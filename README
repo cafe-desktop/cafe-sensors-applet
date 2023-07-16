@@ -41,7 +41,7 @@ Share-Alike license 3.0[10].
 
 Requirements
 
-    * CAFE desktop environment, with GTK >=2.4.0 and libcafepanelapplet
+    * CAFE desktop environment, with CTK >=2.4.0 and libcafepanelapplet
     * For ACPI support:
           o Linux kernel 2.6 with ACPI modules loaded (CONFIG_ACPI &
             CONFIG_ACPI_THERMAL)

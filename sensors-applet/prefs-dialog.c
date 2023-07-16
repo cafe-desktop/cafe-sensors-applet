@@ -39,7 +39,7 @@ void prefs_dialog_close(SensorsApplet *sensors_applet) {
     }
 
     if (sensors_applet->prefs_dialog) {
-        ctk_widget_destroy(GTK_WIDGET(sensors_applet->prefs_dialog->dialog));
+        ctk_widget_destroy(CTK_WIDGET(sensors_applet->prefs_dialog->dialog));
         g_free(sensors_applet->prefs_dialog);
         sensors_applet->prefs_dialog = NULL;
     }
@@ -62,7 +62,7 @@ void prefs_dialog_response(GtkDialog *prefs_dialog,
     sensors_applet = (SensorsApplet *)data;
 
     switch (response) {
-        case GTK_RESPONSE_HELP:
+        case CTK_RESPONSE_HELP:
             g_debug("loading help in prefs");
             current_page = ctk_notebook_get_current_page(sensors_applet->prefs_dialog->notebook);
             uri = g_strdup_printf("help:cafe-sensors-applet/%s",
@@ -111,7 +111,7 @@ static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
                                                         scales[NEW_TEMP_SCALE]);
 
 
-        ctk_tree_store_set(GTK_TREE_STORE(model),
+        ctk_tree_store_set(CTK_TREE_STORE(model),
                            iter,
                            LOW_VALUE_COLUMN, low_value,
                            HIGH_VALUE_COLUMN, high_value,
@@ -137,19 +137,19 @@ static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_bo
 
     display_mode = ctk_combo_box_get_active(display_mode_combo_box);
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->layout_mode_label),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->layout_mode_label),
                              (display_mode != DISPLAY_ICON) &&
                              (display_mode != DISPLAY_VALUE) &&
                              (display_mode != DISPLAY_GRAPH));
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->layout_mode_combo_box),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->layout_mode_combo_box),
                              (display_mode != DISPLAY_ICON) &&
                              (display_mode != DISPLAY_VALUE) &&
                              (display_mode != DISPLAY_GRAPH));
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->graph_size_label),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->graph_size_label),
                              (display_mode == DISPLAY_GRAPH));
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->graph_size_spinbutton),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->graph_size_spinbutton),
                              (display_mode == DISPLAY_GRAPH));
 
     g_settings_set_int (prefs_dialog->sensors_applet->settings,
@@ -199,7 +199,7 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
 static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDialog *prefs_dialog) {
     gboolean state;
 
-    state = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (show_units));
+    state = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (show_units));
     g_settings_set_boolean (prefs_dialog->sensors_applet->settings, HIDE_UNITS, !state);
     sensors_applet_update_active_sensors (prefs_dialog->sensors_applet);
 }
@@ -211,7 +211,7 @@ static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_n
 
     gboolean notify;
 
-    notify = ctk_toggle_button_get_active(GTK_TOGGLE_BUTTON(display_notifications));
+    notify = ctk_toggle_button_get_active(CTK_TOGGLE_BUTTON(display_notifications));
     g_settings_set_boolean(prefs_dialog->sensors_applet->settings,
                            DISPLAY_NOTIFICATIONS,
                            notify);
@@ -246,8 +246,8 @@ static void prefs_dialog_sensor_toggled(GtkCellRenderer *renderer, gchar *path_s
 
     path = ctk_tree_path_new_from_string(path_str);
 
-    ctk_tree_model_get_iter(GTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors), &iter, path);
-    ctk_tree_model_get(GTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors),
+    ctk_tree_model_get_iter(CTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors), &iter, path);
+    ctk_tree_model_get(CTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors),
                        &iter,
                        ENABLE_COLUMN, &old_value,
                        -1);
@@ -269,7 +269,7 @@ static void prefs_dialog_sensor_name_changed(GtkCellRenderer *renderer, gchar *p
     GtkTreeIter iter;
     GtkTreePath *path = ctk_tree_path_new_from_string(path_str);
 
-    ctk_tree_model_get_iter(GTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors), &iter, path);
+    ctk_tree_model_get_iter(CTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors), &iter, path);
 
     ctk_tree_store_set(prefs_dialog->sensors_applet->sensors, &iter, LABEL_COLUMN, new_text, -1);
 
@@ -304,7 +304,7 @@ static void prefs_dialog_sensor_up_button_clicked(GtkButton *button, PrefsDialog
             /* check is a valid node in out model */
             if (ctk_tree_model_get_iter(model, &prev_iter, path)) {
 
-                ctk_tree_store_move_before(GTK_TREE_STORE(model),
+                ctk_tree_store_move_before(CTK_TREE_STORE(model),
                                            &iter,
                                            &prev_iter);
                 g_signal_emit_by_name(prefs_dialog->sensors_applet->selection, "changed");
@@ -328,7 +328,7 @@ static void prefs_dialog_sensor_down_button_clicked(GtkButton *button, PrefsDial
         /* if has no next node set down button insentive */
         if (ctk_tree_model_iter_next(model, &iter_next)) {
 
-                ctk_tree_store_move_after(GTK_TREE_STORE(model),
+                ctk_tree_store_move_after(CTK_TREE_STORE(model),
                                           &iter,
                                           &iter_next);
                 g_signal_emit_by_name(prefs_dialog->sensors_applet->selection, "changed");
@@ -354,10 +354,10 @@ static void prefs_dialog_selection_changed(GtkTreeSelection *selection,
     /* if there is a selection with no children make config button sensitive */
     if (ctk_tree_selection_get_selected(selection, &model, &iter)) {
         if (!ctk_tree_model_iter_has_child(model, &iter)) {
-            ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_config_button), TRUE);
+            ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_config_button), TRUE);
         } else {
             /* otherwise make insensitive */
-            ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_config_button), FALSE);
+            ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_config_button), FALSE);
         }
 
         /* if has no prev node set up button insentive */
@@ -366,28 +366,28 @@ static void prefs_dialog_selection_changed(GtkTreeSelection *selection,
             GtkTreeIter prev_iter;
             /* check is a valid node in out model */
             if (ctk_tree_model_get_iter(model, &prev_iter, path)) {
-                ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), TRUE);
+                ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), TRUE);
             } else {
-                ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
+                ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
             }
         }  else {
-            ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
+            ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
         }
 
         ctk_tree_path_free(path);
 
         /* if has no next node set down button insentive */
         if (ctk_tree_model_iter_next(model, &iter)) {
-            ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_down_button), TRUE);
+            ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_down_button), TRUE);
         } else {
-            ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
+            ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
         }
 
     } else {
         /* otherwise make all insensitive */
-        ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_config_button), FALSE);
-        ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
-        ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
+        ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_config_button), FALSE);
+        ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
+        ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
 
     }
 }
@@ -414,17 +414,17 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     prefs_dialog->sensors_applet = sensors_applet;
 
-    prefs_dialog->dialog = GTK_DIALOG(ctk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
+    prefs_dialog->dialog = CTK_DIALOG(ctk_dialog_new_with_buttons(_("Sensors Applet Preferences"),
                                                                   NULL,
                                                                   0,
                                                                   "ctk-help",
-                                                                  GTK_RESPONSE_HELP,
+                                                                  CTK_RESPONSE_HELP,
                                                                   "ctk-close",
-                                                                  GTK_RESPONSE_CLOSE,
+                                                                  CTK_RESPONSE_CLOSE,
                                                                   NULL));
 
 
-    ctk_window_set_icon_name(GTK_WINDOW(prefs_dialog->dialog), "cafe-sensors-applet");
+    ctk_window_set_icon_name(CTK_WINDOW(prefs_dialog->dialog), "cafe-sensors-applet");
 
     g_object_set(prefs_dialog->dialog,
                  "border-width", 12,
@@ -433,9 +433,9 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                  NULL);
 
     content_area = ctk_dialog_get_content_area (prefs_dialog->dialog);
-    ctk_box_set_homogeneous(GTK_BOX(content_area), FALSE);
+    ctk_box_set_homogeneous(CTK_BOX(content_area), FALSE);
 
-    ctk_box_set_spacing(GTK_BOX(content_area), 5);
+    ctk_box_set_spacing(CTK_BOX(content_area), 5);
 
     g_signal_connect(prefs_dialog->dialog,
                      "response", G_CALLBACK(prefs_dialog_response),
@@ -456,30 +456,30 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
         GtkWidget *content_area;
         label = ctk_label_new(_("No sensors found!"));
         content_area = ctk_dialog_get_content_area (prefs_dialog->dialog);
-        ctk_box_pack_start (GTK_BOX(content_area), label, FALSE, FALSE, 0);
+        ctk_box_pack_start (CTK_BOX(content_area), label, FALSE, FALSE, 0);
         return;
     }
 
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Display"));
-    prefs_dialog->display_header = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->display_header = g_object_new(CTK_TYPE_LABEL,
                                                 "use-markup", TRUE,
                                                 "label", header_text,
                                                 "xalign", 0.0,
                                                 NULL);
     g_free(header_text);
 
-    prefs_dialog->display_mode_combo_box = GTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
+    prefs_dialog->display_mode_combo_box = CTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
     /*expand the whole column */
-    ctk_widget_set_hexpand(GTK_WIDGET(prefs_dialog->display_mode_combo_box), TRUE);
+    ctk_widget_set_hexpand(CTK_WIDGET(prefs_dialog->display_mode_combo_box), TRUE);
 
-    ctk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("label with value"));
-    ctk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("icon with value"));
-    ctk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("value only"));
-    ctk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("icon only"));
-    ctk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("graph only"));
+    ctk_combo_box_text_append_text(CTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("label with value"));
+    ctk_combo_box_text_append_text(CTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("icon with value"));
+    ctk_combo_box_text_append_text(CTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("value only"));
+    ctk_combo_box_text_append_text(CTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("icon only"));
+    ctk_combo_box_text_append_text(CTK_COMBO_BOX_TEXT(prefs_dialog->display_mode_combo_box), _("graph only"));
 
     display_mode = g_settings_get_int(sensors_applet->settings, DISPLAY_MODE);
-    ctk_combo_box_set_active(GTK_COMBO_BOX(prefs_dialog->display_mode_combo_box), display_mode);
+    ctk_combo_box_set_active(CTK_COMBO_BOX(prefs_dialog->display_mode_combo_box), display_mode);
 
     g_signal_connect(prefs_dialog->display_mode_combo_box,
                      "changed",
@@ -487,16 +487,16 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      prefs_dialog);
 
     /* use spaces in label to indent */
-    prefs_dialog->display_mode_label = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->display_mode_label = g_object_new(CTK_TYPE_LABEL,
                                                     "use-underline", TRUE,
                                                     "label", _("_Display sensors in panel as"),
                                                     "mnemonic-widget", prefs_dialog->display_mode_combo_box,
                                                     "xalign", 0.0,
                                                     NULL);
 
-    prefs_dialog->layout_mode_combo_box = GTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
+    prefs_dialog->layout_mode_combo_box = CTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->layout_mode_combo_box),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->layout_mode_combo_box),
                              (display_mode != DISPLAY_ICON) &&
                              (display_mode != DISPLAY_VALUE) &&
                              (display_mode != DISPLAY_GRAPH));
@@ -505,7 +505,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     ctk_combo_box_text_append_text(prefs_dialog->layout_mode_combo_box, _("below labels / icons"));
 
     ctk_combo_box_set_active(
-            GTK_COMBO_BOX(prefs_dialog->layout_mode_combo_box),
+            CTK_COMBO_BOX(prefs_dialog->layout_mode_combo_box),
             g_settings_get_int(sensors_applet->settings, LAYOUT_MODE));
 
     g_signal_connect(prefs_dialog->layout_mode_combo_box,
@@ -513,26 +513,26 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      G_CALLBACK(prefs_dialog_layout_mode_changed),
                      prefs_dialog);
 
-    prefs_dialog->layout_mode_label = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->layout_mode_label = g_object_new(CTK_TYPE_LABEL,
                                                    "use-underline", TRUE,
                                                    "label", _("Preferred _position of sensor values"),
                                                    "mnemonic-widget", prefs_dialog->layout_mode_combo_box,
                                                    "xalign", 0.0,
                                                    NULL);
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->layout_mode_label),
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->layout_mode_label),
                              (display_mode != DISPLAY_ICON) &&
                              (display_mode != DISPLAY_VALUE) &&
                              (display_mode != DISPLAY_GRAPH));
 
-    prefs_dialog->temperature_scale_combo_box = GTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
+    prefs_dialog->temperature_scale_combo_box = CTK_COMBO_BOX_TEXT(ctk_combo_box_text_new());
 
     ctk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Kelvin"));
     ctk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Celsius"));
     ctk_combo_box_text_append_text(prefs_dialog->temperature_scale_combo_box, _("Fahrenheit"));
 
     ctk_combo_box_set_active(
-            GTK_COMBO_BOX(prefs_dialog->temperature_scale_combo_box),
+            CTK_COMBO_BOX(prefs_dialog->temperature_scale_combo_box),
             g_settings_get_int(sensors_applet->settings, TEMPERATURE_SCALE));
 
     g_signal_connect(prefs_dialog->temperature_scale_combo_box,
@@ -540,14 +540,14 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      G_CALLBACK(prefs_dialog_temperature_scale_changed),
                      prefs_dialog);
 
-    prefs_dialog->temperature_scale_label = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->temperature_scale_label = g_object_new(CTK_TYPE_LABEL,
                                                          "use-underline", TRUE,
                                                          "label", _("_Temperature scale"),
                                                          "mnemonic-widget", prefs_dialog->temperature_scale_combo_box,
                                                          "xalign", 0.0,
                                                          NULL);
 
-    prefs_dialog->graph_size_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    prefs_dialog->graph_size_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                                    "value", (gdouble)g_settings_get_int(sensors_applet->settings, GRAPH_SIZE),
                                                    "lower", 1.0,
                                                    "upper", 100.0,
@@ -556,7 +556,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                    "page-size", 0.0,
                                                    NULL);
 
-    prefs_dialog->graph_size_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    prefs_dialog->graph_size_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                                        "adjustment", prefs_dialog->graph_size_adjust,
                                                        "climb-rate", 1.0,
                                                        "digits", 0,
@@ -564,16 +564,16 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                        "width-chars", 4,
                                                        NULL);
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->graph_size_spinbutton), (display_mode == DISPLAY_GRAPH));
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->graph_size_spinbutton), (display_mode == DISPLAY_GRAPH));
 
-    prefs_dialog->graph_size_label = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->graph_size_label = g_object_new(CTK_TYPE_LABEL,
                                                   "use-underline", TRUE,
                                                   "label", _("Graph _size (pixels)"),
                                                   "mnemonic-widget", prefs_dialog->graph_size_spinbutton,
                                                   "xalign", 0.0,
                                                   NULL);
 
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->graph_size_label), (display_mode == DISPLAY_GRAPH));
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->graph_size_label), (display_mode == DISPLAY_GRAPH));
 
     g_signal_connect(prefs_dialog->graph_size_spinbutton, "value-changed",
                      G_CALLBACK(prefs_dialog_graph_size_changed),
@@ -581,22 +581,22 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     // hide/show units
     prefs_dialog->show_units = ctk_check_button_new_with_label (_("Show _units"));
-    ctk_button_set_use_underline (GTK_BUTTON (prefs_dialog->show_units), TRUE);
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (prefs_dialog->show_units),
+    ctk_button_set_use_underline (CTK_BUTTON (prefs_dialog->show_units), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (prefs_dialog->show_units),
                         !g_settings_get_boolean (sensors_applet->settings, HIDE_UNITS));
     g_signal_connect (prefs_dialog->show_units, "toggled",
                         G_CALLBACK (prefs_dialog_show_units_toggled),
                         prefs_dialog);
 
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Update"));
-    prefs_dialog->update_header = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->update_header = g_object_new(CTK_TYPE_LABEL,
                                                "use-markup", TRUE,
                                                "label", header_text,
                                                "xalign", 0.0,
                                                NULL);
     g_free(header_text);
 
-    prefs_dialog->timeout_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    prefs_dialog->timeout_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                                 "value", 2.0,
                                                 "lower", 1.5,
                                                 "upper", 10.0,
@@ -605,7 +605,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                 "page-size", 0.0,
                                                 NULL);
 
-    prefs_dialog->timeout_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    prefs_dialog->timeout_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                                     "adjustment", prefs_dialog->timeout_adjust,
                                                     "climb-rate", 0.5,
                                                     "digits", 1,
@@ -613,7 +613,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                     "width-chars", 4,
                                                     NULL);
 
-    prefs_dialog->timeout_label = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->timeout_label = g_object_new(CTK_TYPE_LABEL,
                                                "use-underline", TRUE,
                                                "label", _("Update _interval (secs)"),
                                                "mnemonic-widget", prefs_dialog->timeout_spinbutton,
@@ -626,18 +626,18 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
 #ifdef HAVE_LIBNOTIFY
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Notifications"));
-    prefs_dialog->notifications_header = g_object_new(GTK_TYPE_LABEL,
+    prefs_dialog->notifications_header = g_object_new(CTK_TYPE_LABEL,
                                                       "use-markup", TRUE,
                                                       "label", header_text,
                                                       "xalign", 0.0,
                                                       NULL);
     g_free(header_text);
 
-    prefs_dialog->display_notifications = g_object_new(GTK_TYPE_CHECK_BUTTON,
+    prefs_dialog->display_notifications = g_object_new(CTK_TYPE_CHECK_BUTTON,
                                                        "use-underline", TRUE,
                                                        "label", _("Display _notifications"),
                                                        NULL);
-    ctk_toggle_button_set_active(GTK_TOGGLE_BUTTON(prefs_dialog->display_notifications),
+    ctk_toggle_button_set_active(CTK_TOGGLE_BUTTON(prefs_dialog->display_notifications),
                                  g_settings_get_boolean(sensors_applet->settings,
                                                         DISPLAY_NOTIFICATIONS));
     g_signal_connect(prefs_dialog->display_notifications,
@@ -648,23 +648,23 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     /* SIZE AND LAYOUT */
     /* keep all widgets same size */
-    prefs_dialog->size_group = ctk_size_group_new(GTK_SIZE_GROUP_HORIZONTAL);
+    prefs_dialog->size_group = ctk_size_group_new(CTK_SIZE_GROUP_HORIZONTAL);
 
     ctk_size_group_add_widget(prefs_dialog->size_group,
-                              GTK_WIDGET(prefs_dialog->display_mode_combo_box));
+                              CTK_WIDGET(prefs_dialog->display_mode_combo_box));
 
     ctk_size_group_add_widget(prefs_dialog->size_group,
-                              GTK_WIDGET(prefs_dialog->layout_mode_combo_box));
+                              CTK_WIDGET(prefs_dialog->layout_mode_combo_box));
 
     ctk_size_group_add_widget(prefs_dialog->size_group,
-                              GTK_WIDGET(prefs_dialog->temperature_scale_combo_box));
+                              CTK_WIDGET(prefs_dialog->temperature_scale_combo_box));
 
     ctk_size_group_add_widget(prefs_dialog->size_group,
-                              GTK_WIDGET(prefs_dialog->timeout_spinbutton));
+                              CTK_WIDGET(prefs_dialog->timeout_spinbutton));
 
     g_object_unref(prefs_dialog->size_group);
 
-    prefs_dialog->globals_grid = g_object_new(GTK_TYPE_GRID,
+    prefs_dialog->globals_grid = g_object_new(CTK_TYPE_GRID,
                                                "row-homogeneous", FALSE,
                                                "column-homogeneous", FALSE,
                                                "row-spacing", 6,
@@ -672,75 +672,75 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                                                NULL);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->display_header),
+                     CTK_WIDGET(prefs_dialog->display_header),
                      0, 0, 2, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->display_mode_label),
+                     CTK_WIDGET(prefs_dialog->display_mode_label),
                      1, 1, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->display_mode_combo_box),
+                     CTK_WIDGET(prefs_dialog->display_mode_combo_box),
                      2, 1, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->layout_mode_label),
+                     CTK_WIDGET(prefs_dialog->layout_mode_label),
                      1, 2, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->layout_mode_combo_box),
+                     CTK_WIDGET(prefs_dialog->layout_mode_combo_box),
                      2, 2, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->graph_size_label),
+                     CTK_WIDGET(prefs_dialog->graph_size_label),
                      1, 3, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->graph_size_spinbutton),
+                     CTK_WIDGET(prefs_dialog->graph_size_spinbutton),
                      2, 3, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->temperature_scale_label),
+                     CTK_WIDGET(prefs_dialog->temperature_scale_label),
                      1, 4, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->temperature_scale_combo_box),
+                     CTK_WIDGET(prefs_dialog->temperature_scale_combo_box),
                      2, 4, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->show_units),
+                     CTK_WIDGET(prefs_dialog->show_units),
                      1, 5, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->update_header),
+                     CTK_WIDGET(prefs_dialog->update_header),
                      0, 6, 2, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->timeout_label),
+                     CTK_WIDGET(prefs_dialog->timeout_label),
                      1, 7, 1, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->timeout_spinbutton),
+                     CTK_WIDGET(prefs_dialog->timeout_spinbutton),
                      2, 7, 1, 1);
 
 #ifdef HAVE_LIBNOTIFY
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->notifications_header),
+                     CTK_WIDGET(prefs_dialog->notifications_header),
                      0, 8, 2, 1);
 
     ctk_grid_attach(prefs_dialog->globals_grid,
-                     GTK_WIDGET(prefs_dialog->display_notifications),
+                     CTK_WIDGET(prefs_dialog->display_notifications),
                      1, 9, 1, 1);
 #endif
 
-    ctk_widget_set_valign(GTK_WIDGET(prefs_dialog->globals_grid), GTK_ALIGN_START);
-    ctk_widget_set_margin_start(GTK_WIDGET(prefs_dialog->globals_grid), 12);
-    ctk_widget_set_margin_end(GTK_WIDGET(prefs_dialog->globals_grid), 12);
-    ctk_widget_set_margin_top(GTK_WIDGET(prefs_dialog->globals_grid), 12);
-    ctk_widget_set_margin_bottom(GTK_WIDGET(prefs_dialog->globals_grid), 12);
+    ctk_widget_set_valign(CTK_WIDGET(prefs_dialog->globals_grid), CTK_ALIGN_START);
+    ctk_widget_set_margin_start(CTK_WIDGET(prefs_dialog->globals_grid), 12);
+    ctk_widget_set_margin_end(CTK_WIDGET(prefs_dialog->globals_grid), 12);
+    ctk_widget_set_margin_top(CTK_WIDGET(prefs_dialog->globals_grid), 12);
+    ctk_widget_set_margin_bottom(CTK_WIDGET(prefs_dialog->globals_grid), 12);
 
-    prefs_dialog->view = g_object_new(GTK_TYPE_TREE_VIEW,
-                                      "model", GTK_TREE_MODEL(sensors_applet->sensors),
+    prefs_dialog->view = g_object_new(CTK_TYPE_TREE_VIEW,
+                                      "model", CTK_TREE_MODEL(sensors_applet->sensors),
                                       "rules-hint", TRUE,
                                       "reorderable", FALSE,
                                       "enable-search", TRUE,
@@ -785,7 +785,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     ctk_tree_view_column_set_min_width(prefs_dialog->label_column, 100);
 
     /* create the tooltip */
-    ctk_widget_set_tooltip_text(GTK_WIDGET(prefs_dialog->view),
+    ctk_widget_set_tooltip_text(CTK_WIDGET(prefs_dialog->view),
                                 _("Labels can be edited directly by clicking on them."));
     prefs_dialog->enable_column = ctk_tree_view_column_new_with_attributes(_("Enabled"),
                                                                            prefs_dialog->enable_renderer,
@@ -809,69 +809,69 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     ctk_tree_view_columns_autosize(prefs_dialog->view);
 
-    prefs_dialog->scrolled_window = g_object_new(GTK_TYPE_SCROLLED_WINDOW,
+    prefs_dialog->scrolled_window = g_object_new(CTK_TYPE_SCROLLED_WINDOW,
                                                  "hadjustment", NULL,
                                                  "height-request", 200,
-                                                 "hscrollbar-policy", GTK_POLICY_NEVER,
+                                                 "hscrollbar-policy", CTK_POLICY_NEVER,
                                                  "vadjustment",NULL,
-                                                 "vscrollbar-policy", GTK_POLICY_AUTOMATIC,
+                                                 "vscrollbar-policy", CTK_POLICY_AUTOMATIC,
                                                  NULL);
 
-    ctk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(prefs_dialog->scrolled_window), GTK_SHADOW_IN);
+    ctk_scrolled_window_set_shadow_type(CTK_SCROLLED_WINDOW(prefs_dialog->scrolled_window), CTK_SHADOW_IN);
 
-    ctk_container_add(GTK_CONTAINER(prefs_dialog->scrolled_window), GTK_WIDGET(prefs_dialog->view));
+    ctk_container_add(CTK_CONTAINER(prefs_dialog->scrolled_window), CTK_WIDGET(prefs_dialog->view));
 
     /* GtkTree Selection */
     sensors_applet->selection = ctk_tree_view_get_selection(prefs_dialog->view);
     /* allow user to only select one row at a time at most */
-    ctk_tree_selection_set_mode(sensors_applet->selection, GTK_SELECTION_SINGLE);
+    ctk_tree_selection_set_mode(sensors_applet->selection, CTK_SELECTION_SINGLE);
     /* when selection is changed, make sure sensor_config button is activated */
 
     /* Create buttons for user to interact with sensors tree */
-    prefs_dialog->sensor_up_button = GTK_BUTTON(ctk_button_new_with_mnemonic(_("_Up")));
-    ctk_button_set_image(prefs_dialog->sensor_up_button, ctk_image_new_from_icon_name("go-up", GTK_ICON_SIZE_BUTTON));
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
+    prefs_dialog->sensor_up_button = CTK_BUTTON(ctk_button_new_with_mnemonic(_("_Up")));
+    ctk_button_set_image(prefs_dialog->sensor_up_button, ctk_image_new_from_icon_name("go-up", CTK_ICON_SIZE_BUTTON));
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), FALSE);
 
     g_signal_connect(prefs_dialog->sensor_up_button, "clicked",
                      G_CALLBACK(prefs_dialog_sensor_up_button_clicked),
                      prefs_dialog);
 
-    prefs_dialog->sensor_down_button = GTK_BUTTON(ctk_button_new_with_mnemonic(_("_Down")));
-    ctk_button_set_image(prefs_dialog->sensor_down_button, ctk_image_new_from_icon_name("go-down", GTK_ICON_SIZE_BUTTON));
-    ctk_widget_set_sensitive(GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
+    prefs_dialog->sensor_down_button = CTK_BUTTON(ctk_button_new_with_mnemonic(_("_Down")));
+    ctk_button_set_image(prefs_dialog->sensor_down_button, ctk_image_new_from_icon_name("go-down", CTK_ICON_SIZE_BUTTON));
+    ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_down_button), FALSE);
 
     g_signal_connect(prefs_dialog->sensor_down_button, "clicked",
                      G_CALLBACK(prefs_dialog_sensor_down_button_clicked),
                      prefs_dialog);
 
-    prefs_dialog->buttons_box = GTK_BUTTON_BOX(ctk_button_box_new(GTK_ORIENTATION_VERTICAL));
+    prefs_dialog->buttons_box = CTK_BUTTON_BOX(ctk_button_box_new(CTK_ORIENTATION_VERTICAL));
 
-    ctk_button_box_set_layout(GTK_BUTTON_BOX(prefs_dialog->buttons_box), GTK_BUTTONBOX_SPREAD);
+    ctk_button_box_set_layout(CTK_BUTTON_BOX(prefs_dialog->buttons_box), CTK_BUTTONBOX_SPREAD);
 
-    ctk_box_pack_start(GTK_BOX(prefs_dialog->buttons_box), GTK_WIDGET(prefs_dialog->sensor_up_button), FALSE, FALSE, 0);
+    ctk_box_pack_start(CTK_BOX(prefs_dialog->buttons_box), CTK_WIDGET(prefs_dialog->sensor_up_button), FALSE, FALSE, 0);
 
-    ctk_box_pack_start(GTK_BOX(prefs_dialog->buttons_box), GTK_WIDGET(prefs_dialog->sensor_down_button), FALSE, FALSE, 0);
+    ctk_box_pack_start(CTK_BOX(prefs_dialog->buttons_box), CTK_WIDGET(prefs_dialog->sensor_down_button), FALSE, FALSE, 0);
 
-    prefs_dialog->sensors_hbox = g_object_new(GTK_TYPE_BOX,
-                                              "orientation", GTK_ORIENTATION_HORIZONTAL,
+    prefs_dialog->sensors_hbox = g_object_new(CTK_TYPE_BOX,
+                                              "orientation", CTK_ORIENTATION_HORIZONTAL,
                                               "border-width", 5,
                                               "homogeneous", FALSE,
                                               "spacing", 5,
                                               NULL);
 
     ctk_box_pack_start(prefs_dialog->sensors_hbox,
-                       GTK_WIDGET(prefs_dialog->scrolled_window),
+                       CTK_WIDGET(prefs_dialog->scrolled_window),
                        TRUE, TRUE, 0); /* make sure window takes up most of room */
 
     ctk_box_pack_start(prefs_dialog->sensors_hbox,
-                       GTK_WIDGET(prefs_dialog->buttons_box),
+                       CTK_WIDGET(prefs_dialog->buttons_box),
                        FALSE, FALSE, 0);
 
     /* Sensor Config button */
     /* initially make button insensitive until user selects a row
        from the sensors tree */
-    prefs_dialog->sensor_config_button = GTK_BUTTON(ctk_button_new_with_mnemonic(_("_Properties")));
-    ctk_button_set_image(prefs_dialog->sensor_config_button, ctk_image_new_from_icon_name("document-properties", GTK_ICON_SIZE_BUTTON));
+    prefs_dialog->sensor_config_button = CTK_BUTTON(ctk_button_new_with_mnemonic(_("_Properties")));
+    ctk_button_set_image(prefs_dialog->sensor_config_button, ctk_image_new_from_icon_name("document-properties", CTK_ICON_SIZE_BUTTON));
     g_object_set(prefs_dialog->sensor_config_button,
                  "sensitive", FALSE,
                  NULL);
@@ -888,45 +888,45 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
                      G_CALLBACK(prefs_dialog_sensor_config_button_clicked),
                      prefs_dialog);
 
-    prefs_dialog->sensor_config_hbox = g_object_new(GTK_TYPE_BOX,
-                                                    "orientation", GTK_ORIENTATION_HORIZONTAL,
+    prefs_dialog->sensor_config_hbox = g_object_new(CTK_TYPE_BOX,
+                                                    "orientation", CTK_ORIENTATION_HORIZONTAL,
                                                     "border-width", 5,
                                                     "homogeneous", FALSE,
                                                     "spacing", 0,
                                                     NULL);
     ctk_box_pack_end(prefs_dialog->sensor_config_hbox,
-                     GTK_WIDGET(prefs_dialog->sensor_config_button),
+                     CTK_WIDGET(prefs_dialog->sensor_config_button),
                      FALSE, FALSE, 0);
 
     /* pack sensors_vbox */
-    prefs_dialog->sensors_vbox = g_object_new(GTK_TYPE_BOX,
-                                              "orientation", GTK_ORIENTATION_VERTICAL,
+    prefs_dialog->sensors_vbox = g_object_new(CTK_TYPE_BOX,
+                                              "orientation", CTK_ORIENTATION_VERTICAL,
                                               "border-width", 5,
                                               "homogeneous", FALSE,
                                               "spacing", 0,
                                               NULL);
 
     ctk_box_pack_start(prefs_dialog->sensors_vbox,
-                       GTK_WIDGET(prefs_dialog->sensors_hbox),
+                       CTK_WIDGET(prefs_dialog->sensors_hbox),
                        TRUE, TRUE, 0);
     ctk_box_pack_start(prefs_dialog->sensors_vbox,
-                       GTK_WIDGET(prefs_dialog->sensor_config_hbox),
+                       CTK_WIDGET(prefs_dialog->sensor_config_hbox),
                        FALSE, FALSE, 0);
 
-    prefs_dialog->notebook = g_object_new(GTK_TYPE_NOTEBOOK, NULL);
+    prefs_dialog->notebook = g_object_new(CTK_TYPE_NOTEBOOK, NULL);
 
     ctk_notebook_append_page(prefs_dialog->notebook,
-                             GTK_WIDGET(prefs_dialog->globals_grid),
+                             CTK_WIDGET(prefs_dialog->globals_grid),
                              ctk_label_new(_("General Options")));
 
     ctk_notebook_append_page(prefs_dialog->notebook,
-                             GTK_WIDGET(prefs_dialog->sensors_vbox),
+                             CTK_WIDGET(prefs_dialog->sensors_vbox),
                              ctk_label_new(_("Sensors")));
 
     /* pack notebook into prefs_dialog */
     content_area = ctk_dialog_get_content_area (prefs_dialog->dialog);
-    ctk_box_pack_start (GTK_BOX(content_area), GTK_WIDGET(prefs_dialog->notebook), TRUE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX(content_area), CTK_WIDGET(prefs_dialog->notebook), TRUE, TRUE, 0);
 
 
-    ctk_widget_show_all(GTK_WIDGET(prefs_dialog->dialog));
+    ctk_widget_show_all(CTK_WIDGET(prefs_dialog->dialog));
 }

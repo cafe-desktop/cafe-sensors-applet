@@ -164,22 +164,22 @@ static void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_a
     /* iterate through the sensor tree
      * code from sensors-applet.c sensors_applet_add_sensor()
      * first go through the interfaces */
-    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
-        not_end_of_interfaces = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter), interfaces_counter++) {
+        not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter), interfaces_counter++) {
 
         /* get interface name */
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &interface_name, -1);
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &interface_name, -1);
 
         /* print interface name */
         syslog(LOG_ERR, "#%d interface name: %s\n", interfaces_counter, interface_name);
 
         /* then go through the individual sensors under one interface */
-        for (not_end_of_sensors = ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
+        for (not_end_of_sensors = ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
             not_end_of_sensors;
-            not_end_of_sensors = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter), sensors_counter++) {
+            not_end_of_sensors = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter), sensors_counter++) {
 
-            ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
+            ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
                        PATH_COLUMN, &sensor_path,
                        ID_COLUMN, &sensor_id,
                        -1);
@@ -212,8 +212,8 @@ static gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *se
     GtkTreePath *tp_b;
     gint ret_val;
 
-    tp_a = ctk_tree_model_get_path (GTK_TREE_MODEL(sensors_applet->sensors), &ti_a);
-    tp_b = ctk_tree_model_get_path (GTK_TREE_MODEL(sensors_applet->sensors), &ti_b);
+    tp_a = ctk_tree_model_get_path (CTK_TREE_MODEL(sensors_applet->sensors), &ti_a);
+    tp_b = ctk_tree_model_get_path (CTK_TREE_MODEL(sensors_applet->sensors), &ti_b);
 
     ret_val = ctk_tree_path_compare(tp_a, tp_b);
 
@@ -257,19 +257,19 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
     /* iterate through the sensor tree
      * code from sensors-applet.c sensors_applet_add_sensor()
      * first go through the interfaces */
-    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
-        not_end_of_interfaces = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+        not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
 
         /* get interface name */
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &interface_name, -1);
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &interface_name, -1);
 
         /* then go through the individual sensors under one interface */
-        for (not_end_of_sensors = ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
+        for (not_end_of_sensors = ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
             not_end_of_sensors;
-            not_end_of_sensors = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+            not_end_of_sensors = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
-            ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
+            ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
                        PATH_COLUMN, &sensor_path,
                        ID_COLUMN, &sensor_id,
                        -1);
@@ -320,14 +320,14 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
         if (a_is_first) {
 
             /* this 'fails' if the tree is empty, but this is already checked with the first loop */
-            ctk_tree_model_get_iter_first (GTK_TREE_MODEL(sensors_applet->sensors), &first_iter);
+            ctk_tree_model_get_iter_first (CTK_TREE_MODEL(sensors_applet->sensors), &first_iter);
 
             /* we are only interested in the case, where the two are not equal
              * that means the a's interface is not the first interface */
             if ( 0 != sensors_applet_settings_sort_sensors_iter_compare (sensors_applet, first_iter, interface_iter_a)) {
 
                 /* it should be, so it needs to be moved to the first position */
-                ctk_tree_store_move_after (GTK_TREE_STORE(sensors_applet->sensors), &interface_iter_a, NULL);
+                ctk_tree_store_move_after (CTK_TREE_STORE(sensors_applet->sensors), &interface_iter_a, NULL);
             }
 
         }
@@ -343,12 +343,12 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
             /* set iter_next to the iter after a's if. iter, can copy like this */
             iter_next = interface_iter_a;
             /* this 'fails' if there is no node after a's if. iter, but we already know, that at least b's if. iter is */
-            ctk_tree_model_iter_next (GTK_TREE_MODEL(sensors_applet->sensors), &iter_next);
+            ctk_tree_model_iter_next (CTK_TREE_MODEL(sensors_applet->sensors), &iter_next);
 
             /* the node right after a's if. iter is not b's if. iter, so move b's if. iter */
             if (0 != sensors_applet_settings_sort_sensors_iter_compare (sensors_applet, iter_next, interface_iter_b)) {
 
-                ctk_tree_store_move_after (GTK_TREE_STORE(sensors_applet->sensors), &interface_iter_b, &interface_iter_a);
+                ctk_tree_store_move_after (CTK_TREE_STORE(sensors_applet->sensors), &interface_iter_b, &interface_iter_a);
             }
         }
 
@@ -358,14 +358,14 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
         if (a_is_first) {
 
             /* this 'fails' if the tree is empty, but at least a is in it */
-            ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &first_iter,  &interface_iter_a);
+            ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &first_iter,  &interface_iter_a);
 
             /* we are only interested in the case, where the two are not equal
              * that means the a is not the first sensor */
             if ( 0 != sensors_applet_settings_sort_sensors_iter_compare (sensors_applet, first_iter, sensor_iter_a)) {
 
                 /* it should be, so it needs to be moved to the first position */
-                ctk_tree_store_move_after (GTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_a, NULL);
+                ctk_tree_store_move_after (CTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_a, NULL);
             }
 
         }
@@ -381,12 +381,12 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
             /* set iter_next to the iter after a's iter, can copy like this */
             iter_next = sensor_iter_a;
             /* this 'fails' if there is no node after a's iter, but we already know, that at least b's iter is */
-            ctk_tree_model_iter_next (GTK_TREE_MODEL(sensors_applet->sensors), &iter_next);
+            ctk_tree_model_iter_next (CTK_TREE_MODEL(sensors_applet->sensors), &iter_next);
 
             /* the node right after a's iter is not b's iter, so move b's iter */
             if (0 != sensors_applet_settings_sort_sensors_iter_compare (sensors_applet, iter_next, sensor_iter_b)) {
 
-                ctk_tree_store_move_after (GTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_b, &sensor_iter_a);
+                ctk_tree_store_move_after (CTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_b, &sensor_iter_a);
             }
         }
 
@@ -397,14 +397,14 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
         if (-1 == ret_val) {
 
             /* this 'fails' if the tree is empty, but at least b is in it */
-            ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &first_iter,  &interface_iter_b);
+            ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &first_iter,  &interface_iter_b);
 
             /* we are only interested in the case, where the two are not equal
              * that means the b is not the first sensor */
             if ( 0 != sensors_applet_settings_sort_sensors_iter_compare (sensors_applet, first_iter, sensor_iter_b)) {
 
                 /* it should be, so it needs to be moved to the first position */
-                ctk_tree_store_move_after (GTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_b, NULL);
+                ctk_tree_store_move_after (CTK_TREE_STORE(sensors_applet->sensors), &sensor_iter_b, NULL);
             }
 
         }
@@ -570,16 +570,16 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     applet_path = cafe_panel_applet_get_preferences_path (sensors_applet->applet);
 
     /* now step through the GtkTreeStore sensors to find which sensors are available / loaded */
-    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+    for (not_end_of_interfaces = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
-        not_end_of_interfaces = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+        not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
 
 
-        for (not_end_of_sensors = ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
+        for (not_end_of_sensors = ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
             not_end_of_sensors;
-            not_end_of_sensors = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+            not_end_of_sensors = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
-            ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
+            ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors),
                                &sensors_iter,
                                PATH_COLUMN, &current_path,
                                ID_COLUMN, &current_id,

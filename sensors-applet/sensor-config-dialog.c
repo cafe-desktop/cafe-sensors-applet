@@ -79,7 +79,7 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
     config_dialog = (SensorConfigDialog *)data;
 
     switch (response) {
-        case GTK_RESPONSE_HELP:
+        case CTK_RESPONSE_HELP:
             g_debug("loading help in config dialog");
             ctk_show_uri_on_window(NULL,
                          "help:cafe-sensors-applet/sensors-applet-sensors#sensors-applet-sensor-config-dialog",
@@ -94,7 +94,7 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
 
         default:
             g_debug("destroying config dialog");
-            ctk_widget_destroy(GTK_WIDGET(dialog));
+            ctk_widget_destroy(CTK_WIDGET(dialog));
     }
 }
 
@@ -110,7 +110,7 @@ static void sensor_config_dialog_multiplier_changed(GtkSpinButton *spinbutton, S
                                     &model,
                                     &iter);
 
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
                         &iter,
                         MULTIPLIER_COLUMN, value,
@@ -131,7 +131,7 @@ static void sensor_config_dialog_offset_changed(GtkSpinButton *spinbutton, Senso
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
                         &iter,
                         OFFSET_COLUMN, value,
@@ -152,7 +152,7 @@ static void sensor_config_dialog_low_value_changed(GtkSpinButton *spinbutton, Se
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
 
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
                         &iter,
@@ -174,7 +174,7 @@ static void sensor_config_dialog_high_value_changed(GtkSpinButton *spinbutton, S
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
 
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
                         &iter,
@@ -194,18 +194,18 @@ static void sensor_config_dialog_alarm_toggled(GtkToggleButton *button, SensorCo
     value = ctk_toggle_button_get_active(button);
 
     /* update state of alarm widgets */
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->alarm_timeout_label), value);
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->alarm_timeout_spinbutton), value);
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->low_alarm_command_label), value);
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->low_alarm_command_entry), value);
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->high_alarm_command_label), value);
-    ctk_widget_set_sensitive(GTK_WIDGET(config_dialog->high_alarm_command_entry), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->alarm_timeout_label), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->alarm_timeout_spinbutton), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->low_alarm_command_label), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->low_alarm_command_entry), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->high_alarm_command_label), value);
+    ctk_widget_set_sensitive(CTK_WIDGET(config_dialog->high_alarm_command_entry), value);
 
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
 
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
 
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
                         &iter,
@@ -227,7 +227,7 @@ static void sensor_config_dialog_alarm_timeout_changed(GtkSpinButton *spinbutton
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
 
     sensors_applet_all_alarms_off(config_dialog->sensors_applet, path);
     ctk_tree_store_set(config_dialog->sensors_applet->sensors,
@@ -250,7 +250,7 @@ static void sensor_config_dialog_alarm_command_edited(GtkEntry *command_entry, S
     ctk_tree_selection_get_selected(config_dialog->sensors_applet->selection,
                                     &model,
                                     &iter);
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
 
     sensors_applet_alarm_off(config_dialog->sensors_applet, path, notif_type);
 
@@ -338,7 +338,7 @@ static void sensor_config_dialog_graph_color_set(GtkColorChooser *color_chooser,
 
     g_free(color_string);
 
-    path = ctk_tree_model_get_path(GTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
+    path = ctk_tree_model_get_path(CTK_TREE_MODEL(config_dialog->sensors_applet->sensors), &iter);
     sensors_applet_update_sensor(config_dialog->sensors_applet, path);
     ctk_tree_path_free(path);
 }
@@ -388,17 +388,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     header_text = g_strdup_printf("%s - %s", _("Sensor Properties"), sensor_label);
 
 
-    config_dialog->dialog = GTK_DIALOG(ctk_dialog_new_with_buttons(header_text,
-                                                        GTK_WINDOW(sensors_applet->prefs_dialog->dialog),
-                                                        GTK_DIALOG_DESTROY_WITH_PARENT,
+    config_dialog->dialog = CTK_DIALOG(ctk_dialog_new_with_buttons(header_text,
+                                                        CTK_WINDOW(sensors_applet->prefs_dialog->dialog),
+                                                        CTK_DIALOG_DESTROY_WITH_PARENT,
                                                         "ctk-help",
-                                                        GTK_RESPONSE_HELP,
+                                                        CTK_RESPONSE_HELP,
                                                         "ctk-close",
-                                                        GTK_RESPONSE_CLOSE,
+                                                        CTK_RESPONSE_CLOSE,
                                                         NULL));
 
 
-    ctk_window_set_icon_name(GTK_WINDOW(config_dialog->dialog), "sensors-applet");
+    ctk_window_set_icon_name(CTK_WINDOW(config_dialog->dialog), "sensors-applet");
 
     g_free(header_text);
     g_free(sensor_label);
@@ -414,7 +414,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     /* graph stuff */
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Graph"));
-    config_dialog->graph_header = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->graph_header = g_object_new(CTK_TYPE_LABEL,
                                "use-markup", TRUE,
                                "label", header_text,
                                "xalign", 0.0,
@@ -422,13 +422,13 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     g_free(header_text);
 
     gdk_rgba_parse(&graph_color, graph_color_string);
-    config_dialog->graph_color_button = GTK_COLOR_BUTTON(ctk_color_button_new_with_rgba(&graph_color));
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->graph_color_button), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->graph_color_button), GTK_ALIGN_START);
+    config_dialog->graph_color_button = CTK_COLOR_BUTTON(ctk_color_button_new_with_rgba(&graph_color));
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->graph_color_button), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->graph_color_button), CTK_ALIGN_START);
 
     ctk_color_button_set_title(config_dialog->graph_color_button, _("Graph Color"));
 
-    config_dialog->graph_color_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->graph_color_label = g_object_new(CTK_TYPE_LABEL,
                                      "label", _("Graph _color"),
                                     "mnemonic-widget", config_dialog->graph_color_button,
                                     "use-underline", TRUE,
@@ -441,7 +441,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     /* icon stuff */
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Icon"));
-    config_dialog->icon_header = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->icon_header = g_object_new(CTK_TYPE_LABEL,
                                "use-markup", TRUE,
                                "label", header_text,
                                "xalign", 0.0,
@@ -462,18 +462,18 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
         }
     }
 
-    config_dialog->icon_type_combo_box = GTK_COMBO_BOX(ctk_combo_box_new_with_model(GTK_TREE_MODEL(icon_store)));
+    config_dialog->icon_type_combo_box = CTK_COMBO_BOX(ctk_combo_box_new_with_model(CTK_TREE_MODEL(icon_store)));
 
-        ctk_widget_set_halign (GTK_WIDGET(config_dialog->icon_type_combo_box), GTK_ALIGN_START);
-        ctk_widget_set_valign (GTK_WIDGET(config_dialog->icon_type_combo_box), GTK_ALIGN_START);
+        ctk_widget_set_halign (CTK_WIDGET(config_dialog->icon_type_combo_box), CTK_ALIGN_START);
+        ctk_widget_set_valign (CTK_WIDGET(config_dialog->icon_type_combo_box), CTK_ALIGN_START);
 
     config_dialog->icon_renderer = ctk_cell_renderer_pixbuf_new();
-    ctk_cell_layout_pack_start(GTK_CELL_LAYOUT(config_dialog->icon_type_combo_box),
-                               GTK_CELL_RENDERER(config_dialog->icon_renderer),
+    ctk_cell_layout_pack_start(CTK_CELL_LAYOUT(config_dialog->icon_type_combo_box),
+                               CTK_CELL_RENDERER(config_dialog->icon_renderer),
                                FALSE);
 
-    ctk_cell_layout_add_attribute(GTK_CELL_LAYOUT(config_dialog->icon_type_combo_box),
-                                  GTK_CELL_RENDERER(config_dialog->icon_renderer),
+    ctk_cell_layout_add_attribute(CTK_CELL_LAYOUT(config_dialog->icon_type_combo_box),
+                                  CTK_CELL_RENDERER(config_dialog->icon_renderer),
                                   "pixbuf", 0);
 
     ctk_combo_box_set_active(config_dialog->icon_type_combo_box, icon_type);
@@ -482,7 +482,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                      G_CALLBACK(sensor_config_dialog_icon_type_changed),
                      config_dialog);
 
-    config_dialog->icon_type_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->icon_type_label = g_object_new(CTK_TYPE_LABEL,
                                      "label", _("Sensor _icon"),
                                     "mnemonic-widget", config_dialog->icon_type_combo_box,
                                     "use-underline", TRUE,
@@ -490,7 +490,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                     NULL);
 
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Scaling Parameters"));
-    config_dialog->scale_header = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->scale_header = g_object_new(CTK_TYPE_LABEL,
                                "use-markup", TRUE,
                                "label", header_text,
                                "xalign", 0.0,
@@ -498,7 +498,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     g_free(header_text);
 
     /* do multiplier and offset widgets */
-    config_dialog->multiplier_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    config_dialog->multiplier_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                           "value", 1.0,
                           "lower", 0.001,
                           "upper", 1000.0,
@@ -507,17 +507,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                           "page-size", 1.0,
                           NULL);
 
-    config_dialog->multiplier_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    config_dialog->multiplier_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                          "adjustment", config_dialog->multiplier_adjust,
                                          "digits", VALUE_DECIMAL_PLACES,
                                          "value", multiplier,
                                          "width-chars", SPINBUTTON_WIDTH_CHARS,
                                          NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->multiplier_spinbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->multiplier_spinbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->multiplier_spinbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->multiplier_spinbutton), CTK_ALIGN_START);
 
-    config_dialog->multiplier_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->multiplier_label = g_object_new(CTK_TYPE_LABEL,
                                                    "label", _("Sensor value _multiplier"),
                                                    "mnemonic-widget", config_dialog->multiplier_spinbutton,
                                                    "use-underline", TRUE,
@@ -526,7 +526,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     g_signal_connect(config_dialog->multiplier_spinbutton, "value-changed", G_CALLBACK(sensor_config_dialog_multiplier_changed), config_dialog);
 
-    config_dialog->offset_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    config_dialog->offset_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                  "value", 0.0,
                                  "lower", -1000.000,
                                  "upper", 1000.000,
@@ -535,17 +535,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                  "page-size", 1.0,
                                  NULL);
 
-    config_dialog->offset_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    config_dialog->offset_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                      "adjustment", config_dialog->offset_adjust,
                                      "digits", VALUE_DECIMAL_PLACES,
                                      "value", (gdouble)offset,
                                      "width-chars", SPINBUTTON_WIDTH_CHARS,
                                      NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->offset_spinbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->offset_spinbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->offset_spinbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->offset_spinbutton), CTK_ALIGN_START);
 
-    config_dialog->offset_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->offset_label = g_object_new(CTK_TYPE_LABEL,
                                 "label", _("Sensor value _offset"),
                                 "mnemonic-widget", config_dialog->offset_spinbutton,
                                 "use-underline", TRUE,
@@ -556,14 +556,14 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     /* now do alarm widgets */
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Sensor Limits"));
-    config_dialog->limits_header = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->limits_header = g_object_new(CTK_TYPE_LABEL,
                                                 "use-markup", TRUE,
                                                 "label", header_text,
                                                 "xalign", 0.0,
                                                 NULL);
     g_free(header_text);
 
-    config_dialog->low_value_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    config_dialog->low_value_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                     "value", 0.0,
                                     "lower", -100000.0,
                                     "upper", 100000.0,
@@ -572,17 +572,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                     "page-size", 100.0,
                                     NULL);
 
-    config_dialog->low_value_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    config_dialog->low_value_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                                        "adjustment", config_dialog->low_value_adjust,
                                                        "digits", VALUE_DECIMAL_PLACES,
                                                        "value", low_value,
                                                        "width-chars", SPINBUTTON_WIDTH_CHARS,
                                                        NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->low_value_spinbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->low_value_spinbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->low_value_spinbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->low_value_spinbutton), CTK_ALIGN_START);
 
-    config_dialog->low_value_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->low_value_label = g_object_new(CTK_TYPE_LABEL,
                                                   "label", _("Sensor _low value"),
                                                   "mnemonic-widget", config_dialog->low_value_spinbutton,
                                                   "use-underline", TRUE,
@@ -591,7 +591,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     g_signal_connect(config_dialog->low_value_spinbutton, "value-changed", G_CALLBACK(sensor_config_dialog_low_value_changed), config_dialog);
 
-    config_dialog->high_value_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    config_dialog->high_value_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                                   "value", 0.0,
                                                   "lower", -100000.0,
                                                   "upper", 100000.0,
@@ -600,17 +600,17 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                                   "page-size", 100.0,
                                                   NULL);
 
-    config_dialog->high_value_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    config_dialog->high_value_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                                         "adjustment", config_dialog->high_value_adjust,
                                                         "digits", VALUE_DECIMAL_PLACES,
                                                         "value", high_value,
                                                         "width-chars", SPINBUTTON_WIDTH_CHARS,
                                                         NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->high_value_spinbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->high_value_spinbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->high_value_spinbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->high_value_spinbutton), CTK_ALIGN_START);
 
-    config_dialog->high_value_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->high_value_label = g_object_new(CTK_TYPE_LABEL,
                                                    "label", _("Sensor _high value"),
                                                    "mnemonic-widget", config_dialog->high_value_spinbutton,
                                                    "use-underline", TRUE,
@@ -620,14 +620,14 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     g_signal_connect(config_dialog->high_value_spinbutton, "value-changed", G_CALLBACK(sensor_config_dialog_high_value_changed), config_dialog);
 
     header_text = g_markup_printf_escaped("<b>%s</b>", _("Alarm"));
-    config_dialog->alarm_header = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->alarm_header = g_object_new(CTK_TYPE_LABEL,
                                                "use-markup", TRUE,
                                                "label", header_text,
                                                "xalign", 0.0,
                                                NULL);
     g_free(header_text);
 
-    config_dialog->alarm_timeout_adjust = g_object_new(GTK_TYPE_ADJUSTMENT,
+    config_dialog->alarm_timeout_adjust = g_object_new(CTK_TYPE_ADJUSTMENT,
                                         "value", 0.0,
                                         "lower", 0.0,
                                         "upper", 10000.0,
@@ -636,7 +636,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                         "page-size", 100.0,
                                         NULL);
 
-    config_dialog->alarm_timeout_spinbutton = g_object_new(GTK_TYPE_SPIN_BUTTON,
+    config_dialog->alarm_timeout_spinbutton = g_object_new(CTK_TYPE_SPIN_BUTTON,
                                                            "adjustment", config_dialog->alarm_timeout_adjust,
                                                            "digits", 0,
                                                            "value", (gdouble)alarm_timeout,
@@ -644,10 +644,10 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                                            "sensitive", alarm_enable,
                                                            NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->alarm_timeout_spinbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->alarm_timeout_spinbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->alarm_timeout_spinbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->alarm_timeout_spinbutton), CTK_ALIGN_START);
 
-    config_dialog->alarm_timeout_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->alarm_timeout_label = g_object_new(CTK_TYPE_LABEL,
                                                       "label", _("Alarm _repeat interval (secs)"),
                                                       "mnemonic-widget", config_dialog->alarm_timeout_spinbutton,
                                                       "use-underline", TRUE,
@@ -657,7 +657,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     g_signal_connect(config_dialog->alarm_timeout_spinbutton, "value-changed", G_CALLBACK(sensor_config_dialog_alarm_timeout_changed), config_dialog);
 
-    config_dialog->low_alarm_command_entry = g_object_new(GTK_TYPE_ENTRY,
+    config_dialog->low_alarm_command_entry = g_object_new(CTK_TYPE_ENTRY,
                                                           "text", low_alarm_command,
                                                           "width-chars", 25,
                                                           "sensitive", alarm_enable,
@@ -665,7 +665,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     g_free(low_alarm_command);
 
-    config_dialog->low_alarm_command_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->low_alarm_command_label = g_object_new(CTK_TYPE_LABEL,
                                                       "use-underline", TRUE,
                                                       "label", _("Lo_w alarm command"),
                                                       "mnemonic-widget", config_dialog->low_alarm_command_entry,
@@ -678,7 +678,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                      G_CALLBACK(sensor_config_dialog_low_alarm_command_edited),
                      config_dialog);
 
-    config_dialog->high_alarm_command_entry = g_object_new(GTK_TYPE_ENTRY,
+    config_dialog->high_alarm_command_entry = g_object_new(CTK_TYPE_ENTRY,
                                                           "text", high_alarm_command,
                                                           "width-chars", 25,
                                                           "sensitive", alarm_enable,
@@ -686,7 +686,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     g_free(high_alarm_command);
 
-    config_dialog->high_alarm_command_label = g_object_new(GTK_TYPE_LABEL,
+    config_dialog->high_alarm_command_label = g_object_new(CTK_TYPE_LABEL,
                                                       "use-underline", TRUE,
                                                       "label", _("Hi_gh alarm command"),
                                                       "mnemonic-widget", config_dialog->high_alarm_command_entry,
@@ -699,29 +699,29 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                      G_CALLBACK(sensor_config_dialog_high_alarm_command_edited),
                      config_dialog);
 
-    config_dialog->alarm_enable_checkbutton = g_object_new(GTK_TYPE_CHECK_BUTTON,
+    config_dialog->alarm_enable_checkbutton = g_object_new(CTK_TYPE_CHECK_BUTTON,
                                             "use-underline", TRUE,
                                             "label", _("_Enable alarm"),
                                             "active", alarm_enable,
                                             "xalign", 0.0,
                                             NULL);
 
-    ctk_widget_set_halign (GTK_WIDGET(config_dialog->alarm_enable_checkbutton), GTK_ALIGN_START);
-    ctk_widget_set_valign (GTK_WIDGET(config_dialog->alarm_enable_checkbutton), GTK_ALIGN_START);
+    ctk_widget_set_halign (CTK_WIDGET(config_dialog->alarm_enable_checkbutton), CTK_ALIGN_START);
+    ctk_widget_set_valign (CTK_WIDGET(config_dialog->alarm_enable_checkbutton), CTK_ALIGN_START);
 
     g_signal_connect(config_dialog->alarm_enable_checkbutton, "toggled", G_CALLBACK(sensor_config_dialog_alarm_toggled), config_dialog);
 
-    config_dialog->size_group = ctk_size_group_new(GTK_SIZE_GROUP_HORIZONTAL);
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->multiplier_spinbutton));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->offset_spinbutton));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->low_value_spinbutton));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->high_value_spinbutton));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->alarm_timeout_spinbutton));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->icon_type_combo_box));
-    ctk_size_group_add_widget(config_dialog->size_group, GTK_WIDGET(config_dialog->graph_color_button));
+    config_dialog->size_group = ctk_size_group_new(CTK_SIZE_GROUP_HORIZONTAL);
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->multiplier_spinbutton));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->offset_spinbutton));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->low_value_spinbutton));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->high_value_spinbutton));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->alarm_timeout_spinbutton));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->icon_type_combo_box));
+    ctk_size_group_add_widget(config_dialog->size_group, CTK_WIDGET(config_dialog->graph_color_button));
     g_object_unref(config_dialog->size_group);
 
-    config_dialog->grid = g_object_new(GTK_TYPE_GRID,
+    config_dialog->grid = g_object_new(CTK_TYPE_GRID,
                                          "column-spacing", 5,
                                          "row-homogeneous", FALSE,
                                          "column-homogeneous", FALSE,
@@ -730,104 +730,104 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                          NULL);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->scale_header),
+                    CTK_WIDGET(config_dialog->scale_header),
                     0, 0, 2, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->multiplier_label),
+                    CTK_WIDGET(config_dialog->multiplier_label),
                     1, 1, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->multiplier_spinbutton),
+                    CTK_WIDGET(config_dialog->multiplier_spinbutton),
                     2, 1, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->offset_label),
+                    CTK_WIDGET(config_dialog->offset_label),
                     1, 2, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->offset_spinbutton),
+                    CTK_WIDGET(config_dialog->offset_spinbutton),
                     2, 2, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->limits_header),
+                    CTK_WIDGET(config_dialog->limits_header),
                     0, 3, 2, 1);
 
     /* now pack alarm widgets */
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->low_value_label),
+                    CTK_WIDGET(config_dialog->low_value_label),
                     1, 4, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->low_value_spinbutton),
+                    CTK_WIDGET(config_dialog->low_value_spinbutton),
                     2, 4, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->high_value_label),
+                    CTK_WIDGET(config_dialog->high_value_label),
                     1, 5, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->high_value_spinbutton),
+                    CTK_WIDGET(config_dialog->high_value_spinbutton),
                     2, 5, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_header),
+                    CTK_WIDGET(config_dialog->alarm_header),
                     0, 6, 2, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_enable_checkbutton),
+                    CTK_WIDGET(config_dialog->alarm_enable_checkbutton),
                     1, 7, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_timeout_label),
+                    CTK_WIDGET(config_dialog->alarm_timeout_label),
                     1, 8, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->alarm_timeout_spinbutton),
+                    CTK_WIDGET(config_dialog->alarm_timeout_spinbutton),
                     2, 8, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->low_alarm_command_label),
+                    CTK_WIDGET(config_dialog->low_alarm_command_label),
                     1, 9, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->low_alarm_command_entry),
+                    CTK_WIDGET(config_dialog->low_alarm_command_entry),
                     2, 9, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->high_alarm_command_label),
+                    CTK_WIDGET(config_dialog->high_alarm_command_label),
                     1, 10, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->high_alarm_command_entry),
+                    CTK_WIDGET(config_dialog->high_alarm_command_entry),
                     2, 10, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->icon_header),
+                    CTK_WIDGET(config_dialog->icon_header),
                     0, 11, 2, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->icon_type_label),
+                    CTK_WIDGET(config_dialog->icon_type_label),
                     1, 12, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->icon_type_combo_box),
+                    CTK_WIDGET(config_dialog->icon_type_combo_box),
                     2, 12, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->graph_header),
+                    CTK_WIDGET(config_dialog->graph_header),
                     0, 13, 2, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->graph_color_label),
+                    CTK_WIDGET(config_dialog->graph_color_label),
                     1, 14, 1, 1);
 
     ctk_grid_attach(config_dialog->grid,
-                    GTK_WIDGET(config_dialog->graph_color_button),
+                    CTK_WIDGET(config_dialog->graph_color_button),
                     2, 14, 1, 1);
 
     content_area = ctk_dialog_get_content_area (config_dialog->dialog);
-    ctk_box_pack_start(GTK_BOX(content_area), GTK_WIDGET(config_dialog->grid), FALSE, FALSE, 0);
-    ctk_widget_show_all(GTK_WIDGET(config_dialog->dialog));
+    ctk_box_pack_start(CTK_BOX(content_area), CTK_WIDGET(config_dialog->grid), FALSE, FALSE, 0);
+    ctk_widget_show_all(CTK_WIDGET(config_dialog->dialog));
 
 }
