@@ -242,7 +242,7 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
                                  DEFAULT_ICON_SIZE, DEFAULT_ICON_SIZE,
                                  0, 0,
                                  1.0, 1.0,
-                                 CDK_INTERP_BILINEAR,
+                                 GDK_INTERP_BILINEAR,
                                  255);
 
             g_object_unref(overlay_icon);
