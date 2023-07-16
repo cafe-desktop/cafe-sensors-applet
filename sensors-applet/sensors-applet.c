@@ -168,7 +168,7 @@ static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) 
     CtkTreePath *path;
     gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
     IconType icon_type;
-    CdkPixbuf *new_icon;
+    GdkPixbuf *new_icon;
     gboolean enabled;
     SensorsApplet *sensors_applet;
     DisplayMode display_mode;
@@ -792,9 +792,9 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 }
 
 /* must unref when done with returned pixbuf */
-CdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
+GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
     CtkIconTheme *icon_theme;
-    CdkPixbuf *icon = NULL;
+    GdkPixbuf *icon = NULL;
     GError *error = NULL;
 
     /* try to load the icon */
@@ -858,7 +858,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     gchar *sensor_id;
     gchar *sensor_path;
     SensorType sensor_type;
-    CdkPixbuf *icon;
+    GdkPixbuf *icon;
     CtkTreePath *tree_path;
 
     g_assert(sensors_applet);

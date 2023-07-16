@@ -169,7 +169,7 @@ gdouble sensors_applet_convert_temperature(gdouble value,
 void sensors_applet_notify_end(ActiveSensor *active_sensor, NotifType notif_type);
 void sensors_applet_notify_end_all(SensorsApplet *sensors_applet);
 void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType notif_type);
-CdkPixbuf *sensors_applet_load_icon(IconType icon_type);
+GdkPixbuf *sensors_applet_load_icon(IconType icon_type);
 void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet);
 
 typedef void SensorsInterfaceTestSensorFunc(SensorsApplet *sensors_applet, const gchar *path);
