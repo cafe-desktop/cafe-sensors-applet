@@ -22,7 +22,7 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "about-dialog.h"
 
 void about_dialog_open(SensorsApplet *sensors_applet) {
@@ -33,7 +33,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
     };
 
     /* Construct the about dialog */
-    gtk_show_about_dialog(NULL,
+    ctk_show_about_dialog(NULL,
                   "icon-name", "cafe-sensors-applet",
                   "program-name", PACKAGE_NAME,
                   "version", PACKAGE_VERSION,
