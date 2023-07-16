@@ -227,17 +227,17 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
     }
 
     /* load base icon */
-    new_icon = gdk_pixbuf_copy(base_icon);
+    new_icon = cdk_pixbuf_copy(base_icon);
 
     /* only load overlay if required */
     if (overlay_icon_filename) {
-        overlay_icon = gdk_pixbuf_new_from_file_at_size(overlay_icon_filename,
+        overlay_icon = cdk_pixbuf_new_from_file_at_size(overlay_icon_filename,
                                 DEFAULT_ICON_SIZE,
                                 DEFAULT_ICON_SIZE,
                                 NULL);
 
         if (overlay_icon) {
-            gdk_pixbuf_composite(overlay_icon, new_icon,
+            cdk_pixbuf_composite(overlay_icon, new_icon,
                                  0, 0,
                                  DEFAULT_ICON_SIZE, DEFAULT_ICON_SIZE,
                                  0, 0,
@@ -660,7 +660,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
             /* do graph if needed */
             if (display_mode == DISPLAY_GRAPH) {
                 /* update graph color in case has changed */
-                gdk_rgba_parse(&(active_sensor->graph_color), graph_color);
+                cdk_rgba_parse(&(active_sensor->graph_color), graph_color);
 
                 ctk_widget_queue_draw (active_sensor->graph);
                 if (tooltip) {

@@ -421,7 +421,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
                                NULL);
     g_free(header_text);
 
-    gdk_rgba_parse(&graph_color, graph_color_string);
+    cdk_rgba_parse(&graph_color, graph_color_string);
     config_dialog->graph_color_button = CTK_COLOR_BUTTON(ctk_color_button_new_with_rgba(&graph_color));
     ctk_widget_set_halign (CTK_WIDGET(config_dialog->graph_color_button), CTK_ALIGN_START);
     ctk_widget_set_valign (CTK_WIDGET(config_dialog->graph_color_button), CTK_ALIGN_START);
