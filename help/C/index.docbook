@@ -4,7 +4,7 @@
   <!ENTITY appletversion "1.10">
   <!ENTITY manrevision "2.1">
   <!ENTITY date "January 2006">
-  <!ENTITY applet "MATE Sensors Applet">
+  <!ENTITY applet "CAFE Sensors Applet">
   <!ENTITY author-name "Alex Murray">
   <!ENTITY author-email "murray.alex@gmail.com">
   <!ENTITY project-webpage "https://github.com/cafe-desktop/cafe-sensors-applet/">
@@ -17,7 +17,7 @@
 ]>
 <!-- 
       (Do not remove this comment block.)
-  Maintained by the MATE Documentation Project
+  Maintained by the CAFE Documentation Project
   https://cafe-desktop.org/development/
   Template version: 2.0 beta
   Template last modified Feb 06, 2003
@@ -30,7 +30,7 @@
     <title>&applet; Manual V&manrevision;</title>
     <copyright> 
       <year>2015-2020</year> 
-      <holder>MATE Documentation Team</holder>
+      <holder>CAFE Documentation Team</holder>
     </copyright>
     <copyright> 
       <year>2006</year> 
@@ -53,7 +53,7 @@
     not specified, the publisher/author is the same for all versions of the 
     document.
     <publisher> 
-    <publishername> MATE Documentation Project </publishername> 
+    <publishername> CAFE Documentation Project </publishername> 
   </publisher> 
     -->
 
@@ -61,9 +61,9 @@
 
     <authorgroup> 
       <author role="maintainer"> 
-	<surname>MATE Development</surname> 
+	<surname>CAFE Development</surname> 
 	<affiliation> 
-	  <!-- <orgname>MATE Documentation
+	  <!-- <orgname>CAFE Documentation
 	  Project</orgname> -->
 	  <!-- The email address of the author is optional and is commented out by default. 
 	  <address> <email>doc-writer2@cafe.org</email> </address> 
@@ -74,7 +74,7 @@
 	<firstname>Alex</firstname> 
 	<surname>Murray</surname> 
 	<affiliation> 
-	  <!-- <orgname>MATE Documentation
+	  <!-- <orgname>CAFE Documentation
 	  Project</orgname> -->
 	  <!-- The email address of the author is optional and is commented out by default. 
 	  <address> <email>doc-writer2@cafe.org</email> </address> 
@@ -99,11 +99,11 @@
     <!-- Remember to remove the &manrevision; entity from the revision entries other
     -->
     <!-- than the current revision. -->
-    <!-- The revision numbering system for MATE manuals is as follows: -->
+    <!-- The revision numbering system for CAFE manuals is as follows: -->
     <!-- * the revision number consists of two components -->
-    <!-- * the first component of the revision number reflects the release version of the MATE desktop. -->
+    <!-- * the first component of the revision number reflects the release version of the CAFE desktop. -->
     <!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
-    <!-- For example, if the MATE desktop release is V2.x, the first version of the manual that -->
+    <!-- For example, if the CAFE desktop release is V2.x, the first version of the manual that -->
     <!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
     <!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
     <!-- to V3.0, and so on. -->  
@@ -116,7 +116,7 @@
 
 	    <email>&author-email;</email>
 	  </para> 
-	  <!-- <para role="publisher">MATE Documentation Project</para> -->
+	  <!-- <para role="publisher">CAFE Documentation Project</para> -->
 	</revdescription> 
       </revision> 
     </revhistory> 
@@ -126,7 +126,7 @@
       <title>Feedback</title>
       <para>To report a bug or make a suggestion regarding &applet;
       or this manual, follow the directions in the
-      <ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback
+      <ulink url="help:cafe-user-guide/feedback" type="help">CAFE Feedback
       Page</ulink>.</para>
 
 <!-- Translators may also add here feedback address for translations -->
@@ -535,7 +535,7 @@ Alarms for individual sensors must also be enabled.
 		      <para>You can play a sound when the alarm occurs
 			by using the command
 			<command>esdplay</command> which should be
-			available as part of the standard MATE
+			available as part of the standard CAFE
 			installation. (Note: If this does not work,
 			you could also try <command>aplay</command>
 			which is the default ALSA sound player).
@@ -677,7 +677,7 @@ Alarms for individual sensors must also be enabled.
 
 </article> 
 <!-- OVERRIDE DICTIONARY SETTING SO THAT USE AMERICAN ENGLISH STYLE - -->
-<!-- FROM MATE HIG -->
+<!-- FROM CAFE HIG -->
 <!-- Local IspellDict: english -->
 <!-- LocalWords: hddtemp filesystem proc lm README Inspiron windtunnel -->
 <!-- LocalWords: ibm ACPI sysfs PowerPC adt Omnibook NVIDIA -->

@@ -23,13 +23,13 @@ msgstr "Abuyop"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
-msgid "MATE Sensors Applet Manual V2.1"
-msgstr "Panduan Aplet Penderia MATE V2.1"
+msgid "CAFE Sensors Applet Manual V2.1"
+msgstr "Panduan Aplet Penderia CAFE V2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015-2020</year> <holder>Pasukan Pendokumenan MATE</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Team</holder>"
+msgstr "<year>2015-2020</year> <holder>Pasukan Pendokumenan CAFE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -39,16 +39,16 @@ msgstr "<year>2006</year> <holder>Alex Murray</holder>"
 #. (itstool) path: abstract/para
 #: C/index.docbook:40
 msgid ""
-"MATE Sensors Applet displays readings from temperature, voltage and fan "
+"CAFE Sensors Applet displays readings from temperature, voltage and fan "
 "sensors within the panel."
 msgstr ""
-"Aplet Penderia MATE memaparkan bacaan dari penderia suhu, voltan dan kipas "
+"Aplet Penderia CAFE memaparkan bacaan dari penderia suhu, voltan dan kipas "
 "dari dalam panel"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:63
-msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
-msgstr "<surname>Pembangunan MATE</surname> <affiliation> </affiliation>"
+msgid "<surname>CAFE Development</surname> <affiliation> </affiliation>"
+msgstr "<surname>Pembangunan CAFE</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
@@ -67,16 +67,16 @@ msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
 msgid ""
-"<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
+"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Panduan Aplet Penderia MATE V2.1</revnumber> <date>Januari "
+"<revnumber>Panduan Aplet Penderia CAFE V2.1</revnumber> <date>Januari "
 "2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:123
-msgid "This manual describes version 1.10 of MATE Sensors Applet."
-msgstr "Panduan ini menerangkan versi 1.10 bagi Apley Penderia MATE."
+msgid "This manual describes version 1.10 of CAFE Sensors Applet."
+msgstr "Panduan ini menerangkan versi 1.10 bagi Apley Penderia CAFE."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:126
@@ -86,18 +86,18 @@ msgstr "Maklumbalas"
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:127
 msgid ""
-"To report a bug or make a suggestion regarding MATE Sensors Applet or this "
+"To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
 "manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
-"Untuk melaporkan pepijat atau membuat saranan berkenaan aplet Penderia MATE "
+"Untuk melaporkan pepijat atau membuat saranan berkenaan aplet Penderia CAFE "
 "atau panduan ini, ikuti arahan di dalam <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">Halaman Maklumbalas MATE</ulink>."
+"guide/feedback\" type=\"help\">Halaman Maklumbalas CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:135
-msgid "<primary>MATE Sensors Applet</primary>"
-msgstr "<primary>Aplet Penderia MATE</primary>"
+msgid "<primary>CAFE Sensors Applet</primary>"
+msgstr "<primary>Aplet Penderia CAFE</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:141
@@ -106,8 +106,8 @@ msgstr "Pengenalan"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:144
-msgid "MATE Sensors Applet"
-msgstr "Aplet Penderia MATE"
+msgid "CAFE Sensors Applet"
+msgstr "Aplet Penderia CAFE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -127,20 +127,20 @@ msgstr ""
 #: C/index.docbook:146
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>CAFE Sensors Applet "
 "with 3 sensors enabled.</phrase> </textobject>"
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Aplet Penderia MATE "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Aplet Penderia CAFE "
 "dengan 3 penderia dibenarkan.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:157
 msgid ""
-"<application>MATE Sensors Applet</application> provides a convenient way to "
+"<application>CAFE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
 msgstr ""
-"<application>Aplet Penderia MATE</application> menyediakan satu cara mudah "
+"<application>Aplet Penderia CAFE</application> menyediakan satu cara mudah "
 "untuk memantau kesihatan komputer anda dalam bentuk paparan ringkas di atas "
 "dekstop anda."
 
@@ -252,20 +252,20 @@ msgstr ""
 #: C/index.docbook:162
 msgid ""
 "A number of sensor interfaces are supported, which should be configured "
-"before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
+"before adding CAFE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
 "Sebilangan antaramuka penderia disokong, yang patut dikonfigur sebelum "
-"menambah aplet Penderia MATE ke dalam panel: <_:itemizedlist-1/>"
+"menambah aplet Penderia CAFE ke dalam panel: <_:itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:236
 msgid ""
-"To add <application>MATE Sensors Applet</application> to a panel right-click"
+"To add <application>CAFE Sensors Applet</application> to a panel right-click"
 " on the panel to open the panel pop-up menu, then choose <menuchoice> "
 "<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
 "Monitor</guimenuitem> </menuchoice>."
 msgstr ""
-"Untuk menambah <application>Aplet Penderia MATE</application> ke dalam panel"
+"Untuk menambah <application>Aplet Penderia CAFE</application> ke dalam panel"
 " klik-kanan pada panel untuk membuka menu timbul panel, kemudian pilih "
 "<menuchoice><guimenu>Tambah ke Panel</guimenu><guimenuitem>Pemantau Penderia"
 " Perkakasan</guimenuitem></menuchoice>."
@@ -278,12 +278,12 @@ msgstr "Penggunaan"
 #. (itstool) path: sect1/para
 #: C/index.docbook:248
 msgid ""
-"When you add <application>MATE Sensors Applet</application> to a panel for "
+"When you add <application>CAFE Sensors Applet</application> to a panel for "
 "the first time, the applet will search for any available sensors to monitor,"
 " and will display a sensible default sensor if found (such as the "
 "temperature of the CPU)."
 msgstr ""
-"Bila anda menambah <application>Aplet Penderia MATE</application> ke dalam "
+"Bila anda menambah <application>Aplet Penderia CAFE</application> ke dalam "
 "panel buat kali pertama, aplet akan menggelintar mana-mana penderia yang ada"
 " untuk dipantau, dan akan paparkan satu penderia lalai yang nyata jika "
 "ditemui (seperti suhu CPU)."
@@ -309,12 +309,12 @@ msgstr "Keutamaan"
 #. (itstool) path: sect1/para
 #: C/index.docbook:263
 msgid ""
-"To configure <application>MATE Sensors Applet</application>, right-click on "
+"To configure <application>CAFE Sensors Applet</application>, right-click on "
 "the applet, then choose "
 "<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
 "pop-up menu."
 msgstr ""
-"Untuk konfigur <application>Aplet Penderia MATE</application>, klik-kanan "
+"Untuk konfigur <application>Aplet Penderia CAFE</application>, klik-kanan "
 "pada aplet, kemudian pilih "
 "<menuchoice><guimenuitem>Keutamaan</guimenuitem></menuchoice> dari menu "
 "timbul."
@@ -453,10 +453,10 @@ msgstr "<guilabel>Papar emberitahuan</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:357
 msgid ""
-"If enabled, MATE Sensors Applet will display notifications to the user when "
+"If enabled, CAFE Sensors Applet will display notifications to the user when "
 "alarm conditions occur."
 msgstr ""
-"Jika dibenarkan, Aplet Penderia MATE akan papar pemberitahuan kepada "
+"Jika dibenarkan, Aplet Penderia CAFE akan papar pemberitahuan kepada "
 "pengguna ketika syarat penggera berlaku."
 
 #. (itstool) path: listitem/para
@@ -734,13 +734,13 @@ msgstr ""
 msgid ""
 "You can play a sound when the alarm occurs by using the command "
 "<command>esdplay</command> which should be available as part of the standard"
-" MATE installation. (Note: If this does not work, you could also try "
+" CAFE installation. (Note: If this does not work, you could also try "
 "<command>aplay</command> which is the default ALSA sound player). "
 "<_:screen-1/>"
 msgstr ""
 "Anda boleh mainkan bunyi ketika penggera berlaku dengan perintah "
 "<command>esdplay</command> yang sepatutnya tersedia sebagai sebahagian dari "
-"pemasangan piawai MATE. (Perhatian: Jika tidak berfungsi, anda juga boleh "
+"pemasangan piawai CAFE. (Perhatian: Jika tidak berfungsi, anda juga boleh "
 "cuba <command>aplay</command> iaitu pemain bunyai lalai ALSA). <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
@@ -842,35 +842,35 @@ msgstr ""
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:644
-msgid "About MATE Sensors Applet"
-msgstr "Perihal Aplet Penderia MATE"
+msgid "About CAFE Sensors Applet"
+msgstr "Perihal Aplet Penderia CAFE"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
 msgid ""
 "The origin sensor applet was written by Alex Murray "
-"(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
+"(<email>murray.alex@gmail.com</email>). <application>CAFE Sensors "
 "Applet</application> is further develop by Mate dev team. To find more "
-"information about <application>MATE Sensors Applet</application>, please "
+"information about <application>CAFE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-"
-"applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
+"applet/\" type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 "Aplet penderia asal telah ditulis oleh Alex Murray "
 "(<email>murray.alex@gmail.com</email>). <application>Aplet Penderia "
-"MATE</application> kemudian dibangunkan oleh pasukan pembangunan Mate. "
-"Maklumat lanjut berkenaan <application>Aplet Penderia MATE</application>, "
+"CAFE</application> kemudian dibangunkan oleh pasukan pembangunan Mate. "
+"Maklumat lanjut berkenaan <application>Aplet Penderia CAFE</application>, "
 "boleh diperolehi di <ulink url=\"https://github.com/cafe-desktop/cafe-"
 "sensors-applet/\" type=\"http\">Laman Sesawang Projek Aplet Penderia "
-"MATE</ulink>."
+"CAFE</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
 msgid ""
-"To report a bug or make a suggestion regarding MATE Sensors Applet or this "
+"To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
 "manual, follow the directions at the <ulink url=\"https://github.com/cafe-"
 "desktop/cafe-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
-"Untuk melaporkan pepijat atau membuat saranan berkenaan Aplet Penderia MATE "
+"Untuk melaporkan pepijat atau membuat saranan berkenaan Aplet Penderia CAFE "
 "atau panduan ini, ikuti arahan di dalam <ulink url=\"https://github.com"
 "/cafe-desktop/cafe-sensors-applet/\" type=\"http\">Laman sesawang "
 "projek</ulink>."
@@ -916,12 +916,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Panduan ini adalah sebahagian dari koleksi panduan MATE yang diedar bawah "
+"Panduan ini adalah sebahagian dari koleksi panduan CAFE yang diedar bawah "
 "GFDL. Jika anda mahu edar panduan ini secara berasingan dari koleksi "
 "asalnya, anda boleh membuat sedemikian dengan menambah satu salinan lesen ke"
 " dalam panduan sepertimana yang dijelaskan dalam seksyen 6 lesen tersebut."
@@ -930,14 +930,14 @@ msgstr ""
 #: C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Kebanyakan nama digunakan oleh syarikat untuk membezakan produk dan "
 "perkhidmatan mereka dituntut sebagai tanda dagangan. Jika nama tersebut ada "
-"di dalam dokumentasi MATE, dan ahli-ahli Projek Dokumentasi MATE sedar akan "
+"di dalam dokumentasi CAFE, dan ahli-ahli Projek Dokumentasi CAFE sedar akan "
 "tanda dagangan tersebut, kerana nama-nama tersebut telah di huruf besarkan "
 "atau huruf awalnya telah dihuruf besarkan."
 
