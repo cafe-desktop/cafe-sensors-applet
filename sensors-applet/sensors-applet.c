@@ -124,8 +124,8 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
     return;
 }
 
-static void change_orient_cb (MatePanelApplet *applet,
-                              MatePanelAppletOrient orient,
+static void change_orient_cb (CafePanelApplet *applet,
+                              CafePanelAppletOrient orient,
                               gpointer data) {
 
     SensorsApplet *sensors_applet;
@@ -134,12 +134,12 @@ static void change_orient_cb (MatePanelApplet *applet,
     sensors_applet_display_layout_changed(sensors_applet);
 }
 
-static void size_allocate_cb(MatePanelApplet *applet,
+static void size_allocate_cb(CafePanelApplet *applet,
                              GtkAllocation *allocation,
                              gpointer data) {
 
     SensorsApplet *sensors_applet;
-    MatePanelAppletOrient orient;
+    CafePanelAppletOrient orient;
 
     sensors_applet = (SensorsApplet *)data;
     orient = cafe_panel_applet_get_orient(sensors_applet->applet);

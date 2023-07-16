@@ -24,7 +24,7 @@
 #include <string.h>
 #include "sensors-applet.h"
 
-static gboolean sensors_applet_fill(MatePanelApplet *applet,
+static gboolean sensors_applet_fill(CafePanelApplet *applet,
                                     const gchar *iid,
                                     gpointer data) {
 
