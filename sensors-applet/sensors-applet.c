@@ -56,7 +56,7 @@ static GVariantBuilder gvb_sensors_hash_list;
 
 
 /* callbacks for panel menu */
-static void prefs_cb(GtkAction *action, gpointer *data) {
+static void prefs_cb(CtkAction *action, gpointer *data) {
 
     SensorsApplet *sensors_applet;
     sensors_applet = (SensorsApplet *)data;
@@ -68,14 +68,14 @@ static void prefs_cb(GtkAction *action, gpointer *data) {
     prefs_dialog_open(sensors_applet);
 }
 
-static void about_cb(GtkAction *action, gpointer data) {
+static void about_cb(CtkAction *action, gpointer data) {
     SensorsApplet *sensors_applet;
     sensors_applet = (SensorsApplet *)data;
 
     about_dialog_open(sensors_applet);
 }
 
-static void help_cb(GtkAction *action, gpointer data) {
+static void help_cb(CtkAction *action, gpointer data) {
 
     GError *error = NULL;
 
@@ -90,7 +90,7 @@ static void help_cb(GtkAction *action, gpointer data) {
     }
 }
 
-static void destroy_cb(GtkWidget *widget, gpointer data) {
+static void destroy_cb(CtkWidget *widget, gpointer data) {
     SensorsApplet *sensors_applet;
     sensors_applet = (SensorsApplet *)data;
 
@@ -135,7 +135,7 @@ static void change_orient_cb (CafePanelApplet *applet,
 }
 
 static void size_allocate_cb(CafePanelApplet *applet,
-                             GtkAllocation *allocation,
+                             CtkAllocation *allocation,
                              gpointer data) {
 
     SensorsApplet *sensors_applet;
@@ -161,11 +161,11 @@ static void size_allocate_cb(CafePanelApplet *applet,
     sensors_applet_display_layout_changed(sensors_applet);
 }
 
-static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) {
+static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) {
 
     /* update all icons in the sensors tree and update all active sensors */
-    GtkTreeIter interfaces_iter, sensors_iter;
-    GtkTreePath *path;
+    CtkTreeIter interfaces_iter, sensors_iter;
+    CtkTreePath *path;
     gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
     IconType icon_type;
     GdkPixbuf *new_icon;
@@ -219,7 +219,7 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
 
 }
 
-static gboolean mouse_enter_cb(GtkWidget *widget, GdkEventCrossing *event, gpointer data)
+static gboolean mouse_enter_cb(CtkWidget *widget, GdkEventCrossing *event, gpointer data)
 {
     SensorsApplet *sensor_applet = data;
     sensor_applet->show_tooltip = TRUE;
@@ -227,14 +227,14 @@ static gboolean mouse_enter_cb(GtkWidget *widget, GdkEventCrossing *event, gpoin
     return TRUE;
 }
 
-static gboolean mouse_leave_cb(GtkWidget *widget, GdkEventCrossing *event, gpointer data)
+static gboolean mouse_leave_cb(CtkWidget *widget, GdkEventCrossing *event, gpointer data)
 {
     SensorsApplet *sensor_applet = data;
     sensor_applet->show_tooltip = FALSE;
     return TRUE;
 }
 
-static const GtkActionEntry sensors_applet_menu_actions[] = {
+static const CtkActionEntry sensors_applet_menu_actions[] = {
     { "Preferences", "document-properties", N_("_Preferences"),
         NULL, NULL,
         G_CALLBACK(prefs_cb) },
@@ -264,8 +264,8 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
     gchar *sensor_path;
     SensorType sensor_type;
     TemperatureScale temp_scale;
-    GtkTreeIter iter;
-    GtkTreePath *path;
+    CtkTreeIter iter;
+    CtkTreePath *path;
     const gchar *unit_type = NULL;
     const gchar *unit_type_title = NULL;
     const gchar *relation = NULL;
@@ -428,9 +428,9 @@ void sensors_applet_notify_end_all(SensorsApplet *sensors_applet) {
 /* should be called as a g_container_foreach at the start of
  * pack_display if the grid already exists to remove but keep alive
  * all children of the grid before repacking it */
-static void sensors_applet_pack_display_empty_grid_cb(GtkWidget *widget, gpointer data)
+static void sensors_applet_pack_display_empty_grid_cb(CtkWidget *widget, gpointer data)
 {
-    GtkContainer *container;
+    CtkContainer *container;
 
     container = CTK_CONTAINER(data);
 
@@ -443,7 +443,7 @@ static void sensors_applet_pack_display_empty_grid_cb(GtkWidget *widget, gpointe
  * pack_display to unref any of the old children that we have readdded
  * to the table to stop reference creep from the g_object_ref called
  * on each child at the start of pack labels */
-static void sensors_applet_pack_display_cleanup_refs_cb(GtkWidget *widget, gpointer data) {
+static void sensors_applet_pack_display_cleanup_refs_cb(CtkWidget *widget, gpointer data) {
 
     GList *old_children;
 
@@ -456,7 +456,7 @@ static void sensors_applet_pack_display_cleanup_refs_cb(GtkWidget *widget, gpoin
 static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     /* note the if () around each widget is to ensure we only
      * operate on those that actually exist */
-    GtkLabel *no_sensors_enabled_label = NULL;
+    CtkLabel *no_sensors_enabled_label = NULL;
     gint num_active_sensors = 0, num_sensors_per_group, rows, cols, i, j;
     GList *old_grid_children = NULL;
 
@@ -469,7 +469,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     gint label_width, icon_width, value_width;
     gint label_height, icon_height, value_height;
 
-    GtkRequisition req;
+    CtkRequisition req;
 
     ActiveSensor *first_sensor;
 
@@ -494,7 +494,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
              * existing version of no sensors label - okay
              * to just add again though if destroy first */
             g_debug("destroying any existing widgets in container");
-            ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid), (GtkCallback)ctk_widget_destroy, NULL);
+            ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid), (CtkCallback)ctk_widget_destroy, NULL);
         }
         g_debug("packing no sensors enabled label");
         ctk_grid_attach(CTK_GRID(sensors_applet->grid),
@@ -793,7 +793,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 
 /* must unref when done with returned pixbuf */
 GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
-    GtkIconTheme *icon_theme;
+    CtkIconTheme *icon_theme;
     GdkPixbuf *icon = NULL;
     GError *error = NULL;
 
@@ -849,7 +849,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
                                    IconType icon_type,
                                    const gchar *graph_color) {
 
-    GtkTreeIter interfaces_iter, sensors_iter;
+    CtkTreeIter interfaces_iter, sensors_iter;
     gboolean not_empty_tree;
 
     gchar *node_interface;
@@ -859,7 +859,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     gchar *sensor_path;
     SensorType sensor_type;
     GdkPixbuf *icon;
-    GtkTreePath *tree_path;
+    CtkTreePath *tree_path;
 
     g_assert(sensors_applet);
 
@@ -1040,8 +1040,8 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     return TRUE;
 }
 
-static ActiveSensor *sensors_applet_find_active_sensor(SensorsApplet *sensors_applet, GtkTreePath *path) {
-    GtkTreePath *sensor_tree_path;
+static ActiveSensor *sensors_applet_find_active_sensor(SensorsApplet *sensors_applet, CtkTreePath *path) {
+    CtkTreePath *sensor_tree_path;
     GList *current_sensor;
 
     for (current_sensor = sensors_applet->active_sensors; current_sensor != NULL; current_sensor = g_list_next(current_sensor)) {
@@ -1071,7 +1071,7 @@ void sensors_applet_display_layout_changed(SensorsApplet *sensors_applet) {
 }
 
 void sensors_applet_alarm_off(SensorsApplet *sensors_applet,
-                              GtkTreePath *path,
+                              CtkTreePath *path,
                               NotifType notif_type) {
     ActiveSensor *active_sensor;
 
@@ -1080,12 +1080,12 @@ void sensors_applet_alarm_off(SensorsApplet *sensors_applet,
     }
 }
 
-void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet, GtkTreePath *path) {
+void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet, CtkTreePath *path) {
     sensors_applet_alarm_off(sensors_applet, path, LOW_ALARM);
     sensors_applet_alarm_off(sensors_applet, path, HIGH_ALARM);
 }
 
-void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, GtkTreePath *path) {
+void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, CtkTreePath *path) {
     ActiveSensor *active_sensor;
 
     g_assert(sensors_applet);
@@ -1108,7 +1108,7 @@ void sensors_applet_reorder_sensors(SensorsApplet *sensors_applet) {
     sensors_applet_pack_display(sensors_applet);
 }
 
-void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, GtkTreePath *path) {
+void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, CtkTreePath *path) {
 
     ActiveSensor *active_sensor;
 
@@ -1127,7 +1127,7 @@ void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, GtkTreePath *
     }
 }
 
-void sensors_applet_update_sensor(SensorsApplet *sensors_applet, GtkTreePath *path) {
+void sensors_applet_update_sensor(SensorsApplet *sensors_applet, CtkTreePath *path) {
     ActiveSensor *active_sensor;
 
     g_assert(sensors_applet);
@@ -1138,7 +1138,7 @@ void sensors_applet_update_sensor(SensorsApplet *sensors_applet, GtkTreePath *pa
     }
 }
 
-void sensors_applet_icon_changed(SensorsApplet *sensors_applet, GtkTreePath *path) {
+void sensors_applet_icon_changed(SensorsApplet *sensors_applet, CtkTreePath *path) {
     ActiveSensor *active_sensor;
 
     g_assert(sensors_applet);
@@ -1239,7 +1239,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     g_assert(sensors_applet);
     g_assert(sensors_applet->applet);
 
-    GtkActionGroup *action_group;
+    CtkActionGroup *action_group;
     gchar *ui_path;
 
     /* Have our background automatically painted. */
@@ -1284,7 +1284,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
 
     /* should have created sensors tree above, but if have not was because we couldn't find any sensors */
     if (NULL == sensors_applet->sensors) {
-        GtkWidget *label;
+        CtkWidget *label;
         label = ctk_label_new(_("No sensors found!"));
         ctk_container_add(CTK_CONTAINER(sensors_applet->applet), label);
         ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));

@@ -27,38 +27,38 @@
 
 typedef struct {
     SensorsApplet *sensors_applet;
-    GtkDialog *dialog;
-    GtkNotebook *notebook;
+    CtkDialog *dialog;
+    CtkNotebook *notebook;
 
     /* widgets for global prefs */
-    GtkSpinButton *timeout_spinbutton, *graph_size_spinbutton;
-    GtkGrid *globals_grid;
-    GtkHSeparator *globals_separator;
-    GtkComboBoxText *display_mode_combo_box, *layout_mode_combo_box, *temperature_scale_combo_box;
-    GtkLabel *timeout_label, *display_mode_label, *layout_mode_label, *temperature_scale_label, *graph_size_label, *update_header, *display_header;
-    GtkAdjustment *timeout_adjust, *graph_size_adjust;
-    GtkWidget *show_units;
+    CtkSpinButton *timeout_spinbutton, *graph_size_spinbutton;
+    CtkGrid *globals_grid;
+    CtkHSeparator *globals_separator;
+    CtkComboBoxText *display_mode_combo_box, *layout_mode_combo_box, *temperature_scale_combo_box;
+    CtkLabel *timeout_label, *display_mode_label, *layout_mode_label, *temperature_scale_label, *graph_size_label, *update_header, *display_header;
+    CtkAdjustment *timeout_adjust, *graph_size_adjust;
+    CtkWidget *show_units;
 
 #ifdef HAVE_LIBNOTIFY
-    GtkCheckButton *display_notifications;
-    GtkLabel *notifications_header;
+    CtkCheckButton *display_notifications;
+    CtkLabel *notifications_header;
 #endif
 
     /* widgets for sensors tree */
-    GtkTreeView *view;
-    GtkTreeViewColumn *id_column, *label_column, *enable_column, *icon_column;
-    GtkCellRenderer *id_renderer, *label_renderer, *enable_renderer, *icon_renderer;
-    GtkScrolledWindow *scrolled_window;
+    CtkTreeView *view;
+    CtkTreeViewColumn *id_column, *label_column, *enable_column, *icon_column;
+    CtkCellRenderer *id_renderer, *label_renderer, *enable_renderer, *icon_renderer;
+    CtkScrolledWindow *scrolled_window;
 
-    GtkButtonBox *buttons_box; /* holds sensor reorder buttons */
-    GtkBox *sensors_hbox; /* holds scrolled window and buttons_vbox */
-    GtkBox *sensors_vbox; /* holds sensors_hbox and sensor_config_hbox */
-    GtkBox *sensor_config_hbox; /* holds config button */
-    GtkSizeGroup *size_group; /* so comboboxes all request the same size */
+    CtkButtonBox *buttons_box; /* holds sensor reorder buttons */
+    CtkBox *sensors_hbox; /* holds scrolled window and buttons_vbox */
+    CtkBox *sensors_vbox; /* holds sensors_hbox and sensor_config_hbox */
+    CtkBox *sensor_config_hbox; /* holds config button */
+    CtkSizeGroup *size_group; /* so comboboxes all request the same size */
 
-    GtkButton *sensor_up_button;
-    GtkButton *sensor_down_button;
-    GtkButton *sensor_config_button;
+    CtkButton *sensor_up_button;
+    CtkButton *sensor_down_button;
+    CtkButton *sensor_config_button;
 } PrefsDialog;
 
 /* function prototypes */

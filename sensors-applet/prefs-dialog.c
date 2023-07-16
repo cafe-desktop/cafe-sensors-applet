@@ -50,7 +50,7 @@ void prefs_dialog_close(SensorsApplet *sensors_applet) {
 
 }
 
-void prefs_dialog_response(GtkDialog *prefs_dialog,
+void prefs_dialog_response(CtkDialog *prefs_dialog,
                            gint response,
                            gpointer data) {
 
@@ -86,9 +86,9 @@ void prefs_dialog_response(GtkDialog *prefs_dialog,
 }
 
 
-static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
-                                                         GtkTreePath *path,
-                                                         GtkTreeIter *iter,
+static gboolean prefs_dialog_convert_low_and_high_values(CtkTreeModel *model,
+                                                         CtkTreePath *path,
+                                                         CtkTreeIter *iter,
                                                          TemperatureScale scales[2]) {
 
     SensorType sensor_type;
@@ -121,7 +121,7 @@ static gboolean prefs_dialog_convert_low_and_high_values(GtkTreeModel *model,
 }
 
 
-static void prefs_dialog_timeout_changed(GtkSpinButton *button,
+static void prefs_dialog_timeout_changed(CtkSpinButton *button,
                                          PrefsDialog *prefs_dialog) {
 
     gint value;
@@ -129,7 +129,7 @@ static void prefs_dialog_timeout_changed(GtkSpinButton *button,
     g_settings_set_int (prefs_dialog->sensors_applet->settings, TIMEOUT, value);
 }
 
-static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_box,
+static void prefs_dialog_display_mode_changed(CtkComboBox *display_mode_combo_box,
                                               PrefsDialog *prefs_dialog) {
 
 
@@ -159,7 +159,7 @@ static void prefs_dialog_display_mode_changed(GtkComboBox *display_mode_combo_bo
     sensors_applet_display_layout_changed(prefs_dialog->sensors_applet);
 }
 
-static void prefs_dialog_layout_mode_changed(GtkComboBox *layout_mode_combo_box,
+static void prefs_dialog_layout_mode_changed(CtkComboBox *layout_mode_combo_box,
                                              PrefsDialog *prefs_dialog) {
 
     g_settings_set_int (prefs_dialog->sensors_applet->settings,
@@ -169,12 +169,12 @@ static void prefs_dialog_layout_mode_changed(GtkComboBox *layout_mode_combo_box,
     sensors_applet_display_layout_changed(prefs_dialog->sensors_applet);
 }
 
-static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scale_combo_box,
+static void prefs_dialog_temperature_scale_changed(CtkComboBox *temperature_scale_combo_box,
                                                    PrefsDialog *prefs_dialog) {
 
     /* get old temp scale value */
     TemperatureScale scales[2];
-    GtkTreeModel *model;
+    CtkTreeModel *model;
 
     scales[OLD_TEMP_SCALE] = (TemperatureScale) g_settings_get_int (prefs_dialog->sensors_applet->settings, TEMPERATURE_SCALE);
 
@@ -188,7 +188,7 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
      * the tree to either celcius or Fahrenheit */
     model = ctk_tree_view_get_model(prefs_dialog->view);
     ctk_tree_model_foreach(model,
-                           (GtkTreeModelForeachFunc)prefs_dialog_convert_low_and_high_values,
+                           (CtkTreeModelForeachFunc)prefs_dialog_convert_low_and_high_values,
                            scales);
 
     /* finally update display of active sensors */
@@ -196,7 +196,7 @@ static void prefs_dialog_temperature_scale_changed(GtkComboBox *temperature_scal
 }
 
 // hide/show units
-static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDialog *prefs_dialog) {
+static void prefs_dialog_show_units_toggled (CtkCheckButton *show_units, PrefsDialog *prefs_dialog) {
     gboolean state;
 
     state = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (show_units));
@@ -206,7 +206,7 @@ static void prefs_dialog_show_units_toggled (GtkCheckButton *show_units, PrefsDi
 
 
 #ifdef HAVE_LIBNOTIFY
-static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_notifications,
+static void prefs_dialog_display_notifications_toggled(CtkCheckButton *display_notifications,
                                                        PrefsDialog *prefs_dialog) {
 
     gboolean notify;
@@ -225,7 +225,7 @@ static void prefs_dialog_display_notifications_toggled(GtkCheckButton *display_n
 #endif
 
 
-static void prefs_dialog_graph_size_changed(GtkSpinButton *button,
+static void prefs_dialog_graph_size_changed(CtkSpinButton *button,
                                             PrefsDialog *prefs_dialog) {
 
     gint value;
@@ -238,9 +238,9 @@ static void prefs_dialog_graph_size_changed(GtkSpinButton *button,
 }
 
 /* callbacks for the tree of sensors */
-static void prefs_dialog_sensor_toggled(GtkCellRenderer *renderer, gchar *path_str, PrefsDialog *prefs_dialog) {
-    GtkTreeIter iter;
-    GtkTreePath *path;
+static void prefs_dialog_sensor_toggled(CtkCellRenderer *renderer, gchar *path_str, PrefsDialog *prefs_dialog) {
+    CtkTreeIter iter;
+    CtkTreePath *path;
 
     gboolean old_value;
 
@@ -265,9 +265,9 @@ static void prefs_dialog_sensor_toggled(GtkCellRenderer *renderer, gchar *path_s
     ctk_tree_path_free(path);
 }
 
-static void prefs_dialog_sensor_name_changed(GtkCellRenderer *renderer, gchar *path_str, gchar *new_text, PrefsDialog *prefs_dialog) {
-    GtkTreeIter iter;
-    GtkTreePath *path = ctk_tree_path_new_from_string(path_str);
+static void prefs_dialog_sensor_name_changed(CtkCellRenderer *renderer, gchar *path_str, gchar *new_text, PrefsDialog *prefs_dialog) {
+    CtkTreeIter iter;
+    CtkTreePath *path = ctk_tree_path_new_from_string(path_str);
 
     ctk_tree_model_get_iter(CTK_TREE_MODEL(prefs_dialog->sensors_applet->sensors), &iter, path);
 
@@ -277,11 +277,11 @@ static void prefs_dialog_sensor_name_changed(GtkCellRenderer *renderer, gchar *p
     ctk_tree_path_free(path);
 }
 
-static void prefs_dialog_row_activated(GtkTreeView *view, GtkTreePath *path, GtkTreeViewColumn *column, PrefsDialog *prefs_dialog) {
+static void prefs_dialog_row_activated(CtkTreeView *view, CtkTreePath *path, CtkTreeViewColumn *column, PrefsDialog *prefs_dialog) {
     /* only bring up dialog this if is a sensor - ie has no
      * children */
-    GtkTreeIter iter;
-    GtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model(view);
     /* make sure can set iter first */
@@ -290,17 +290,17 @@ static void prefs_dialog_row_activated(GtkTreeView *view, GtkTreePath *path, Gtk
     }
 }
 
-static void prefs_dialog_sensor_up_button_clicked(GtkButton *button, PrefsDialog *prefs_dialog) {
-    GtkTreeModel *model;
-    GtkTreeIter iter;
-    GtkTreePath *path;
+static void prefs_dialog_sensor_up_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
+    CtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreePath *path;
 
     if (ctk_tree_selection_get_selected(prefs_dialog->sensors_applet->selection, &model, &iter)) {
         /* if has no prev node set up button insentive */
         path = ctk_tree_model_get_path(model, &iter);
         if (ctk_tree_path_prev(path)) {
 
-            GtkTreeIter prev_iter;
+            CtkTreeIter prev_iter;
             /* check is a valid node in out model */
             if (ctk_tree_model_get_iter(model, &prev_iter, path)) {
 
@@ -318,10 +318,10 @@ static void prefs_dialog_sensor_up_button_clicked(GtkButton *button, PrefsDialog
     }
 }
 
-static void prefs_dialog_sensor_down_button_clicked(GtkButton *button, PrefsDialog *prefs_dialog) {
-    GtkTreeModel *model;
-    GtkTreeIter iter;
-    GtkTreeIter iter_next;
+static void prefs_dialog_sensor_down_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
+    CtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreeIter iter_next;
 
     if (ctk_tree_selection_get_selected(prefs_dialog->sensors_applet->selection, &model, &iter)) {
         iter_next = iter;
@@ -338,19 +338,19 @@ static void prefs_dialog_sensor_down_button_clicked(GtkButton *button, PrefsDial
     }
 }
 
-static void prefs_dialog_sensor_config_button_clicked(GtkButton *button, PrefsDialog *prefs_dialog) {
+static void prefs_dialog_sensor_config_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
     sensor_config_dialog_create(prefs_dialog->sensors_applet);
 }
 
 /* if a sensor is selected, make config sure button is able to be
  * clicked and also set the sensitivities properly for the up and down
  * buttons */
-static void prefs_dialog_selection_changed(GtkTreeSelection *selection,
+static void prefs_dialog_selection_changed(CtkTreeSelection *selection,
                                            PrefsDialog *prefs_dialog) {
 
-    GtkTreeIter iter;
-    GtkTreePath *path;
-    GtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreePath *path;
+    CtkTreeModel *model;
     /* if there is a selection with no children make config button sensitive */
     if (ctk_tree_selection_get_selected(selection, &model, &iter)) {
         if (!ctk_tree_model_iter_has_child(model, &iter)) {
@@ -363,7 +363,7 @@ static void prefs_dialog_selection_changed(GtkTreeSelection *selection,
         /* if has no prev node set up button insentive */
         path = ctk_tree_model_get_path(model, &iter);
         if (ctk_tree_path_prev(path)) {
-            GtkTreeIter prev_iter;
+            CtkTreeIter prev_iter;
             /* check is a valid node in out model */
             if (ctk_tree_model_get_iter(model, &prev_iter, path)) {
                 ctk_widget_set_sensitive(CTK_WIDGET(prefs_dialog->sensor_up_button), TRUE);
@@ -396,7 +396,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     gchar *header_text;
     PrefsDialog *prefs_dialog;
     DisplayMode display_mode;
-    GtkWidget *content_area;
+    CtkWidget *content_area;
 
     g_assert(sensors_applet->prefs_dialog == NULL);
 
@@ -452,8 +452,8 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
     /* if no SensorsList's have been created, this is because
        we haven't been able to access any sensors */
     if (sensors_applet->sensors == NULL) {
-        GtkWidget *label;
-        GtkWidget *content_area;
+        CtkWidget *label;
+        CtkWidget *content_area;
         label = ctk_label_new(_("No sensors found!"));
         content_area = ctk_dialog_get_content_area (prefs_dialog->dialog);
         ctk_box_pack_start (CTK_BOX(content_area), label, FALSE, FALSE, 0);
@@ -821,7 +821,7 @@ void prefs_dialog_open(SensorsApplet *sensors_applet) {
 
     ctk_container_add(CTK_CONTAINER(prefs_dialog->scrolled_window), CTK_WIDGET(prefs_dialog->view));
 
-    /* GtkTree Selection */
+    /* CtkTree Selection */
     sensors_applet->selection = ctk_tree_view_get_selection(prefs_dialog->view);
     /* allow user to only select one row at a time at most */
     ctk_tree_selection_set_mode(sensors_applet->selection, CTK_SELECTION_SINGLE);

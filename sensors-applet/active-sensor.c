@@ -135,9 +135,9 @@ static void active_sensor_all_alarms_off(ActiveSensor *active_sensor) {
 static void active_sensor_alarm_on(ActiveSensor *active_sensor,
                                    NotifType notif_type) {
 
-    GtkTreeModel *model;
-    GtkTreePath *tree_path;
-    GtkTreeIter iter;
+    CtkTreeModel *model;
+    CtkTreePath *tree_path;
+    CtkTreeIter iter;
 
     g_assert(active_sensor);
 
@@ -190,7 +190,7 @@ static void active_sensor_alarm_on(ActiveSensor *active_sensor,
  * 0 if refer to same row, 1 if b comes before a
  */
 gint active_sensor_compare(ActiveSensor *a, ActiveSensor *b) {
-    GtkTreePath *a_tree_path, *b_tree_path;
+    CtkTreePath *a_tree_path, *b_tree_path;
     gint ret_val;
 
     g_assert(a);
@@ -256,7 +256,7 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
 }
 
 static void active_sensor_update_graph(ActiveSensor *as, cairo_t *cr) {
-    GtkAllocation allocation;
+    CtkAllocation allocation;
     gdouble line_height;
     gdouble width, height;
     gdouble x, y;
@@ -342,7 +342,7 @@ void active_sensor_destroy(ActiveSensor *active_sensor) {
     g_free(active_sensor);
 }
 
-gboolean graph_draw_cb(GtkWidget *graph,
+gboolean graph_draw_cb(CtkWidget *graph,
                        cairo_t *cr,
                        gpointer data) {
 
@@ -403,7 +403,7 @@ void active_sensor_update_graph_dimensions(ActiveSensor *as,
 }
 
 ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
-                                GtkTreeRowReference *sensor_row) {
+                                CtkTreeRowReference *sensor_row) {
 
     ActiveSensor *active_sensor;
     CafePanelAppletOrient orient;
@@ -479,9 +479,9 @@ static void active_sensor_update_sensor_value(ActiveSensor *as,
 void active_sensor_update(ActiveSensor *active_sensor,
                           SensorsApplet *sensors_applet) {
 
-    GtkTreeModel *model;
-    GtkTreeIter iter;
-    GtkTreePath *path;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreePath *path;
 
     /* instance data from the tree for this sensor */
     gchar *sensor_path = NULL;
@@ -500,7 +500,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
     gchar *graph_color;
     gint label_min_width;
     gint label_width;
-    GtkRequisition  req;
+    CtkRequisition  req;
 
     /* to build the list of labels as we go */
     gchar *value_text = NULL;
@@ -769,14 +769,14 @@ void active_sensor_update(ActiveSensor *active_sensor,
 
 }
 
-/* to be called when the icon within the GtkRowReference that this
+/* to be called when the icon within the CtkRowReference that this
  * sensor references is changed - updates icon based upon value in the
  * ActiveSensor */
 void active_sensor_icon_changed(ActiveSensor *active_sensor, SensorsApplet *sensors_applet) {
 
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
 
     SensorType sensor_type;
     GdkPixbuf *icon_pixbuf;

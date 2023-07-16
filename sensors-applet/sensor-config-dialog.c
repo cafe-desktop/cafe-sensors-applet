@@ -30,46 +30,46 @@
 typedef struct {
     SensorsApplet *sensors_applet;
 
-    GtkDialog *dialog;
+    CtkDialog *dialog;
     /* icon widgets */
-    GtkLabel *icon_header, *icon_type_label;
-    GtkComboBox *icon_type_combo_box;
-    GtkAlignment *icon_type_combo_box_aligner;
-    GtkCellRenderer *icon_renderer;
+    CtkLabel *icon_header, *icon_type_label;
+    CtkComboBox *icon_type_combo_box;
+    CtkAlignment *icon_type_combo_box_aligner;
+    CtkCellRenderer *icon_renderer;
 
     /* Graph Color chooser */
-    GtkColorButton *graph_color_button;
-    GtkAlignment *graph_color_button_aligner;
-    GtkLabel *graph_color_label, *graph_header;
+    CtkColorButton *graph_color_button;
+    CtkAlignment *graph_color_button_aligner;
+    CtkLabel *graph_color_label, *graph_header;
 
     /* multiplier and offset widgets */
-    GtkLabel *scale_header, *multiplier_label, *offset_label;
-    GtkAlignment *multiplier_spinbutton_aligner, *offset_spinbutton_aligner;
-    GtkAdjustment *multiplier_adjust, *offset_adjust;
-    GtkSpinButton *multiplier_spinbutton, *offset_spinbutton;
+    CtkLabel *scale_header, *multiplier_label, *offset_label;
+    CtkAlignment *multiplier_spinbutton_aligner, *offset_spinbutton_aligner;
+    CtkAdjustment *multiplier_adjust, *offset_adjust;
+    CtkSpinButton *multiplier_spinbutton, *offset_spinbutton;
 
-    GtkLabel *limits_header;
-    GtkLabel *low_value_label, *high_value_label;
-    GtkAlignment *low_value_spinbutton_aligner, *high_value_spinbutton_aligner;
-    GtkAdjustment *low_value_adjust, *high_value_adjust;
-    GtkSpinButton *low_value_spinbutton, *high_value_spinbutton;
+    CtkLabel *limits_header;
+    CtkLabel *low_value_label, *high_value_label;
+    CtkAlignment *low_value_spinbutton_aligner, *high_value_spinbutton_aligner;
+    CtkAdjustment *low_value_adjust, *high_value_adjust;
+    CtkSpinButton *low_value_spinbutton, *high_value_spinbutton;
 
     /* alarm widgets */
-    GtkLabel *alarm_header;
-    GtkLabel *low_alarm_command_label, *high_alarm_command_label, *alarm_timeout_label;
-    GtkAlignment *alarm_timeout_spinbutton_aligner;
-    GtkAdjustment *alarm_timeout_adjust;
-    GtkSpinButton *alarm_timeout_spinbutton;
-    GtkGrid *grid;
-    GtkAlignment *alarm_enable_aligner;
-    GtkCheckButton *alarm_enable_checkbutton;
-    GtkEntry *low_alarm_command_entry, *high_alarm_command_entry;
+    CtkLabel *alarm_header;
+    CtkLabel *low_alarm_command_label, *high_alarm_command_label, *alarm_timeout_label;
+    CtkAlignment *alarm_timeout_spinbutton_aligner;
+    CtkAdjustment *alarm_timeout_adjust;
+    CtkSpinButton *alarm_timeout_spinbutton;
+    CtkGrid *grid;
+    CtkAlignment *alarm_enable_aligner;
+    CtkCheckButton *alarm_enable_checkbutton;
+    CtkEntry *low_alarm_command_entry, *high_alarm_command_entry;
 
-    GtkSizeGroup *size_group;
+    CtkSizeGroup *size_group;
 } SensorConfigDialog;
 
 
-static void sensor_config_dialog_response(GtkDialog *dialog,
+static void sensor_config_dialog_response(CtkDialog *dialog,
                                           gint response,
                                           gpointer data) {
 
@@ -98,10 +98,10 @@ static void sensor_config_dialog_response(GtkDialog *dialog,
     }
 }
 
-static void sensor_config_dialog_multiplier_changed(GtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_multiplier_changed(CtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
     gdouble value;
 
     value = ctk_spin_button_get_value(spinbutton);
@@ -120,10 +120,10 @@ static void sensor_config_dialog_multiplier_changed(GtkSpinButton *spinbutton, S
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_offset_changed(GtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_offset_changed(CtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
     gdouble value;
 
     value = ctk_spin_button_get_value(spinbutton);
@@ -141,10 +141,10 @@ static void sensor_config_dialog_offset_changed(GtkSpinButton *spinbutton, Senso
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_low_value_changed(GtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_low_value_changed(CtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
     gdouble value;
 
     value = ctk_spin_button_get_value(spinbutton);
@@ -163,10 +163,10 @@ static void sensor_config_dialog_low_value_changed(GtkSpinButton *spinbutton, Se
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_high_value_changed(GtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_high_value_changed(CtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
     gdouble value;
 
     value = ctk_spin_button_get_value(spinbutton);
@@ -185,10 +185,10 @@ static void sensor_config_dialog_high_value_changed(GtkSpinButton *spinbutton, S
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_alarm_toggled(GtkToggleButton *button, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_alarm_toggled(CtkToggleButton *button, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
 
     gboolean value;
     value = ctk_toggle_button_get_active(button);
@@ -216,10 +216,10 @@ static void sensor_config_dialog_alarm_toggled(GtkToggleButton *button, SensorCo
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_alarm_timeout_changed(GtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_alarm_timeout_changed(CtkSpinButton *spinbutton, SensorConfigDialog *config_dialog) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
     gint value;
 
     value = ctk_spin_button_get_value_as_int(spinbutton);
@@ -239,10 +239,10 @@ static void sensor_config_dialog_alarm_timeout_changed(GtkSpinButton *spinbutton
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_alarm_command_edited(GtkEntry *command_entry, SensorConfigDialog *config_dialog, NotifType notif_type) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
+static void sensor_config_dialog_alarm_command_edited(CtkEntry *command_entry, SensorConfigDialog *config_dialog, NotifType notif_type) {
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
 
     gchar *value;
     g_object_get(command_entry, "text", &value, NULL);
@@ -264,26 +264,26 @@ static void sensor_config_dialog_alarm_command_edited(GtkEntry *command_entry, S
     ctk_tree_path_free(path);
 }
 
-static void sensor_config_dialog_low_alarm_command_edited(GtkEntry *command_entry, SensorConfigDialog *config_dialog) {
+static void sensor_config_dialog_low_alarm_command_edited(CtkEntry *command_entry, SensorConfigDialog *config_dialog) {
     sensor_config_dialog_alarm_command_edited(command_entry,
                                               config_dialog,
                                               LOW_ALARM);
 }
 
-static void sensor_config_dialog_high_alarm_command_edited(GtkEntry *command_entry, SensorConfigDialog *config_dialog) {
+static void sensor_config_dialog_high_alarm_command_edited(CtkEntry *command_entry, SensorConfigDialog *config_dialog) {
     sensor_config_dialog_alarm_command_edited(command_entry,
                                               config_dialog,
                                               HIGH_ALARM);
 }
 
-static void sensor_config_dialog_icon_type_changed(GtkComboBox *icon_type_combo_box,
+static void sensor_config_dialog_icon_type_changed(CtkComboBox *icon_type_combo_box,
                                                    SensorConfigDialog *config_dialog) {
-    GtkTreeModel *icons_model;
-    GtkTreeIter icons_iter;
+    CtkTreeModel *icons_model;
+    CtkTreeIter icons_iter;
 
-    GtkTreeModel *model;
-    GtkTreeIter iter;
-    GtkTreePath *path;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreePath *path;
 
     GdkPixbuf *new_icon;
     IconType icon_type;
@@ -312,12 +312,12 @@ static void sensor_config_dialog_icon_type_changed(GtkComboBox *icon_type_combo_
     }
 }
 
-static void sensor_config_dialog_graph_color_set(GtkColorChooser *color_chooser,
+static void sensor_config_dialog_graph_color_set(CtkColorChooser *color_chooser,
                                                  SensorConfigDialog *config_dialog) {
-    GtkTreeModel *model;
-    GtkTreePath *path;
-    GtkTreeIter iter;
-    GtkWidget *content_area;
+    CtkTreeModel *model;
+    CtkTreePath *path;
+    CtkTreeIter iter;
+    CtkWidget *content_area;
     gchar *color_string;
     GdkRGBA color;
 
@@ -344,13 +344,13 @@ static void sensor_config_dialog_graph_color_set(GtkColorChooser *color_chooser,
 }
 
 void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
-    GtkTreeModel *model;
-    GtkTreeIter iter;
-    GtkWidget *content_area;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkWidget *content_area;
 
     SensorConfigDialog *config_dialog;
 
-    GtkListStore *icon_store;
+    CtkListStore *icon_store;
     IconType count;
     GdkPixbuf *pixbuf;
     GdkRGBA graph_color;
