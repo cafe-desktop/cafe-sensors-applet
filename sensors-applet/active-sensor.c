@@ -249,7 +249,7 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
         }
     }
 
-    ctk_image_set_from_pixbuf(GTK_IMAGE(active_sensor->icon),
+    ctk_image_set_from_pixbuf(CTK_IMAGE(active_sensor->icon),
                               new_icon);
     g_object_unref(new_icon);
 
@@ -436,9 +436,9 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
 
     active_sensor->graph = ctk_drawing_area_new();
     active_sensor->graph_frame = ctk_frame_new(NULL);
-    ctk_frame_set_shadow_type(GTK_FRAME(active_sensor->graph_frame),
-                              GTK_SHADOW_IN);
-    ctk_container_add(GTK_CONTAINER(active_sensor->graph_frame),
+    ctk_frame_set_shadow_type(CTK_FRAME(active_sensor->graph_frame),
+                              CTK_SHADOW_IN);
+    ctk_container_add(CTK_CONTAINER(active_sensor->graph_frame),
                       active_sensor->graph);
     ctk_widget_add_events(active_sensor->graph_frame,
                           GDK_ALL_EVENTS_MASK);
@@ -529,7 +529,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
     /* if can successfully get iter can proceed */
     if (ctk_tree_model_get_iter(model, &iter, path)) {
         ctk_tree_path_free(path);
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors),
                    &iter,
                    PATH_COLUMN, &sensor_path,
                    ID_COLUMN, &sensor_id,
@@ -715,18 +715,18 @@ void active_sensor_update(ActiveSensor *active_sensor,
                 }
 
                 /*Keep the label as large as previous size unless hide_units has changed */
-                ctk_widget_get_preferred_size (GTK_WIDGET (active_sensor->value), &req, NULL);
+                ctk_widget_get_preferred_size (CTK_WIDGET (active_sensor->value), &req, NULL);
                 if (!(hide_units_old == hide_units)) {
                     label_min_width = 0;
                 } else {
                     label_min_width = req.width;
                 }
 
-                ctk_label_set_markup(GTK_LABEL(active_sensor->value), value_text);
+                ctk_label_set_markup(CTK_LABEL(active_sensor->value), value_text);
 
-                ctk_widget_get_preferred_size (GTK_WIDGET (active_sensor->value), &req, NULL);
+                ctk_widget_get_preferred_size (CTK_WIDGET (active_sensor->value), &req, NULL);
                 label_width = MAX(req.width, label_min_width);
-                ctk_widget_set_size_request (GTK_WIDGET (active_sensor->value), label_min_width, req.height);
+                ctk_widget_set_size_request (CTK_WIDGET (active_sensor->value), label_min_width, req.height);
 
                 if (tooltip) {
                     ctk_widget_set_tooltip_text(active_sensor->value, tooltip);
@@ -743,7 +743,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
                     g_free(old_value_text);
                 }
 
-                ctk_label_set_markup(GTK_LABEL(active_sensor->label), sensor_label);
+                ctk_label_set_markup(CTK_LABEL(active_sensor->label), sensor_label);
                 if (tooltip) {
                         ctk_widget_set_tooltip_text(active_sensor->label, tooltip);
                 }
@@ -789,7 +789,7 @@ void active_sensor_icon_changed(ActiveSensor *active_sensor, SensorsApplet *sens
 
     /* if can successfully get iter can proceed */
     if (ctk_tree_model_get_iter(model, &iter, path)) {
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors),
                                            &iter,
                                            SENSOR_TYPE_COLUMN, &sensor_type,
                                            ICON_PIXBUF_COLUMN, &icon_pixbuf,

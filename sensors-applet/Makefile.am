@@ -12,10 +12,10 @@ AM_CPPFLAGS = -DCAFELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(CAFE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) $(CTK_CFLAGS) $(CAFE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
 
 
-LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(CAFE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
+LIBS = $(GLIB_LIBS) $(CTK_LIBS) $(CAFE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
 
 if LIBNOTIFY
 libnotify_SRC = active-sensor-libnotify.c \

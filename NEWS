@@ -52,11 +52,11 @@
   * fix save order of sensors v2
   * prefs-dialog: drop unneeded space in general tab
   * prefs-dialog: set a min_width for enable_column
-  * prefs-dialog: use hscrollbar-policy GTK_POLICY_NEVER
+  * prefs-dialog: use hscrollbar-policy CTK_POLICY_NEVER
 
 ### cafe-sensors-applet 1.20.0
 
-  * require GTK+ 3.22 and GLib 2.50
+  * require CTK+ 3.22 and GLib 2.50
   * build: enable udisk2 plugin again
   * Translations update
   * Remove deprecated udisks plugin
@@ -83,22 +83,22 @@
 
   * Translations update
   * sensor-applet.c: replace deprecated GtkMisc
-  * sensor-applet.c: avoid deprecated GTK_STOCK_MISSING_IMAGE
+  * sensor-applet.c: avoid deprecated CTK_STOCK_MISSING_IMAGE
   * sensor-config-dialog: avoid deprecated GtkAlignment
   * sensor-config-dialog: don't use deprecated GtkColorButton
   * prefs-dialog: add style class frame to scrolledwindow
   * prefs-dialog: avoid deprecated GtkAlignment
-  * prefs-dialog: avoid deprecated GTK_VBUTTON_BOX, GTK_TYPE_{H,V}BOX
-  * use GTK_ALIGN_CENTER for the sensor_applet grid
+  * prefs-dialog: avoid deprecated CTK_VBUTTON_BOX, CTK_TYPE_{H,V}BOX
+  * use CTK_ALIGN_CENTER for the sensor_applet grid
 
 ### cafe-sensors-applet 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
     to make generating release announcements easier
   * Build: require cafe-panel >= 1.17
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and
     --with-ctk build option
-  * Fix some GTK+ deprecations
+  * Fix some CTK+ deprecations
   * Some more fixes and cleanups
   * Translations update
 
@@ -109,7 +109,7 @@
 
 ### cafe-sensors-applet 1.16.0
 
-  * Make distcheck use currently selected GTK+ version
+  * Make distcheck use currently selected CTK+ version
   * Translations update
 
 ### cafe-sensors-applet 1.14.0
@@ -129,7 +129,7 @@
   * Add mbmon plugin
   * Make udisks plugin poll for new value
   * Retrieve strings directly from gschema (requires intltool 0.50.1)
-  * Some GTK+3 fixes
+  * Some CTK+3 fixes
   * Some more fixes and cleanups
 
 ### cafe-sensors-applet 1.10.4
@@ -149,12 +149,12 @@
 ### cafe-sensors-applet 1.10.1
 
   * Fix sensor config dialog (was non-responsive)
-  * Fix display of sensors in GTK+3 build
+  * Fix display of sensors in CTK+3 build
   * Updated translations
 
 ### cafe-sensors-applet 1.10.0
 
-  * Add GTK3 support
+  * Add CTK3 support
 
 ### cafe-sensors-applet 1.8.0
 

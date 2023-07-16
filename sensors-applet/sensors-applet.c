@@ -62,7 +62,7 @@ static void prefs_cb(GtkAction *action, gpointer *data) {
     sensors_applet = (SensorsApplet *)data;
 
     if (sensors_applet->prefs_dialog) {
-        ctk_window_present(GTK_WINDOW(sensors_applet->prefs_dialog->dialog));
+        ctk_window_present(CTK_WINDOW(sensors_applet->prefs_dialog->dialog));
         return;
     }
     prefs_dialog_open(sensors_applet);
@@ -118,7 +118,7 @@ static void destroy_cb(GtkWidget *widget, gpointer data) {
         ctk_tree_store_clear(sensors_applet->sensors);
     }
 
-    ctk_widget_destroy(GTK_WIDGET(sensors_applet->applet));
+    ctk_widget_destroy(CTK_WIDGET(sensors_applet->applet));
 
     g_free(sensors_applet);
     return;
@@ -177,18 +177,18 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
 
     display_mode = g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
     if (sensors_applet->sensors) {
-        for (ctk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+        for (ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
             not_end_of_interfaces;
-            not_end_of_interfaces = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+            not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
 
             /* reset sensors sentinel */
             not_end_of_sensors = TRUE;
 
-            for (ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
+            for (ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter, &interfaces_iter);
                 not_end_of_sensors;
-                not_end_of_sensors = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+                not_end_of_sensors = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
-                ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors),
+                ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors),
                                    &sensors_iter,
                                    ENABLE_COLUMN, &enabled,
                                    ICON_TYPE_COLUMN, &icon_type,
@@ -207,7 +207,7 @@ static void style_set_cb(GtkWidget *widget, GtkStyle *old_style, gpointer data) 
                     (display_mode == DISPLAY_ICON ||
                      display_mode == DISPLAY_ICON_WITH_VALUE)) {
 
-                    path = ctk_tree_model_get_path(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter);
+                    path = ctk_tree_model_get_path(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter);
                     sensors_applet_icon_changed(sensors_applet, path);
                     ctk_tree_path_free(path);
                 }
@@ -283,9 +283,9 @@ void sensors_applet_notify_active_sensor(ActiveSensor *active_sensor, NotifType 
     }
 
     path = ctk_tree_row_reference_get_path(active_sensor->sensor_row);
-    if (ctk_tree_model_get_iter(GTK_TREE_MODEL(sensors_applet->sensors), &iter, path)) {
+    if (ctk_tree_model_get_iter(CTK_TREE_MODEL(sensors_applet->sensors), &iter, path)) {
 
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &iter,
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &iter,
                            LABEL_COLUMN, &sensor_label,
                            PATH_COLUMN, &sensor_path,
                            SENSOR_TYPE_COLUMN, &sensor_type,
@@ -432,7 +432,7 @@ static void sensors_applet_pack_display_empty_grid_cb(GtkWidget *widget, gpointe
 {
     GtkContainer *container;
 
-    container = GTK_CONTAINER(data);
+    container = CTK_CONTAINER(data);
 
     /* ref then remove widget */
     g_object_ref(widget);
@@ -478,29 +478,29 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
      * pointer access first though */
     if (sensors_applet->active_sensors == NULL || g_list_length(sensors_applet->active_sensors) == 0) {
         g_debug("no active sensors to pack in grid");
-        no_sensors_enabled_label = g_object_new(GTK_TYPE_LABEL, "label", _("No sensors enabled!"), NULL);
+        no_sensors_enabled_label = g_object_new(CTK_TYPE_LABEL, "label", _("No sensors enabled!"), NULL);
 
         if (sensors_applet->grid == NULL) {
             /* only need 1 row and 1 col */
             sensors_applet->grid = ctk_grid_new();
-            ctk_grid_set_column_spacing(GTK_GRID(sensors_applet->grid), COLUMN_SPACING);
-            ctk_grid_set_row_spacing(GTK_GRID(sensors_applet->grid), ROW_SPACING);
-            ctk_widget_set_halign(sensors_applet->grid, GTK_ALIGN_CENTER);
-            ctk_widget_set_valign(sensors_applet->grid, GTK_ALIGN_CENTER);
+            ctk_grid_set_column_spacing(CTK_GRID(sensors_applet->grid), COLUMN_SPACING);
+            ctk_grid_set_row_spacing(CTK_GRID(sensors_applet->grid), ROW_SPACING);
+            ctk_widget_set_halign(sensors_applet->grid, CTK_ALIGN_CENTER);
+            ctk_widget_set_valign(sensors_applet->grid, CTK_ALIGN_CENTER);
             /* add grid to applet */
-            ctk_container_add(GTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
+            ctk_container_add(CTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
         } else {
             /* destroy existing widgets - could be an
              * existing version of no sensors label - okay
              * to just add again though if destroy first */
             g_debug("destroying any existing widgets in container");
-            ctk_container_foreach(GTK_CONTAINER(sensors_applet->grid), (GtkCallback)ctk_widget_destroy, NULL);
+            ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid), (GtkCallback)ctk_widget_destroy, NULL);
         }
         g_debug("packing no sensors enabled label");
-        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
-                                 GTK_WIDGET(no_sensors_enabled_label),
+        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
+                                 CTK_WIDGET(no_sensors_enabled_label),
                                  0, 0, 1, 1);
-        ctk_widget_show_all(GTK_WIDGET(sensors_applet->applet));
+        ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));
         return;
     }
     /* otherwise can acess active_sensors without any worries */
@@ -520,7 +520,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 
     switch (display_mode) {
         case DISPLAY_VALUE:
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->value), &req, NULL);
             value_width = req.width + COLUMN_SPACING;
             value_height = req.height + ROW_SPACING;
 
@@ -540,12 +540,12 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
             /* even though we end up packing the event boxes into the
              * panel, these dont give back request sizes, so need to ask
              * widgets directly */
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->value), &req, NULL);
 
             value_width = req.width + COLUMN_SPACING;
             value_height = req.height + ROW_SPACING;
 
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->label), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->label), &req, NULL);
             label_width = req.width + COLUMN_SPACING;
             label_height = req.height + ROW_SPACING;
 
@@ -569,11 +569,11 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
             break;
 
         case DISPLAY_ICON_WITH_VALUE:
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->value), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->value), &req, NULL);
             value_width = req.width + COLUMN_SPACING;
             value_height = req.height + ROW_SPACING;
 
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->icon), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->icon), &req, NULL);
             icon_width = req.width + COLUMN_SPACING;
             icon_height = req.height + ROW_SPACING;
 
@@ -593,7 +593,7 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
             break;
 
         case DISPLAY_ICON:
-            ctk_widget_get_preferred_size(GTK_WIDGET(first_sensor->icon), &req, NULL);
+            ctk_widget_get_preferred_size(CTK_WIDGET(first_sensor->icon), &req, NULL);
             icon_width = req.width + COLUMN_SPACING;
             icon_height = req.height + ROW_SPACING;
 
@@ -658,17 +658,17 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     if (sensors_applet->grid == NULL) {
         /* create grid and add to applet */
         sensors_applet->grid = ctk_grid_new();
-        ctk_grid_set_column_spacing(GTK_GRID(sensors_applet->grid), COLUMN_SPACING);
-        ctk_grid_set_row_spacing(GTK_GRID(sensors_applet->grid), ROW_SPACING);
-        ctk_widget_set_halign(sensors_applet->grid, GTK_ALIGN_CENTER);
-        ctk_widget_set_valign(sensors_applet->grid, GTK_ALIGN_CENTER);
-        ctk_container_add(GTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
+        ctk_grid_set_column_spacing(CTK_GRID(sensors_applet->grid), COLUMN_SPACING);
+        ctk_grid_set_row_spacing(CTK_GRID(sensors_applet->grid), ROW_SPACING);
+        ctk_widget_set_halign(sensors_applet->grid, CTK_ALIGN_CENTER);
+        ctk_widget_set_valign(sensors_applet->grid, CTK_ALIGN_CENTER);
+        ctk_container_add(CTK_CONTAINER(sensors_applet->applet), sensors_applet->grid);
     } else {
         /* remove all children if grid already exists so we can start again */
         /* save a list of the old children for later */
-        old_grid_children = ctk_container_get_children(GTK_CONTAINER(sensors_applet->grid));
+        old_grid_children = ctk_container_get_children(CTK_CONTAINER(sensors_applet->grid));
 
-        ctk_container_foreach(GTK_CONTAINER(sensors_applet->grid),
+        ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid),
                       sensors_applet_pack_display_empty_grid_cb,
                       sensors_applet->grid);
     }
@@ -685,13 +685,13 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 /* attach label / icon at this point */
                 if (display_mode == DISPLAY_ICON_WITH_VALUE) {
                     if (((ActiveSensor *)(current_sensor->data))->icon) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->icon,
                                         i, j, 1, 1);
                     }
                 } else {
                     if (((ActiveSensor *)(current_sensor->data))->label) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->label,
                                         i, j, 1, 1);
                     }
@@ -700,21 +700,21 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
                 if (layout_mode == VALUE_BESIDE_LABEL) {
                     /* left align labels */
                     if (((ActiveSensor *)(current_sensor->data))->icon) {
-                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_START);
-                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
+                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, CTK_ALIGN_START);
+                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, CTK_ALIGN_CENTER);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->label) {
-                        ctk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0);
-                        ctk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+                        ctk_label_set_xalign (CTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0);
+                        ctk_label_set_yalign (CTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_START);
-                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
+                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, CTK_ALIGN_START);
+                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, CTK_ALIGN_CENTER);
                     }
 
                      /* place value next to label */
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->value,
                                         i + 1, j, 1, 1);
                     }
@@ -723,20 +723,20 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 
                     /* center align labels */
                     if (((ActiveSensor *)(current_sensor->data))->icon) {
-                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
-                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, GTK_ALIGN_CENTER);
+                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->icon, CTK_ALIGN_CENTER);
+                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->icon, CTK_ALIGN_CENTER);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->label) {
-                        ctk_label_set_xalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
-                        ctk_label_set_yalign (GTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+                        ctk_label_set_xalign (CTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
+                        ctk_label_set_yalign (CTK_LABEL(((ActiveSensor *)(current_sensor->data))->label), 0.5);
                     }
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
-                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, GTK_ALIGN_CENTER);
+                        ctk_widget_set_halign (((ActiveSensor *)(current_sensor->data))->value, CTK_ALIGN_CENTER);
+                        ctk_widget_set_valign (((ActiveSensor *)(current_sensor->data))->value, CTK_ALIGN_CENTER);
                     }
 
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->value,
                                         i, j + 1, 1, 1);
                     }
@@ -758,19 +758,19 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
             for (j = 0; current_sensor!= NULL && j < rows; ++j) {
                 if (display_mode == DISPLAY_VALUE) {
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->value,
                                         i, j, 1, 1);
                     }
                 } else if (display_mode == DISPLAY_ICON) {
                     if (((ActiveSensor *)(current_sensor->data))->value) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->icon,
                                         i, j, 1, 1);
                     }
                 } else if (display_mode == DISPLAY_GRAPH) {
                     if (((ActiveSensor *)(current_sensor->data))->graph) {
-                        ctk_grid_attach(GTK_GRID(sensors_applet->grid),
+                        ctk_grid_attach(CTK_GRID(sensors_applet->grid),
                                         ((ActiveSensor *)(current_sensor->data))->graph_frame,
                                         i, j, 1, 1);
                     }
@@ -782,12 +782,12 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     }
 
     if (old_grid_children != NULL) {
-        ctk_container_foreach(GTK_CONTAINER(sensors_applet->grid),
+        ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid),
                       sensors_applet_pack_display_cleanup_refs_cb,
                       old_grid_children);
         g_list_free(old_grid_children);
     }
-    ctk_widget_show_all(GTK_WIDGET(sensors_applet->applet));
+    ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));
 
 }
 
@@ -804,7 +804,7 @@ GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
     icon = ctk_icon_theme_load_icon(icon_theme,
                                     stock_icons[icon_type],
                                     DEFAULT_ICON_SIZE,
-                                    GTK_ICON_LOOKUP_USE_BUILTIN,
+                                    CTK_ICON_LOOKUP_USE_BUILTIN,
                                     &error);
 
     if (error) {
@@ -816,12 +816,12 @@ GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
         icon = ctk_icon_theme_load_icon(icon_theme,
                                         "image-missing",
                                         DEFAULT_ICON_SIZE,
-                                        GTK_ICON_LOOKUP_USE_BUILTIN,
+                                        CTK_ICON_LOOKUP_USE_BUILTIN,
                                         &error);
 
         if (error) {
             /* this will quit sensors-applet but it is a pretty major error so may as well */
-            g_error("Could not load GTK_STOCK_MISSING_IMAGE - major error!!!: %s", error->message);
+            g_error("Could not load CTK_STOCK_MISSING_IMAGE - major error!!!: %s", error->message);
             g_error_free(error);
             error = NULL;
         }
@@ -895,22 +895,22 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     }
 
     /* search sensor tree for the parent interface to place this sensor under */
-    for (not_empty_tree = ctk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+    for (not_empty_tree = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_empty_tree && not_end_of_interfaces && !interface_exists;
-        not_end_of_interfaces = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
+        not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
 
-        ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &node_interface, -1);
+        ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter, INTERFACE_COLUMN, &node_interface, -1);
         if (g_ascii_strcasecmp(interface, node_interface) == 0) {
             /* found interface in tree */
             interface_exists = TRUE;
 
             /* now see if this actual sensor already exists within this interface - don't want to add duplicates */
             /* see if have children */
-            for (not_end_of_sensors = ctk_tree_model_iter_children(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
+            for (not_end_of_sensors = ctk_tree_model_iter_children(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,  &interfaces_iter);
                 not_end_of_sensors;
-                not_end_of_sensors = ctk_tree_model_iter_next(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
+                not_end_of_sensors = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter)) {
 
-                ctk_tree_model_get(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
+                ctk_tree_model_get(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter,
                            PATH_COLUMN, &sensor_path,
                            ID_COLUMN, &sensor_id,
                            SENSOR_TYPE_COLUMN, &sensor_type,
@@ -1033,7 +1033,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
 
     /* create the active sensor */
     if (enable) {
-        tree_path = ctk_tree_model_get_path(GTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter);
+        tree_path = ctk_tree_model_get_path(CTK_TREE_MODEL(sensors_applet->sensors), &sensors_iter);
         sensors_applet_sensor_enabled(sensors_applet, tree_path);
         ctk_tree_path_free(tree_path);
     }
@@ -1091,7 +1091,7 @@ void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, GtkTreePath *p
     g_assert(sensors_applet);
     g_assert(path);
 
-    active_sensor = active_sensor_new(sensors_applet, ctk_tree_row_reference_new(GTK_TREE_MODEL(sensors_applet->sensors), path));
+    active_sensor = active_sensor_new(sensors_applet, ctk_tree_row_reference_new(CTK_TREE_MODEL(sensors_applet->sensors), path));
     active_sensor_update(active_sensor, sensors_applet);
 
     /* keep list sorted */
@@ -1243,7 +1243,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     gchar *ui_path;
 
     /* Have our background automatically painted. */
-    cafe_panel_applet_set_background_widget(CAFE_PANEL_APPLET(sensors_applet->applet), GTK_WIDGET(sensors_applet->applet));
+    cafe_panel_applet_set_background_widget(CAFE_PANEL_APPLET(sensors_applet->applet), CTK_WIDGET(sensors_applet->applet));
 
     /* plugin functions are stored as name -> get_value_function pairs so
      * use standard string functions on hash table */
@@ -1286,8 +1286,8 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     if (NULL == sensors_applet->sensors) {
         GtkWidget *label;
         label = ctk_label_new(_("No sensors found!"));
-        ctk_container_add(GTK_CONTAINER(sensors_applet->applet), label);
-        ctk_widget_show_all(GTK_WIDGET(sensors_applet->applet));
+        ctk_container_add(CTK_CONTAINER(sensors_applet->applet), label);
+        ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));
         return;
     }
 
@@ -1329,6 +1329,6 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     sensors_applet->timeout_id = g_timeout_add_seconds(g_settings_get_int(sensors_applet->settings, TIMEOUT) / 1000,
                                                            (GSourceFunc)sensors_applet_update_active_sensors,
                                                            sensors_applet);
-    ctk_widget_show_all(GTK_WIDGET(sensors_applet->applet));
+    ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));
 }
 
