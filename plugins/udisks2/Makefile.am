@@ -1,5 +1,5 @@
 # UDisks2 plugin
-plugindir = $(libdir)/mate-sensors-applet/plugins
+plugindir = $(libdir)/cafe-sensors-applet/plugins
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
@@ -21,6 +21,6 @@ libudisks2_la_SOURCES = \
 
 libudisks2_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 
-libudisks2_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+libudisks2_la_LIBADD = $(top_builddir)/lib/libcafe-sensors-applet-plugin.la
 
 -include $(top_srcdir)/git.mk

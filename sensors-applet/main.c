@@ -20,7 +20,7 @@
 #include "config.h"
 #endif /* HAVE_CONFIG_H */
 
-#include <mate-panel-applet.h>
+#include <cafe-panel-applet.h>
 #include <string.h>
 #include "sensors-applet.h"
 

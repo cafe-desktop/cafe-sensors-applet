@@ -31,7 +31,7 @@
 #include <syslog.h>
 #endif
 
-/* these must be as the gsettings schema in file org.mate.sensors-applet.gschema.xml.in
+/* these must be as the gsettings schema in file org.cafe.sensors-applet.gschema.xml.in
  * gsettings gvariant type string */
 #define GSGVTS "s"
 /* gsettings gvariant type string for the array */
@@ -81,7 +81,7 @@ gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
     gchar *current_graph_color = NULL;
 
     /* get gsettings path for applet */
-    applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
+    applet_path = cafe_panel_applet_get_preferences_path (sensors_applet->applet);
 
     /* get sensors-list array from gsettings */
     g_settings_get (sensors_applet->settings, "sensors-list", GSGVTSA, &iter);
@@ -101,7 +101,7 @@ gboolean sensors_applet_settings_load_sensors (SensorsApplet *sensors_applet) {
 
         /* make a schema which points to one sensor data */
         GSettings *settings;
-        settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
+        settings = g_settings_new_with_path ("org.cafe.sensors-applet.sensor", path);
         g_free (path);
 
         /* laod sensor data to temp variables
@@ -567,7 +567,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE (GSGVTSA));
 
-    applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
+    applet_path = cafe_panel_applet_get_preferences_path (sensors_applet->applet);
 
     /* now step through the GtkTreeStore sensors to find which sensors are available / loaded */
     for (not_end_of_interfaces = gtk_tree_model_get_iter_first(GTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
@@ -614,7 +614,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
             g_free (gsuid);
 
             GSettings *settings;
-            settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", path);
+            settings = g_settings_new_with_path ("org.cafe.sensors-applet.sensor", path);
             g_free (path);
 
             /* wait until g_settings_apply() is called to save all changes at once to gsettings */

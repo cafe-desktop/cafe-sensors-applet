@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-sensors-applet package.
+# This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -14,127 +14,127 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"Project-Id-Version: cafe-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Saif Husam <saifxman10@yahoo.com>, 2020\n"
-"Language-Team: Arabic (https://www.transifex.com/mate/teams/13566/ar/)\n"
+"Language-Team: Arabic (https://www.transifex.com/cafe/teams/13566/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "استشعار مصنع التطبيق الصغير"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "مراقبة أجهزة الاستشعار"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-sensors-applet"
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:12
+msgid "cafe-sensors-applet"
 msgstr ""
 
-#: org.mate.sensors-applet.gschema.xml.in:5
+#: org.cafe.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "حجم الخط بالنقاط"
 
-#: org.mate.sensors-applet.gschema.xml.in:9
+#: org.cafe.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "أظهر أو أخفِ واحدات الحساسات"
 
-#: org.mate.sensors-applet.gschema.xml.in:13
+#: org.cafe.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "أظهر أو أخفِ الرموز أو التسميات"
 
-#: org.mate.sensors-applet.gschema.xml.in:17
+#: org.cafe.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "حدد القيمة جانب أو تحت التسمية"
 
-#: org.mate.sensors-applet.gschema.xml.in:21
+#: org.cafe.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "أظهر درجة الحرارة بالمئوية أو الكلفن أو الفهرنهايت"
 
-#: org.mate.sensors-applet.gschema.xml.in:25
+#: org.cafe.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "عرض الإشعارات أم لا"
 
-#: org.mate.sensors-applet.gschema.xml.in:29
+#: org.cafe.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "المهلة ( بالثواني ) بين عمليات التحديث"
 
-#: org.mate.sensors-applet.gschema.xml.in:33
+#: org.cafe.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "حجم المخطط بالبكسل ( العرض للأفقي ، و الطول للعمودي )"
 
-#: org.mate.sensors-applet.gschema.xml.in:37
+#: org.cafe.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "قائمة الحساسات"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:5
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "مسار الملف"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:9
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "معرّفات جهاز الحساس"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:13
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "واجهة إدخال جهاز الحساس"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:17
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "التسمية المخصصة بواسطة المستخدم"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:21
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "ما إذا كان الحساس مفعلًا أم لا"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:25
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "قيمة منخفضة"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:29
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "قيمة مرتفعة"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:33
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "عندما يفعّل التنبيه بواسطة الحساس"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:37
-#: org.mate.sensors-applet.sensor.gschema.xml.in:41
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:37
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "تنفيذ هذا الأمر عند تفعيل التنبيه"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:45
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr "كل متى ترغب بسماع التنبيهات ( بالثواني)"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:49
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "مستخدم للتعريف عن الحساس في القائمة."
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:53
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "محصي"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:57
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "التعويض"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:61
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "صيغة الرمز"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:65
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "لون مخطط الحساس"
 

@@ -444,7 +444,7 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
                           GDK_ALL_EVENTS_MASK);
 
     /* need to set size according to orientation */
-    orient = mate_panel_applet_get_orient(active_sensor->sensors_applet->applet);
+    orient = cafe_panel_applet_get_orient(active_sensor->sensors_applet->applet);
     graph_size = g_settings_get_int(active_sensor->sensors_applet->settings, GRAPH_SIZE);
 
     horizontal = ((orient == MATE_PANEL_APPLET_ORIENT_UP) ||

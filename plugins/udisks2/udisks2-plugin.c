@@ -18,7 +18,7 @@
  */
 
 /*
-Udisks2 plugin for the mate-sensors-applet
+Udisks2 plugin for the cafe-sensors-applet
 
 written using the structure and code of the previous version
 from Pramod Dematagoda <pmd.lotr.gandalf@gmail.com>
@@ -113,7 +113,7 @@ syslog(LOG_ERR, "Failed to get drive temperature 1");
 
 /* note on timing:
  * it seems to me that smart updates occur automatically every 10 minutes
- * mate-sensor-applet has a default refresh of 2 seconds...
+ * cafe-sensor-applet has a default refresh of 2 seconds...
  * it is possible to force a smart update with udisks2: SmartUpdate (IN  a{sv} options); */
 
     /* directly asking the device's DBus object for the temp */

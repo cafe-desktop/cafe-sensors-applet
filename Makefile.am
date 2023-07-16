@@ -2,9 +2,9 @@ SUBDIRS = sensors-applet lib plugins pixmaps po help
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-appletdir =  $(datadir)/mate-panel/applets
-applet_in_files = org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in
-applet_DATA = $(applet_in_files:.mate-panel-applet.desktop.in=.mate-panel-applet)
+appletdir =  $(datadir)/cafe-panel/applets
+applet_in_files = org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in
+applet_DATA = $(applet_in_files:.cafe-panel-applet.desktop.in=.cafe-panel-applet)
 
 $(applet_in_files): $(applet_in_files).in Makefile
 	$(AM_V_GEN)sed \
@@ -14,21 +14,21 @@ $(applet_in_files): $(applet_in_files).in Makefile
 $(applet_DATA): $(applet_in_files) Makefile
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
-uidir 		= $(datadir)/mate-sensors-applet/ui
+uidir 		= $(datadir)/cafe-sensors-applet/ui
 ui_DATA 	= SensorsApplet.xml
 
 servicedir = $(datadir)/dbus-1/services
-service_in_files = org.mate.panel.applet.SensorsAppletFactory.service.in
+service_in_files = org.cafe.panel.applet.SensorsAppletFactory.service.in
 service_DATA = $(service_in_files:.service.in=.service)
 
-org.mate.panel.applet.SensorsAppletFactory.service: $(service_in_files)
+org.cafe.panel.applet.SensorsAppletFactory.service: $(service_in_files)
 	$(AM_V_GEN)sed \
 		-e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
 		$< > $@
 
 gsettingsschema_in_files = \
-	org.mate.sensors-applet.gschema.xml.in \
-	org.mate.sensors-applet.sensor.gschema.xml.in
+	org.cafe.sensors-applet.gschema.xml.in \
+	org.cafe.sensors-applet.sensor.gschema.xml.in
 
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@

@@ -21,8 +21,8 @@
 #define SENSORS_APPLET_SETTINGS_H
 
 #include "sensors-applet.h"
-#include <mate-panel-applet.h>
-#include <mate-panel-applet-gsettings.h>
+#include <cafe-panel-applet.h>
+#include <cafe-panel-applet-gsettings.h>
 
 #define FONT_SIZE             "font-size"
 #define HIDE_UNITS            "hide-units"

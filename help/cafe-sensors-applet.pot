@@ -66,7 +66,7 @@ msgstr ""
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:127
-msgid "To report a bug or make a suggestion regarding MATE Sensors Applet or this manual, follow the directions in the <ulink url=\"help:mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgid "To report a bug or make a suggestion regarding MATE Sensors Applet or this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -559,12 +559,12 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
-msgid "The origin sensor applet was written by Alex Murray (<email>murray.alex@gmail.com</email>). <application>MATE Sensors Applet</application> is further develop by Mate dev team. To find more information about <application>MATE Sensors Applet</application>, please visit the <ulink url=\"https://github.com/mate-desktop/mate-sensors-applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
+msgid "The origin sensor applet was written by Alex Murray (<email>murray.alex@gmail.com</email>). <application>MATE Sensors Applet</application> is further develop by Mate dev team. To find more information about <application>MATE Sensors Applet</application>, please visit the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
-msgid "To report a bug or make a suggestion regarding MATE Sensors Applet or this manual, follow the directions at the <ulink url=\"https://github.com/mate-desktop/mate-sensors-applet/\" type=\"http\">project homepage</ulink>."
+msgid "To report a bug or make a suggestion regarding MATE Sensors Applet or this manual, follow the directions at the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
 
 #. (itstool) path: sect1/para

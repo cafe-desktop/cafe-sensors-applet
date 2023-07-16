@@ -79,7 +79,7 @@ static void help_cb(GtkAction *action, gpointer data) {
 
     GError *error = NULL;
 
-    gtk_show_uri_on_window(NULL, "help:mate-sensors-applet",
+    gtk_show_uri_on_window(NULL, "help:cafe-sensors-applet",
 
         gtk_get_current_event_time(),
         &error);
@@ -142,7 +142,7 @@ static void size_allocate_cb(MatePanelApplet *applet,
     MatePanelAppletOrient orient;
 
     sensors_applet = (SensorsApplet *)data;
-    orient = mate_panel_applet_get_orient(sensors_applet->applet);
+    orient = cafe_panel_applet_get_orient(sensors_applet->applet);
 
     if ((orient == MATE_PANEL_APPLET_ORIENT_LEFT) ||
         (orient == MATE_PANEL_APPLET_ORIENT_RIGHT)) {
@@ -509,8 +509,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     display_mode = (DisplayMode) g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
     layout_mode = (LayoutMode) g_settings_get_int (sensors_applet->settings, LAYOUT_MODE);
 
-    horizontal = (((mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_UP) ||
-                  (mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN)));
+    horizontal = (((cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_UP) ||
+                  (cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN)));
 
     /* figure out num rows / cols by how high / wide sensors
      * labels / icons are and how much size we have to put them in */
@@ -962,10 +962,10 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     gtk_tree_store_append(sensors_applet->sensors, &sensors_iter, &interfaces_iter);
 
     /* if sensor is already in settings, load values from there */
-    gchar *applet_path = mate_panel_applet_get_preferences_path (sensors_applet->applet);
+    gchar *applet_path = cafe_panel_applet_get_preferences_path (sensors_applet->applet);
     gchar *gsuid = sensors_applet_settings_get_unique_id (interface, id, path);
     gchar *settings_path = g_strdup_printf ("%s%s/", applet_path, gsuid);
-    GSettings *settings = g_settings_new_with_path ("org.mate.sensors-applet.sensor", settings_path);
+    GSettings *settings = g_settings_new_with_path ("org.cafe.sensors-applet.sensor", settings_path);
 
     /* add hash to temp sorting list */
     g_variant_builder_add (&gvb_sensors_hash_list, "s", gsuid);
@@ -1171,8 +1171,8 @@ void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet) {
     if (sensors_applet->active_sensors) {
 
         graph_size = g_settings_get_int (sensors_applet->settings, GRAPH_SIZE);
-        if (mate_panel_applet_get_orient(sensors_applet->applet) ==  MATE_PANEL_APPLET_ORIENT_UP ||
-            mate_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN) {
+        if (cafe_panel_applet_get_orient(sensors_applet->applet) ==  MATE_PANEL_APPLET_ORIENT_UP ||
+            cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN) {
 
             /* is horizontal so set graph_size as width */
             dimensions[0] = graph_size;
@@ -1243,7 +1243,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     gchar *ui_path;
 
     /* Have our background automatically painted. */
-    mate_panel_applet_set_background_widget(MATE_PANEL_APPLET(sensors_applet->applet), GTK_WIDGET(sensors_applet->applet));
+    cafe_panel_applet_set_background_widget(MATE_PANEL_APPLET(sensors_applet->applet), GTK_WIDGET(sensors_applet->applet));
 
     /* plugin functions are stored as name -> get_value_function pairs so
      * use standard string functions on hash table */
@@ -1254,14 +1254,14 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     /* initialise size */
     sensors_applet->size = DEFAULT_APPLET_SIZE;
 
-    mate_panel_applet_set_flags(sensors_applet->applet, MATE_PANEL_APPLET_EXPAND_MINOR);
+    cafe_panel_applet_set_flags(sensors_applet->applet, MATE_PANEL_APPLET_EXPAND_MINOR);
 
     g_signal_connect(sensors_applet->applet, "destroy",
              G_CALLBACK(destroy_cb),
              sensors_applet);
 
     /* init gsettings */
-    sensors_applet->settings = mate_panel_applet_settings_new (sensors_applet->applet, "org.mate.sensors-applet");
+    sensors_applet->settings = cafe_panel_applet_settings_new (sensors_applet->applet, "org.cafe.sensors-applet");
 
 
     /* set up builder for sorting verification */
@@ -1299,7 +1299,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
                                 G_N_ELEMENTS (sensors_applet_menu_actions),
                                 sensors_applet);
     ui_path = g_build_filename (UIDIR, SENSORS_APPLET_MENU_FILE, NULL);
-    mate_panel_applet_setup_menu_from_file (sensors_applet->applet, ui_path, action_group);
+    cafe_panel_applet_setup_menu_from_file (sensors_applet->applet, ui_path, action_group);
     g_free (ui_path);
     g_object_unref (action_group);
 

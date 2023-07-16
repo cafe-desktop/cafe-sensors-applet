@@ -1,5 +1,5 @@
 # SONYPI plugin
-plugindir = $(libdir)/mate-sensors-applet/plugins
+plugindir = $(libdir)/cafe-sensors-applet/plugins
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
@@ -18,6 +18,6 @@ libsonypi_la_SOURCES = \
 	sonypi-plugin.c
 
 libsonypi_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libsonypi_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+libsonypi_la_LIBADD = $(top_builddir)/lib/libcafe-sensors-applet-plugin.la
 
 -include $(top_srcdir)/git.mk

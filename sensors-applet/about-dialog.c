@@ -34,7 +34,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
 
     /* Construct the about dialog */
     gtk_show_about_dialog(NULL,
-                  "icon-name", "mate-sensors-applet",
+                  "icon-name", "cafe-sensors-applet",
                   "program-name", PACKAGE_NAME,
                   "version", PACKAGE_VERSION,
                   "copyright", _("Copyright \xc2\xa9 2005-2009 Alex Murray\n"
@@ -45,7 +45,7 @@ void about_dialog_open(SensorsApplet *sensors_applet) {
                   /* To translator: Put your name here to show up in the About dialog as the translator */
                   "translator-credits", _("translator-credits"),
                   "logo-icon-name", SENSORS_APPLET_ICON,
-                  "website", "https://mate-desktop.org",
+                  "website", "https://cafe-desktop.org",
                   NULL);
 
 }

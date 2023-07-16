@@ -20,7 +20,7 @@
 #define SENSORS_APPLET_H
 
 #include <gtk/gtk.h>
-#include <mate-panel-applet.h>
+#include <cafe-panel-applet.h>
 #include "sensors-applet-sensor.h"
 
 #ifdef HAVE_CONFIG_H
@@ -36,17 +36,17 @@ typedef struct _ActiveSensor ActiveSensor;
 #include "prefs-dialog.h"
 
 #define GRAPH_FRAME_EXTRA_WIDTH 6
-#define SENSORS_APPLET_ICON "mate-sensors-applet"
+#define SENSORS_APPLET_ICON "cafe-sensors-applet"
 
 static const gchar * const stock_icons[NUM_ICONS] = {
-    "mate-sensors-applet-cpu",
-    "mate-sensors-applet-drive-harddisk",
-    "mate-sensors-applet-battery",
-    "mate-sensors-applet-memory",
-    "mate-sensors-applet-gpu",
-    "mate-sensors-applet-chip",
-    "mate-sensors-applet-fan",
-    "mate-sensors-applet-case"
+    "cafe-sensors-applet-cpu",
+    "cafe-sensors-applet-drive-harddisk",
+    "cafe-sensors-applet-battery",
+    "cafe-sensors-applet-memory",
+    "cafe-sensors-applet-gpu",
+    "cafe-sensors-applet-chip",
+    "cafe-sensors-applet-fan",
+    "cafe-sensors-applet-case"
 };
 
 #define DEFAULT_ICON_SIZE 22

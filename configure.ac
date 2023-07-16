@@ -1,7 +1,7 @@
 # ================= initialization =================== #
 
-AC_INIT([MATE Sensors Applet], [1.24.1], [https://mate-desktop.org],
-[mate-sensors-applet])
+AC_INIT([MATE Sensors Applet], [1.24.1], [https://cafe-desktop.org],
+[cafe-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
 AC_CONFIG_HEADERS([sensors-applet/config.h])
@@ -22,7 +22,7 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
 AH_TEMPLATE([GETTEXT_PACKAGE], [Package name for gettext])
-GETTEXT_PACKAGE=mate-sensors-applet
+GETTEXT_PACKAGE=cafe-sensors-applet
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
 AC_SUBST(GETTEXT_PACKAGE)
 
@@ -62,7 +62,7 @@ PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
-PKG_CHECK_MODULES(MATE, libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED)
+PKG_CHECK_MODULES(MATE, libcafepanelapplet-4.0 >= $LIBPANEL_REQUIRED)
 AC_SUBST(MATE_CFLAGS)
 AC_SUBST(MATE_LIBS)
 
@@ -277,8 +277,8 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 # ================= generate files =================== #
 AC_CONFIG_FILES([
 	Makefile
-	org.mate.sensors-applet.gschema.xml
-	org.mate.sensors-applet.sensor.gschema.xml
+	org.cafe.sensors-applet.gschema.xml
+	org.cafe.sensors-applet.sensor.gschema.xml
 	sensors-applet/Makefile
 	lib/Makefile
 	plugins/Makefile
@@ -310,8 +310,8 @@ dnl - Show summary
 dnl ---------------------------------------------------------------------------
 
 echo "
-       mate-sensors-applet $VERSION
-       `echo mate-sensors-applet $VERSION | sed "s/./=/g"`
+       cafe-sensors-applet $VERSION
+       `echo cafe-sensors-applet $VERSION | sed "s/./=/g"`
 
        prefix:               ${prefix}
        compiler:             ${CC}

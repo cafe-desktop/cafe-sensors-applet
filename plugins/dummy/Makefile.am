@@ -1,5 +1,5 @@
 # Dummy plugin
-plugindir = $(libdir)/mate-sensors-applet/plugins
+plugindir = $(libdir)/cafe-sensors-applet/plugins
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
@@ -20,6 +20,6 @@ libdummy_la_SOURCES = \
 
 libdummy_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
 
-libdummy_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+libdummy_la_LIBADD = $(top_builddir)/lib/libcafe-sensors-applet-plugin.la
 
 -include $(top_srcdir)/git.mk
