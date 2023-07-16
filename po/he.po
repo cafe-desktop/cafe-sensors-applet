@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-sensors-applet package.
+# This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -11,127 +11,127 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"Project-Id-Version: cafe-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Omer, 2020\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"Language-Team: Hebrew (https://www.transifex.com/cafe/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "ייצרן יישומוני חיישנים"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "צג חיישני חומרה"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-sensors-applet"
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:12
+msgid "cafe-sensors-applet"
 msgstr ""
 
-#: org.mate.sensors-applet.gschema.xml.in:5
+#: org.cafe.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "גודל גופן בנקודות"
 
-#: org.mate.sensors-applet.gschema.xml.in:9
+#: org.cafe.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "ציון האם להציג או להסתיר את יחידת החיישן"
 
-#: org.mate.sensors-applet.gschema.xml.in:13
+#: org.cafe.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "הגדרה האם יוצגו סמלים או טקסט"
 
-#: org.mate.sensors-applet.gschema.xml.in:17
+#: org.cafe.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "הגדרת תווית ערך למעט או מתחת"
 
-#: org.mate.sensors-applet.gschema.xml.in:21
+#: org.cafe.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "הצגת הטמפרטורה בקלווין, צלזיוס או פרנהייט"
 
-#: org.mate.sensors-applet.gschema.xml.in:25
+#: org.cafe.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "האם להציג התרעות"
 
-#: org.mate.sensors-applet.gschema.xml.in:29
+#: org.cafe.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "השהיה (בשניות) בין העדכונים"
 
-#: org.mate.sensors-applet.gschema.xml.in:33
+#: org.cafe.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr "גודל התרשים בפיקסלים (רוחב אם אופקי, גובה אם אנכי)"
 
-#: org.mate.sensors-applet.gschema.xml.in:37
+#: org.cafe.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "רשימת החיישנים"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:5
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "נתיב אל שם הקובץ"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:9
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "מזהי התקן חיישן"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:13
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "מנשק התקן חיישן"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:17
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "תווית בהגדרת המשתמש"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:21
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "האם חיישן פעיל או לא"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:25
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "ערך נמוך"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:29
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "ערך גבוה"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:33
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "האם לחיישן יש אזעקה פעילה"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:37
-#: org.mate.sensors-applet.sensor.gschema.xml.in:41
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:37
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "פקודה להרצה כשהאזעקה פעילה"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:45
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr ""
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:49
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "בשימוש לזיהוי חיישן ברשימה"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:53
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "מכפיל"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:57
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "קיזוז"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:61
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "סוג סמל"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:65
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "צבע תרשים החיישן"
 

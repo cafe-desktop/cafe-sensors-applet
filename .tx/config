@@ -1,16 +1,16 @@
 [main]
 host = https://www.transifex.com
  
-[MATE.1-24--mate-sensors-applet]
+[MATE.1-24--cafe-sensors-applet]
 file_filter = po/<lang>.po
-source_file = mate-sensors-applet.pot
+source_file = cafe-sensors-applet.pot
 source_lang = en
 type = PO
 minimum_perc = 2
 
-[MATE.1-24--mate-sensors-applet-user-guide]
+[MATE.1-24--cafe-sensors-applet-user-guide]
 file_filter = help/<lang>/<lang>.po
-source_file = help/mate-sensors-applet.pot
+source_file = help/cafe-sensors-applet.pot
 source_lang = en
 type = PO
 minimum_perc = 2

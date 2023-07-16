@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.sensors-applet">
+  <schema id="org.cafe.sensors-applet">
     <key name="font-size" type="i">
       <default>0</default>
       <summary>Font size in points</summary>

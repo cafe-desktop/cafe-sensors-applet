@@ -1,6 +1,6 @@
 #! /bin/sh
 
-PACKAGE=mate-sensors-applet;
+PACKAGE=cafe-sensors-applet;
 
 # normal translations
 make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .

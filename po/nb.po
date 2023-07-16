@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-sensors-applet package.
+# This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -12,128 +12,128 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-sensors-applet 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"Project-Id-Version: cafe-sensors-applet 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
 "POT-Creation-Date: 2020-01-12 19:14+0100\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/cafe/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:5
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
 msgstr "Sensorminiprogram-fabrikk"
 
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:9
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "Maskinvaresensor-oversikt"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: org.mate.applets.SensorsApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-sensors-applet"
-msgstr "mate-sensors-applet"
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:12
+msgid "cafe-sensors-applet"
+msgstr "cafe-sensors-applet"
 
-#: org.mate.sensors-applet.gschema.xml.in:5
+#: org.cafe.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
 msgstr "Skriftstørrelse i punkter"
 
-#: org.mate.sensors-applet.gschema.xml.in:9
+#: org.cafe.sensors-applet.gschema.xml.in:9
 msgid "Specify if show or hide sensor units"
 msgstr "Angi hvorvidt sensorenheter skal vises eller skjules"
 
-#: org.mate.sensors-applet.gschema.xml.in:13
+#: org.cafe.sensors-applet.gschema.xml.in:13
 msgid "Set if display icons or text labels"
 msgstr "Velg mellom visning av ikoner eller tekstmerkning"
 
-#: org.mate.sensors-applet.gschema.xml.in:17
+#: org.cafe.sensors-applet.gschema.xml.in:17
 msgid "Set value beside or below label"
 msgstr "Angi verdi ved siden av eller nedenfor merkelapp"
 
-#: org.mate.sensors-applet.gschema.xml.in:21
+#: org.cafe.sensors-applet.gschema.xml.in:21
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr "Vis temperatur i Kelvin, Celsius eller Fahrenheit"
 
-#: org.mate.sensors-applet.gschema.xml.in:25
+#: org.cafe.sensors-applet.gschema.xml.in:25
 msgid "Whether to display notifications"
 msgstr "Om det skal vises varslinger"
 
-#: org.mate.sensors-applet.gschema.xml.in:29
+#: org.cafe.sensors-applet.gschema.xml.in:29
 msgid "Delay (in ms) between refreshes"
 msgstr "Forsinkelse (i ms) mellom gjenoppfriskninger"
 
-#: org.mate.sensors-applet.gschema.xml.in:33
+#: org.cafe.sensors-applet.gschema.xml.in:33
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr ""
 "Grafens størrelse i bildepunkter (bredde hvis vannrett, høyde hvis loddrett)"
 
-#: org.mate.sensors-applet.gschema.xml.in:37
+#: org.cafe.sensors-applet.gschema.xml.in:37
 msgid "List of sensors"
 msgstr "Liste av sensorer"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:5
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:5
 msgid "Path to filename"
 msgstr "Sti til filnavn"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:9
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:9
 msgid "Sensor device ids"
 msgstr "Sensorenhets-ID-er"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:13
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:13
 msgid "The sensor device interface"
 msgstr "Sensorens enhetsgrensesnitt"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:17
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:17
 msgid "User defined label"
 msgstr "Brukerdefinert merkelapp"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:21
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:21
 msgid "Whether a sensor is enabled or not"
 msgstr "Hvorvidt en sensor er aktivert eller ei"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:25
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:25
 msgid "Low value"
 msgstr "Lav verdi"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:29
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:29
 msgid "High value"
 msgstr "Høy verdi"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:33
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:33
 msgid "Whether the sensor has its alarm enabled"
 msgstr "Hvorvidt alarmen for sensoren er påslått"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:37
-#: org.mate.sensors-applet.sensor.gschema.xml.in:41
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:37
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:41
 msgid "Command to execute when the alarm is activated"
 msgstr "Kommando som skal kjøres når alarmen er utløst"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:45
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:45
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr "Hvor ofte hver alarm skal høres (i sekunder)"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:49
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:49
 msgid "Used to identify a sensor in a list"
 msgstr "brukt til å identifisere en sensor i en liste"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:53
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:53
 msgid "Multiplier"
 msgstr "Multiplikator"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:57
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:57
 msgid "Offset"
 msgstr "Forskyvning"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:61
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:61
 msgid "Icon type"
 msgstr "Ikontype"
 
-#: org.mate.sensors-applet.sensor.gschema.xml.in:65
+#: org.cafe.sensors-applet.sensor.gschema.xml.in:65
 msgid "Color of the graph for the sensor"
 msgstr "Fargen på grafen tilhørende sensoren"
 

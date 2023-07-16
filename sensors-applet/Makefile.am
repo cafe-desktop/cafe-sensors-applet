@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-uidir = $(datadir)/mate-sensors-applet/ui
+uidir = $(datadir)/cafe-sensors-applet/ui
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
@@ -24,8 +24,8 @@ else
 libnotify_SRC =
 endif
 
-libexec_PROGRAMS = mate-sensors-applet
-mate_sensors_applet_SOURCES = main.c \
+libexec_PROGRAMS = cafe-sensors-applet
+cafe_sensors_applet_SOURCES = main.c \
 		about-dialog.c \
 		about-dialog.h \
 		active-sensor.c \
@@ -43,12 +43,12 @@ mate_sensors_applet_SOURCES = main.c \
 		sensors-applet-settings.h \
 		$(libnotify_SRC)
 
-mate_sensors_applet_LDADD = -ldl
+cafe_sensors_applet_LDADD = -ldl
 
 # install headers for plugins to use
 INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
 
-headerdir = $(prefix)/include/mate-sensors-applet
+headerdir = $(prefix)/include/cafe-sensors-applet
 
 header_DATA = $(INST_H_FILES)
 

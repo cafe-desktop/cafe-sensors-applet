@@ -1,4 +1,4 @@
-pixmapsdir = $(datadir)/pixmaps/mate-sensors-applet
+pixmapsdir = $(datadir)/pixmaps/cafe-sensors-applet
 pixmaps_DATA = \
 	very-low-temp-icon.png \
 	low-temp-icon.png \
@@ -8,17 +8,17 @@ pixmaps_DATA = \
 
 deviceiconsdir = $(datadir)/icons/hicolor/22x22/devices
 deviceicons_DATA = \
-	mate-sensors-applet-battery.png \
-	mate-sensors-applet-case.png \
-	mate-sensors-applet-chip.png \
-	mate-sensors-applet-cpu.png \
-	mate-sensors-applet-gpu.png \
-	mate-sensors-applet-fan.png \
-	mate-sensors-applet-drive-harddisk.png \
-	mate-sensors-applet-memory.png
+	cafe-sensors-applet-battery.png \
+	cafe-sensors-applet-case.png \
+	cafe-sensors-applet-chip.png \
+	cafe-sensors-applet-cpu.png \
+	cafe-sensors-applet-gpu.png \
+	cafe-sensors-applet-fan.png \
+	cafe-sensors-applet-drive-harddisk.png \
+	cafe-sensors-applet-memory.png
 
 appicondir = $(datadir)/icons/hicolor/48x48/apps
-appicon_DATA = mate-sensors-applet.png
+appicon_DATA = cafe-sensors-applet.png
 
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 

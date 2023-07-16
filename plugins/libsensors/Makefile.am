@@ -1,4 +1,4 @@
-plugindir = $(libdir)/mate-sensors-applet/plugins
+plugindir = $(libdir)/cafe-sensors-applet/plugins
 
 # libsensors plugin
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
@@ -18,6 +18,6 @@ liblibsensors_la_SOURCES = \
 	libsensors-plugin.c
 
 liblibsensors_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS) $(LIBSENSORS_LIBS)
-liblibsensors_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+liblibsensors_la_LIBADD = $(top_builddir)/lib/libcafe-sensors-applet-plugin.la
 
 -include $(top_srcdir)/git.mk

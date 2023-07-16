@@ -1,3 +1,3 @@
 [D-BUS Service]
-Name=org.mate.panel.applet.SensorsAppletFactory
-Exec=@LIBEXECDIR@/mate-sensors-applet
+Name=org.cafe.panel.applet.SensorsAppletFactory
+Exec=@LIBEXECDIR@/cafe-sensors-applet

@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.sensors-applet.sensor">
+  <schema id="org.cafe.sensors-applet.sensor">
     <key name="path" type="s">
       <default>''</default>
       <summary>Path to filename</summary>

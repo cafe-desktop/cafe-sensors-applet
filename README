@@ -1,4 +1,4 @@
-MATE Sensors Applet <https://github.com/mate-desktop/mate-sensors-applet>
+MATE Sensors Applet <https://github.com/cafe-desktop/cafe-sensors-applet>
 
 Authors: Alex Murray <murray.alex@gmail.com>,
          Stefano Karapetsas <stefano@karapetsas.com>
@@ -41,7 +41,7 @@ Share-Alike license 3.0[10].
 
 Requirements
 
-    * MATE desktop environment, with GTK >=2.4.0 and libmatepanelapplet
+    * MATE desktop environment, with GTK >=2.4.0 and libcafepanelapplet
     * For ACPI support:
           o Linux kernel 2.6 with ACPI modules loaded (CONFIG_ACPI &
             CONFIG_ACPI_THERMAL)

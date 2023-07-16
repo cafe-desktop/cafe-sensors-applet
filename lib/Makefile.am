@@ -12,9 +12,9 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 LIBS = $(GLIB_LIBS)
 
 # also build the libsensorsplugin library
-lib_LTLIBRARIES = libmate-sensors-applet-plugin.la
+lib_LTLIBRARIES = libcafe-sensors-applet-plugin.la
 
-libmate_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
-libmate_sensors_applet_plugin_la_LDFLAGS = -export-dynamic
+libcafe_sensors_applet_plugin_la_SOURCES = sensors-applet-plugin.c 
+libcafe_sensors_applet_plugin_la_LDFLAGS = -export-dynamic
 
 -include $(top_srcdir)/git.mk

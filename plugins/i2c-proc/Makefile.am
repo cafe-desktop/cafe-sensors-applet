@@ -1,5 +1,5 @@
 # I2C-PROC plugin
-plugindir = $(libdir)/mate-sensors-applet/plugins
+plugindir = $(libdir)/cafe-sensors-applet/plugins
 
 AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
@@ -18,6 +18,6 @@ libi2c_proc_la_SOURCES = \
 	i2c-proc-plugin.c
 
 libi2c_proc_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) $(GLIB_LIBS)
-libi2c_proc_la_LIBADD = $(top_builddir)/lib/libmate-sensors-applet-plugin.la
+libi2c_proc_la_LIBADD = $(top_builddir)/lib/libcafe-sensors-applet-plugin.la
 
 -include $(top_srcdir)/git.mk

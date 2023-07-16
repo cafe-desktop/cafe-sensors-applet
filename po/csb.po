@@ -14,119 +14,119 @@ msgstr ""
 "POT-Creation-Date: 2018-12-23 14:46+0100\n"
 "PO-Revision-Date: 2018-03-12 07:35+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
-"Language-Team: Kashubian (https://www.transifex.com/mate/teams/13566/csb/)\n"
+"Language-Team: Kashubian (https://www.transifex.com/cafe/teams/13566/csb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: csb\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:1
+#: ../org.cafe.applets.SensorsApplet.cafe-panel-applet.in.in.h:1
 msgid "Sensors Applet Factory"
 msgstr ""
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:2
+#: ../org.cafe.applets.SensorsApplet.cafe-panel-applet.in.in.h:2
 msgid "Hardware Sensors Monitor"
 msgstr ""
 
-#: ../org.mate.applets.SensorsApplet.mate-panel-applet.in.in.h:3
+#: ../org.cafe.applets.SensorsApplet.cafe-panel-applet.in.in.h:3
 msgid "Displays temperature, fan speed and voltage sensor readings"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:1
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:1
 msgid "Font size in points"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:2
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:2
 msgid "Specify if show or hide sensor units"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:3
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:3
 msgid "Set if display icons or text labels"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:4
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:4
 msgid "Set value beside or below label"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:5
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:5
 msgid "Show temperature in Kelvin, Celsius or Fahrenheit"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:6
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:6
 msgid "Whether to display notifications"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:7
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:7
 msgid "Delay (in ms) between refreshes"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:8
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:8
 msgid ""
 "The size of the graph in pixels (width if horizontal, height if vertical)"
 msgstr ""
 
-#: ../org.mate.sensors-applet.gschema.xml.in.h:9
+#: ../org.cafe.sensors-applet.gschema.xml.in.h:9
 msgid "List of sensors"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:1
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:1
 msgid "Path to filename"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:2
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:2
 msgid "Sensor device ids"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:3
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:3
 msgid "The sensor device interface"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:4
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:4
 msgid "User defined label"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:5
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:5
 msgid "Whether a sensor is enabled or not"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:6
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:6
 msgid "Low value"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:7
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:7
 msgid "High value"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:8
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:8
 msgid "Whether the sensor has its alarm enabled"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:9
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:9
 msgid "Command to execute when the alarm is activated"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:10
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:10
 msgid "How often each alarm should be sounded (in seconds)"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:11
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:11
 msgid "Used to identify a sensor in a list"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:12
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:12
 msgid "Multiplier"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:13
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:13
 msgid "Offset"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:14
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:14
 msgid "Icon type"
 msgstr ""
 
-#: ../org.mate.sensors-applet.sensor.gschema.xml.in.h:15
+#: ../org.cafe.sensors-applet.sensor.gschema.xml.in.h:15
 msgid "Color of the graph for the sensor"
 msgstr ""
 
