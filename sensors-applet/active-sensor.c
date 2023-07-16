@@ -242,7 +242,7 @@ static void active_sensor_update_icon(ActiveSensor *active_sensor,
                                  DEFAULT_ICON_SIZE, DEFAULT_ICON_SIZE,
                                  0, 0,
                                  1.0, 1.0,
-                                 GDK_INTERP_BILINEAR,
+                                 CDK_INTERP_BILINEAR,
                                  255);
 
             g_object_unref(overlay_icon);
@@ -441,7 +441,7 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
     ctk_container_add(CTK_CONTAINER(active_sensor->graph_frame),
                       active_sensor->graph);
     ctk_widget_add_events(active_sensor->graph_frame,
-                          GDK_ALL_EVENTS_MASK);
+                          CDK_ALL_EVENTS_MASK);
 
     /* need to set size according to orientation */
     orient = cafe_panel_applet_get_orient(active_sensor->sensors_applet->applet);
