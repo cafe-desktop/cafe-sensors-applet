@@ -24,12 +24,11 @@ requires:
     - libxml-parser-perl
     - libxnvctrl-dev
     - make
-    - mate-common
     - yelp-tools
 
 before_scripts:
   - ./html-cppcheck
-  - ./install-from-git https://github.com/mate-desktop/mate-sensors-applet master
+  - ./install-from-git https://github.com/mate-desktop/mate-common master
 
 build_scripts:
   - ./before-build
