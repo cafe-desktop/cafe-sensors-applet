@@ -208,10 +208,10 @@ gint active_sensor_compare(ActiveSensor *a, ActiveSensor *b) {
 }
 
 static void active_sensor_update_icon(ActiveSensor *active_sensor,
-                                      GdkPixbuf *base_icon,
+                                      CdkPixbuf *base_icon,
                                       SensorType sensor_type) {
 
-    GdkPixbuf *overlay_icon, *new_icon;
+    CdkPixbuf *overlay_icon, *new_icon;
     const gchar *overlay_icon_filename = NULL;
     SensorValueRange value_range;
 
@@ -496,7 +496,7 @@ void active_sensor_update(ActiveSensor *active_sensor,
     gdouble sensor_multiplier;
     gdouble sensor_offset;
     gdouble sensor_value;
-    GdkPixbuf *icon_pixbuf;
+    CdkPixbuf *icon_pixbuf;
     gchar *graph_color;
     gint label_min_width;
     gint label_width;
@@ -779,7 +779,7 @@ void active_sensor_icon_changed(ActiveSensor *active_sensor, SensorsApplet *sens
     CtkTreeIter iter;
 
     SensorType sensor_type;
-    GdkPixbuf *icon_pixbuf;
+    CdkPixbuf *icon_pixbuf;
 
     g_assert(active_sensor);
     g_assert(sensors_applet);

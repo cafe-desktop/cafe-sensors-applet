@@ -37,7 +37,7 @@ struct _ActiveSensor {
     CtkWidget *graph;
     CtkWidget *graph_frame;
 
-    GdkRGBA graph_color;
+    CdkRGBA graph_color;
 
     CtkTreeRowReference *sensor_row;
 

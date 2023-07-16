@@ -285,7 +285,7 @@ static void sensor_config_dialog_icon_type_changed(CtkComboBox *icon_type_combo_
     CtkTreeIter iter;
     CtkTreePath *path;
 
-    GdkPixbuf *new_icon;
+    CdkPixbuf *new_icon;
     IconType icon_type;
 
     icons_model = ctk_combo_box_get_model(icon_type_combo_box);
@@ -319,7 +319,7 @@ static void sensor_config_dialog_graph_color_set(CtkColorChooser *color_chooser,
     CtkTreeIter iter;
     CtkWidget *content_area;
     gchar *color_string;
-    GdkRGBA color;
+    CdkRGBA color;
 
     ctk_color_chooser_get_rgba(color_chooser, &color);
 
@@ -352,8 +352,8 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
 
     CtkListStore *icon_store;
     IconType count;
-    GdkPixbuf *pixbuf;
-    GdkRGBA graph_color;
+    CdkPixbuf *pixbuf;
+    CdkRGBA graph_color;
     gchar *sensor_label;
     gchar *header_text;
 
