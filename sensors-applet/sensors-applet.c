@@ -168,7 +168,7 @@ static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) 
     CtkTreePath *path;
     gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
     IconType icon_type;
-    GdkPixbuf *new_icon;
+    CdkPixbuf *new_icon;
     gboolean enabled;
     SensorsApplet *sensors_applet;
     DisplayMode display_mode;
@@ -219,7 +219,7 @@ static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) 
 
 }
 
-static gboolean mouse_enter_cb(CtkWidget *widget, GdkEventCrossing *event, gpointer data)
+static gboolean mouse_enter_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
 {
     SensorsApplet *sensor_applet = data;
     sensor_applet->show_tooltip = TRUE;
@@ -227,7 +227,7 @@ static gboolean mouse_enter_cb(CtkWidget *widget, GdkEventCrossing *event, gpoin
     return TRUE;
 }
 
-static gboolean mouse_leave_cb(CtkWidget *widget, GdkEventCrossing *event, gpointer data)
+static gboolean mouse_leave_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
 {
     SensorsApplet *sensor_applet = data;
     sensor_applet->show_tooltip = FALSE;
@@ -792,9 +792,9 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
 }
 
 /* must unref when done with returned pixbuf */
-GdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
+CdkPixbuf *sensors_applet_load_icon(IconType icon_type) {
     CtkIconTheme *icon_theme;
-    GdkPixbuf *icon = NULL;
+    CdkPixbuf *icon = NULL;
     GError *error = NULL;
 
     /* try to load the icon */
@@ -858,7 +858,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
     gchar *sensor_id;
     gchar *sensor_path;
     SensorType sensor_type;
-    GdkPixbuf *icon;
+    CdkPixbuf *icon;
     CtkTreePath *tree_path;
 
     g_assert(sensors_applet);
