@@ -31,15 +31,15 @@ struct _ActiveSensor {
     SensorsApplet *sensors_applet;
 
     /* widgets to render to display the sensor */
-    GtkWidget *label;
-    GtkWidget *icon;
-    GtkWidget *value;
-    GtkWidget *graph;
-    GtkWidget *graph_frame;
+    CtkWidget *label;
+    CtkWidget *icon;
+    CtkWidget *value;
+    CtkWidget *graph;
+    CtkWidget *graph_frame;
 
     GdkRGBA graph_color;
 
-    GtkTreeRowReference *sensor_row;
+    CtkTreeRowReference *sensor_row;
 
 #ifdef HAVE_LIBNOTIFY
     NotifyNotification *notification[NUM_NOTIFS];
@@ -64,7 +64,7 @@ struct _ActiveSensor {
     gdouble sensor_high_value;
 };
 
-ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet, GtkTreeRowReference *sensor_row);
+ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet, CtkTreeRowReference *sensor_row);
 void active_sensor_destroy(ActiveSensor *active_sensor);
 gint active_sensor_compare(ActiveSensor *a, ActiveSensor *b);
 void active_sensor_update(ActiveSensor *sensor, SensorsApplet *sensors_applet);

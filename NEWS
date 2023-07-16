@@ -82,12 +82,12 @@
 ### cafe-sensors-applet 1.19.0
 
   * Translations update
-  * sensor-applet.c: replace deprecated GtkMisc
+  * sensor-applet.c: replace deprecated CtkMisc
   * sensor-applet.c: avoid deprecated CTK_STOCK_MISSING_IMAGE
-  * sensor-config-dialog: avoid deprecated GtkAlignment
-  * sensor-config-dialog: don't use deprecated GtkColorButton
+  * sensor-config-dialog: avoid deprecated CtkAlignment
+  * sensor-config-dialog: don't use deprecated CtkColorButton
   * prefs-dialog: add style class frame to scrolledwindow
-  * prefs-dialog: avoid deprecated GtkAlignment
+  * prefs-dialog: avoid deprecated CtkAlignment
   * prefs-dialog: avoid deprecated CTK_VBUTTON_BOX, CTK_TYPE_{H,V}BOX
   * use CTK_ALIGN_CENTER for the sensor_applet grid
 

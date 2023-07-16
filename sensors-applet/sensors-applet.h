@@ -59,7 +59,7 @@ static const gchar * const stock_icons[NUM_ICONS] = {
 #define UNITS_CURRENT  _("A")
 
 
-/* enumeration used to identify columns in the GtkTreeStore data structure */
+/* enumeration used to identify columns in the CtkTreeStore data structure */
 enum {
     PATH_COLUMN = 0,
     ID_COLUMN,
@@ -119,20 +119,20 @@ struct _SensorsApplet {
     CafePanelApplet* applet;
     gint size;
 
-    GtkTreeStore *sensors;
+    CtkTreeStore *sensors;
     gchar **sensors_hash_array;
-    GtkTreeSelection *selection;
+    CtkTreeSelection *selection;
 
     GHashTable *required_plugins;
     GHashTable *plugins;
 
     guint timeout_id;
-    /* preferences and about windows (if Gtk < 2.6) */
+    /* preferences and about windows (if Ctk < 2.6) */
     PrefsDialog *prefs_dialog;
 
     /* primary grid to contain the panel dispay - we pack the
      * list of labels and sensor values into this container */
-    GtkWidget *grid;
+    CtkWidget *grid;
     GList *active_sensors;
 
     GSettings *settings;
@@ -147,18 +147,18 @@ struct _SensorsApplet {
 
 /* non-static function prototypes */
 void sensors_applet_init(SensorsApplet *sensors_applet);
-void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, GtkTreePath *path);
-void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, GtkTreePath *path);
+void sensors_applet_sensor_enabled(SensorsApplet *sensors_applet, CtkTreePath *path);
+void sensors_applet_sensor_disabled(SensorsApplet *sensors_applet, CtkTreePath *path);
 gboolean sensors_applet_update_active_sensors(SensorsApplet *sensors_applet);
 /**
  * to be called by things like prefs dialog to turn off a sensor alarm
  */
 void sensors_applet_alarm_off(SensorsApplet *sensors_applet,
-                              GtkTreePath *path,
+                              CtkTreePath *path,
                               NotifType notif_type);
-void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet, GtkTreePath *path);
-void sensors_applet_icon_changed(SensorsApplet *sensors_applet, GtkTreePath *path);
-void sensors_applet_update_sensor(SensorsApplet *sensors_applet, GtkTreePath *path);
+void sensors_applet_all_alarms_off(SensorsApplet *sensors_applet, CtkTreePath *path);
+void sensors_applet_icon_changed(SensorsApplet *sensors_applet, CtkTreePath *path);
+void sensors_applet_update_sensor(SensorsApplet *sensors_applet, CtkTreePath *path);
 
 void sensors_applet_display_layout_changed(SensorsApplet *sensors_applet);
 void sensors_applet_reorder_sensors(SensorsApplet *sensors_applet);

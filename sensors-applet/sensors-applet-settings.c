@@ -149,8 +149,8 @@ static void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_a
     g_assert(sensors_applet);
     g_assert(sensors_applet->sensors);
 
-    GtkTreeIter interfaces_iter;
-    GtkTreeIter sensors_iter;
+    CtkTreeIter interfaces_iter;
+    CtkTreeIter sensors_iter;
     gboolean not_end_of_interfaces = TRUE;
     gboolean not_end_of_sensors = TRUE;
     gint interfaces_counter = 0;
@@ -206,10 +206,10 @@ static void sensors_applet_settings_print_sensors_tree (SensorsApplet *sensors_a
 
 /* compare two iters using their paths
  * kinda same as active_sensor_compare () */
-static gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *sensors_applet, GtkTreeIter ti_a, GtkTreeIter ti_b) {
+static gint sensors_applet_settings_sort_sensors_iter_compare (SensorsApplet *sensors_applet, CtkTreeIter ti_a, CtkTreeIter ti_b) {
 
-    GtkTreePath *tp_a;
-    GtkTreePath *tp_b;
+    CtkTreePath *tp_a;
+    CtkTreePath *tp_b;
     gint ret_val;
 
     tp_a = ctk_tree_model_get_path (CTK_TREE_MODEL(sensors_applet->sensors), &ti_a);
@@ -237,8 +237,8 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
     g_assert(sensors_applet);
     g_assert(sensors_applet->sensors);
 
-    GtkTreeIter interfaces_iter;
-    GtkTreeIter sensors_iter;
+    CtkTreeIter interfaces_iter;
+    CtkTreeIter sensors_iter;
     gboolean not_end_of_interfaces = TRUE;
     gboolean not_end_of_sensors = TRUE;
 
@@ -247,10 +247,10 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
     gchar *sensor_path = NULL;
     gchar *sensor_hash = NULL;
 
-    GtkTreeIter interface_iter_a;
-    GtkTreeIter interface_iter_b;
-    GtkTreeIter sensor_iter_a;
-    GtkTreeIter sensor_iter_b;
+    CtkTreeIter interface_iter_a;
+    CtkTreeIter interface_iter_b;
+    CtkTreeIter sensor_iter_a;
+    CtkTreeIter sensor_iter_b;
     gboolean found_a = FALSE;
     gboolean found_b = FALSE;
 
@@ -311,8 +311,8 @@ static gint sensors_applet_settings_sort_sensors_sort (SensorsApplet *sensors_ap
     /* make the switch */
     if (found_a && found_b) {
 
-        GtkTreeIter first_iter;
-        GtkTreeIter iter_next;
+        CtkTreeIter first_iter;
+        CtkTreeIter iter_next;
 
         gint ret_val;
 
@@ -539,9 +539,9 @@ gboolean sensors_applet_settings_sort_sensors (SensorsApplet *sensors_applet) {
 gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
 
     /* write everything to GSettings except VISIBLE and ALARM_TIMEOUT_INDEX
-     * for stepping through GtkTreeStore data structure */
-    GtkTreeIter interfaces_iter;
-    GtkTreeIter sensors_iter;
+     * for stepping through CtkTreeStore data structure */
+    CtkTreeIter interfaces_iter;
+    CtkTreeIter sensors_iter;
     gboolean not_end_of_interfaces = TRUE;
     gboolean not_end_of_sensors = TRUE;
     gchar *applet_path = NULL;
@@ -569,7 +569,7 @@ gboolean sensors_applet_settings_save_sensors (SensorsApplet *sensors_applet) {
 
     applet_path = cafe_panel_applet_get_preferences_path (sensors_applet->applet);
 
-    /* now step through the GtkTreeStore sensors to find which sensors are available / loaded */
+    /* now step through the CtkTreeStore sensors to find which sensors are available / loaded */
     for (not_end_of_interfaces = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
         not_end_of_interfaces;
         not_end_of_interfaces = ctk_tree_model_iter_next(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter)) {
