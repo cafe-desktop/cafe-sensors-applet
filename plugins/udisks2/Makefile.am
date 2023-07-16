@@ -1,7 +1,7 @@
 # UDisks2 plugin
 plugindir = $(libdir)/cafe-sensors-applet/plugins
 
-AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
+AM_CPPFLAGS = -DCAFELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -341,11 +341,11 @@ msgstr "ГРЕШКА"
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Авторски права © 2005-2009 Alex Murray\n"
 "Авторски права © 2011 Stefano Karapetsas\n"
-"Авторски права © 2012-2020 Разработчиците на MATE"
+"Авторски права © 2012-2020 Разработчиците на CAFE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
@@ -355,7 +355,7 @@ msgstr ""
 "Александър Шопов <ash@contact.bg>\n"
 "Любомир Василев <lyubomirv@abv.bg>\n"
 "\n"
-"Проектът за превод на MATE има нужда от подкрепа.\n"
+"Проектът за превод на CAFE има нужда от подкрепа.\n"
 "Научете повече за нас на http://cafe.cult.bg\n"
 "Докладвайте за грешки на http://cafe.cult.bg/bugs"
 

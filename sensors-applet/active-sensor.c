@@ -447,8 +447,8 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
     orient = cafe_panel_applet_get_orient(active_sensor->sensors_applet->applet);
     graph_size = g_settings_get_int(active_sensor->sensors_applet->settings, GRAPH_SIZE);
 
-    horizontal = ((orient == MATE_PANEL_APPLET_ORIENT_UP) ||
-                  (orient == MATE_PANEL_APPLET_ORIENT_DOWN));
+    horizontal = ((orient == CAFE_PANEL_APPLET_ORIENT_UP) ||
+                  (orient == CAFE_PANEL_APPLET_ORIENT_DOWN));
 
     active_sensor_set_graph_dimensions(active_sensor,
                                        (horizontal ? graph_size : sensors_applet->size),

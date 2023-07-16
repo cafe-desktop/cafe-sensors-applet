@@ -27,13 +27,13 @@ msgstr ""
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:30
-msgid "MATE Sensors Applet Manual V2.1"
-msgstr "Manual for panelprogrammet MATE-sensorer version 2.1"
+msgid "CAFE Sensors Applet Manual V2.1"
+msgstr "Manual for panelprogrammet CAFE-sensorer version 2.1"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015-2020</year> <holder>MATE-dokumentationsholdet</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Team</holder>"
+msgstr "<year>2015-2020</year> <holder>CAFE-dokumentationsholdet</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -43,16 +43,16 @@ msgstr "<year>2006</year> <holder>Alex Murray</holder>"
 #. (itstool) path: abstract/para
 #: C/index.docbook:40
 msgid ""
-"MATE Sensors Applet displays readings from temperature, voltage and fan "
+"CAFE Sensors Applet displays readings from temperature, voltage and fan "
 "sensors within the panel."
 msgstr ""
-"Panelprogrammet MATE-sensorer viser læsninger fra temperatur, spænding og "
+"Panelprogrammet CAFE-sensorer viser læsninger fra temperatur, spænding og "
 "blæsersensorer i panelet."
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:63
-msgid "<surname>MATE Development</surname> <affiliation> </affiliation>"
-msgstr "<surname>MATE-udvikling</surname> <affiliation> </affiliation>"
+msgid "<surname>CAFE Development</surname> <affiliation> </affiliation>"
+msgstr "<surname>CAFE-udvikling</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
@@ -71,16 +71,16 @@ msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
 msgid ""
-"<revnumber>MATE Sensors Applet Manual V2.1</revnumber> <date>January "
+"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January "
 "2006</date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Manual for panelprogrammet MATE-sensorer version 2.1</revnumber> "
+"<revnumber>Manual for panelprogrammet CAFE-sensorer version 2.1</revnumber> "
 "<date>Januar 2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:123
-msgid "This manual describes version 1.10 of MATE Sensors Applet."
-msgstr "Denne manual beskriver version 1.10 af panelprogrammet MATE-sensorer."
+msgid "This manual describes version 1.10 of CAFE Sensors Applet."
+msgstr "Denne manual beskriver version 1.10 af panelprogrammet CAFE-sensorer."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:126
@@ -90,19 +90,19 @@ msgstr "Tilbagemelding"
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:127
 msgid ""
-"To report a bug or make a suggestion regarding MATE Sensors Applet or this "
+"To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
 "manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "For at rapportere en fejl eller komme med et forslag jævnfør panelprogrammet"
-" MATE-sensorer eller denne manual, så følg retningslinjerne i <ulink "
-"url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE's side for "
+" CAFE-sensorer eller denne manual, så følg retningslinjerne i <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE's side for "
 "tilbagemeldinger</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:135
-msgid "<primary>MATE Sensors Applet</primary>"
-msgstr "<primary>Panelprogrammet MATE-sensorer</primary>"
+msgid "<primary>CAFE Sensors Applet</primary>"
+msgstr "<primary>Panelprogrammet CAFE-sensorer</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:141
@@ -111,8 +111,8 @@ msgstr "Indledning"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:144
-msgid "MATE Sensors Applet"
-msgstr "Panelprogrammet MATE-sensorer"
+msgid "CAFE Sensors Applet"
+msgstr "Panelprogrammet CAFE-sensorer"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -132,20 +132,20 @@ msgstr ""
 #: C/index.docbook:146
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>MATE Sensors Applet "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>CAFE Sensors Applet "
 "with 3 sensors enabled.</phrase> </textobject>"
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Panelprogrammet MATE-"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Panelprogrammet CAFE-"
 "sensorer med 3 sensorer aktiveret.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:157
 msgid ""
-"<application>MATE Sensors Applet</application> provides a convenient way to "
+"<application>CAFE Sensors Applet</application> provides a convenient way to "
 "monitor the health of your computer in a simple display on your desktop."
 msgstr ""
-"Panelprogrammet <application>MATE-sensorer</application> tilbyder en nem "
+"Panelprogrammet <application>CAFE-sensorer</application> tilbyder en nem "
 "måde at overvåge helbredet for din computer i en simpel visning på dit "
 "skrivebord."
 
@@ -259,20 +259,20 @@ msgstr ""
 #: C/index.docbook:162
 msgid ""
 "A number of sensor interfaces are supported, which should be configured "
-"before adding MATE Sensors Applet to the panel: <_:itemizedlist-1/>"
+"before adding CAFE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
 "Et antal sensorgrænseflader er understøttet, som skal konfigureres før "
-"tilføjelse af panelprogrammet MATE-sensorer til panelet: <_:itemizedlist-1/>"
+"tilføjelse af panelprogrammet CAFE-sensorer til panelet: <_:itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:236
 msgid ""
-"To add <application>MATE Sensors Applet</application> to a panel right-click"
+"To add <application>CAFE Sensors Applet</application> to a panel right-click"
 " on the panel to open the panel pop-up menu, then choose <menuchoice> "
 "<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
 "Monitor</guimenuitem> </menuchoice>."
 msgstr ""
-"For at tilføje Panelprogrammet <application>MATE-sensorer</application> til "
+"For at tilføje Panelprogrammet <application>CAFE-sensorer</application> til "
 "et panel, højreklik for at åbne panelets pop op-menu, vælg så <menuchoice> "
 "<guimenu>Tilføj til panel</guimenu> <guimenuitem>Overvågning af "
 "udstyrssensorer</guimenuitem> </menuchoice>."
@@ -285,12 +285,12 @@ msgstr "Brug"
 #. (itstool) path: sect1/para
 #: C/index.docbook:248
 msgid ""
-"When you add <application>MATE Sensors Applet</application> to a panel for "
+"When you add <application>CAFE Sensors Applet</application> to a panel for "
 "the first time, the applet will search for any available sensors to monitor,"
 " and will display a sensible default sensor if found (such as the "
 "temperature of the CPU)."
 msgstr ""
-"Når du tilføjer panelprogrammet <application>MATE-sensorer</application> til"
+"Når du tilføjer panelprogrammet <application>CAFE-sensorer</application> til"
 " et panel for den første gang, så vil panelprogrammet søge for tilgængelige "
 "sensorer at overvåge, og vil vise en fornuftig standardsensor hvis fundet "
 "(såsom cpu'ens temperatur)."
@@ -316,12 +316,12 @@ msgstr "Indstillinger"
 #. (itstool) path: sect1/para
 #: C/index.docbook:263
 msgid ""
-"To configure <application>MATE Sensors Applet</application>, right-click on "
+"To configure <application>CAFE Sensors Applet</application>, right-click on "
 "the applet, then choose "
 "<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
 "pop-up menu."
 msgstr ""
-"For at konfigurere panelprogrammet <application>MATE-sensorer</application>,"
+"For at konfigurere panelprogrammet <application>CAFE-sensorer</application>,"
 " højreklik på panelprogrammet, vælg så "
 "<menuchoice><guimenuitem>Præferencer</guimenuitem></menuchoice> fra pop op-"
 "menuen."
@@ -458,10 +458,10 @@ msgstr "<guilabel>Vis påmindelser</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:357
 msgid ""
-"If enabled, MATE Sensors Applet will display notifications to the user when "
+"If enabled, CAFE Sensors Applet will display notifications to the user when "
 "alarm conditions occur."
 msgstr ""
-"Hvis aktivere vil panelprogrammet MATE-sensorer vise påmindelser til "
+"Hvis aktivere vil panelprogrammet CAFE-sensorer vise påmindelser til "
 "brugeren, når alarmbetingelser opstår."
 
 #. (itstool) path: listitem/para
@@ -739,12 +739,12 @@ msgstr ""
 msgid ""
 "You can play a sound when the alarm occurs by using the command "
 "<command>esdplay</command> which should be available as part of the standard"
-" MATE installation. (Note: If this does not work, you could also try "
+" CAFE installation. (Note: If this does not work, you could also try "
 "<command>aplay</command> which is the default ALSA sound player). "
 "<_:screen-1/>"
 msgstr ""
 "Du kan afspille en lyd, når alarmen opstår ved at bruge kommandoen "
-"<command>esdplay</command>, der bør være tilgængelig som en del af MATE-"
+"<command>esdplay</command>, der bør være tilgængelig som en del af CAFE-"
 "installationen. (Bemærk: Hvis dette ikke fungerer, kan du også prøve "
 "<command>aplay</command>, der er den gængse ALSA-lydafspiller). "
 "<_:screen-1/>"
@@ -845,36 +845,36 @@ msgstr ""
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:644
-msgid "About MATE Sensors Applet"
-msgstr "Om panelprogrammet MATE-sensorer"
+msgid "About CAFE Sensors Applet"
+msgstr "Om panelprogrammet CAFE-sensorer"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
 msgid ""
 "The origin sensor applet was written by Alex Murray "
-"(<email>murray.alex@gmail.com</email>). <application>MATE Sensors "
+"(<email>murray.alex@gmail.com</email>). <application>CAFE Sensors "
 "Applet</application> is further develop by Mate dev team. To find more "
-"information about <application>MATE Sensors Applet</application>, please "
+"information about <application>CAFE Sensors Applet</application>, please "
 "visit the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-"
-"applet/\" type=\"http\">MATE Sensors Applet Project Homepage</ulink>."
+"applet/\" type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 "Det oprindelige sensorpanelprogram blev skrevet af Alex Murray "
-"(<email>murray.alex@gmail.com</email>). <application>Panelprogrammet MATE-"
-"sensorer</application> er yderligere udvikling af MATE-udviklingsholdet. For"
-" at finde yderligere information om <application>Panelprogrammet MATE-"
+"(<email>murray.alex@gmail.com</email>). <application>Panelprogrammet CAFE-"
+"sensorer</application> er yderligere udvikling af CAFE-udviklingsholdet. For"
+" at finde yderligere information om <application>Panelprogrammet CAFE-"
 "sensorer</application>, så besøg <ulink url=\"https://github.com/cafe-"
-"desktop/cafe-sensors-applet/\" type=\"http\">MATE-sensorers "
+"desktop/cafe-sensors-applet/\" type=\"http\">CAFE-sensorers "
 "projekthjemmeside</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
 msgid ""
-"To report a bug or make a suggestion regarding MATE Sensors Applet or this "
+"To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
 "manual, follow the directions at the <ulink url=\"https://github.com/cafe-"
 "desktop/cafe-sensors-applet/\" type=\"http\">project homepage</ulink>."
 msgstr ""
 "For at rapportere en fejl eller komme med et forslag jævnfør panelprogrammet"
-" MATE-sensorer eller denne manual, så følg retningslinjerne fra <ulink "
+" CAFE-sensorer eller denne manual, så følg retningslinjerne fra <ulink "
 "url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" "
 "type=\"http\">projektets hjemmeside</ulink>."
 
@@ -919,12 +919,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Denne manual er en del af MATE-manualsamlingen distribueret under GFDL. Hvis"
+"Denne manual er en del af CAFE-manualsamlingen distribueret under GFDL. Hvis"
 " du vil distribuere denne manual separat fra denne samling, kan du gøre det "
 "ved at tilføje en kopi af licensen til manualen, som beskrevet i sektion 6 "
 "af licensen."
@@ -933,14 +933,14 @@ msgstr ""
 #: C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Mange af navnene brugt af firmaer til at skelne deres produkter og tjenester"
-" er registrerede varemærker. Der hvor disse navne optræder i MATE-"
-"dokumentationen, og medlemmerne af MATE-dokumentationsprojektet er blevet "
+" er registrerede varemærker. Der hvor disse navne optræder i CAFE-"
+"dokumentationen, og medlemmerne af CAFE-dokumentationsprojektet er blevet "
 "gjort opmærksomme på disse varemærker, er navnene skrevet med store "
 "bogstaver eller store forbogstaver."
 

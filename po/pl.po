@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -345,16 +345,16 @@ msgstr "BŁĄD"
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Prawa autorskie © 2005-2009 Alex Murray\n"
 "Prawa autorskie © 2011 Stefano Karapetsas\n"
-"Prawa autorskie © 2012-2020 programiści MATE"
+"Prawa autorskie © 2012-2020 programiści CAFE"
 
 #: sensors-applet/about-dialog.c:46
 msgid "translator-credits"
 msgstr ""
-"Tłumacze środowiska MATE, 2014-2020\n"
+"Tłumacze środowiska CAFE, 2014-2020\n"
 "\n"
 "Zbigniew Chyla, 2002-2003\n"
 "Artur Flinta, 2003-2005\n"

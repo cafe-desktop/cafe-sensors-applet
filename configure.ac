@@ -1,6 +1,6 @@
 # ================= initialization =================== #
 
-AC_INIT([MATE Sensors Applet], [1.24.1], [https://cafe-desktop.org],
+AC_INIT([CAFE Sensors Applet], [1.24.1], [https://cafe-desktop.org],
 [cafe-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
@@ -62,9 +62,9 @@ PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
-PKG_CHECK_MODULES(MATE, libcafepanelapplet-4.0 >= $LIBPANEL_REQUIRED)
-AC_SUBST(MATE_CFLAGS)
-AC_SUBST(MATE_LIBS)
+PKG_CHECK_MODULES(CAFE, libcafepanelapplet-4.0 >= $LIBPANEL_REQUIRED)
+AC_SUBST(CAFE_CFLAGS)
+AC_SUBST(CAFE_LIBS)
 
 PKG_CHECK_MODULES(CAIRO, cairo >= $LIBCAIRO_REQUIRED)
 AC_SUBST(CAIRO_CFLAGS)
@@ -262,7 +262,7 @@ if test x"$XSLTPROC" = xno; then
   AC_MSG_ERROR([xsltproc executable not found in your path - should be installed with libxslt])
 fi
 
-MATE_COMPILE_WARNINGS
+CAFE_COMPILE_WARNINGS
 
 # ================ yelp-tools stuff ============= #
 YELP_HELP_INIT

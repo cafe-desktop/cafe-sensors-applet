@@ -144,8 +144,8 @@ static void size_allocate_cb(MatePanelApplet *applet,
     sensors_applet = (SensorsApplet *)data;
     orient = cafe_panel_applet_get_orient(sensors_applet->applet);
 
-    if ((orient == MATE_PANEL_APPLET_ORIENT_LEFT) ||
-        (orient == MATE_PANEL_APPLET_ORIENT_RIGHT)) {
+    if ((orient == CAFE_PANEL_APPLET_ORIENT_LEFT) ||
+        (orient == CAFE_PANEL_APPLET_ORIENT_RIGHT)) {
 
         if (sensors_applet->size == allocation->width)
             return;
@@ -509,8 +509,8 @@ static void sensors_applet_pack_display(SensorsApplet *sensors_applet) {
     display_mode = (DisplayMode) g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
     layout_mode = (LayoutMode) g_settings_get_int (sensors_applet->settings, LAYOUT_MODE);
 
-    horizontal = (((cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_UP) ||
-                  (cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN)));
+    horizontal = (((cafe_panel_applet_get_orient(sensors_applet->applet) == CAFE_PANEL_APPLET_ORIENT_UP) ||
+                  (cafe_panel_applet_get_orient(sensors_applet->applet) == CAFE_PANEL_APPLET_ORIENT_DOWN)));
 
     /* figure out num rows / cols by how high / wide sensors
      * labels / icons are and how much size we have to put them in */
@@ -1171,8 +1171,8 @@ void sensors_applet_graph_size_changed(SensorsApplet *sensors_applet) {
     if (sensors_applet->active_sensors) {
 
         graph_size = g_settings_get_int (sensors_applet->settings, GRAPH_SIZE);
-        if (cafe_panel_applet_get_orient(sensors_applet->applet) ==  MATE_PANEL_APPLET_ORIENT_UP ||
-            cafe_panel_applet_get_orient(sensors_applet->applet) == MATE_PANEL_APPLET_ORIENT_DOWN) {
+        if (cafe_panel_applet_get_orient(sensors_applet->applet) ==  CAFE_PANEL_APPLET_ORIENT_UP ||
+            cafe_panel_applet_get_orient(sensors_applet->applet) == CAFE_PANEL_APPLET_ORIENT_DOWN) {
 
             /* is horizontal so set graph_size as width */
             dimensions[0] = graph_size;
@@ -1243,7 +1243,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     gchar *ui_path;
 
     /* Have our background automatically painted. */
-    cafe_panel_applet_set_background_widget(MATE_PANEL_APPLET(sensors_applet->applet), GTK_WIDGET(sensors_applet->applet));
+    cafe_panel_applet_set_background_widget(CAFE_PANEL_APPLET(sensors_applet->applet), GTK_WIDGET(sensors_applet->applet));
 
     /* plugin functions are stored as name -> get_value_function pairs so
      * use standard string functions on hash table */
@@ -1254,7 +1254,7 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     /* initialise size */
     sensors_applet->size = DEFAULT_APPLET_SIZE;
 
-    cafe_panel_applet_set_flags(sensors_applet->applet, MATE_PANEL_APPLET_EXPAND_MINOR);
+    cafe_panel_applet_set_flags(sensors_applet->applet, CAFE_PANEL_APPLET_EXPAND_MINOR);
 
     g_signal_connect(sensors_applet->applet, "destroy",
              G_CALLBACK(destroy_cb),

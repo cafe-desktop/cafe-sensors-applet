@@ -2,7 +2,7 @@
 
 uidir = $(datadir)/cafe-sensors-applet/ui
 
-AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
+AM_CPPFLAGS = -DCAFELOCALEDIR=\""$(datadir)/locale/"\" \
 	-DG_LOG_DOMAIN=\""sensors-applet"\" \
 	-DPIXMAPS_DIR=\""$(datadir)/pixmaps/$(PACKAGE)/"\" \
 	-DDATADIR=\""$(datadir)"\" \
@@ -12,10 +12,10 @@ AM_CPPFLAGS = -DMATELOCALEDIR=\""$(datadir)/locale/"\" \
         -DSYSCONFDIR=\""$(sysconfdir)"\" \
         -DPREFIX=\""$(prefix)"\" \
 	-I$(top_srcdir) \
-	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(MATE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
+	$(GLIB_CFLAGS) $(GTK_CFLAGS) $(CAFE_CFLAGS) $(CAIRO_CFLAGS) $(LIBNOTIFY_CFLAGS)
 
 
-LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(MATE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
+LIBS = $(GLIB_LIBS) $(GTK_LIBS) $(CAFE_LIBS) $(CAIRO_LIBS) $(LIBNOTIFY_LIBS)
 
 if LIBNOTIFY
 libnotify_SRC = active-sensor-libnotify.c \
