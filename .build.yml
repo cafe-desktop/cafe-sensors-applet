@@ -28,7 +28,7 @@ requires:
     #required for cafe-panel
     - gir1.2-freedesktop
     - gobject-introspection
-    - gtk-doc-tools
+    - ctk-doc-tools
     - libatk1.0-dev
     - libdconf-dev
     - libgirepository1.0-dev

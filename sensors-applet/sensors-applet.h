@@ -19,7 +19,7 @@
 #ifndef SENSORS_APPLET_H
 #define SENSORS_APPLET_H
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <cafe-panel-applet.h>
 #include "sensors-applet-sensor.h"
 

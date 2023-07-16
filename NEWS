@@ -97,7 +97,7 @@
     to make generating release announcements easier
   * Build: require cafe-panel >= 1.17
   * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
-    --with-gtk build option
+    --with-ctk build option
   * Fix some GTK+ deprecations
   * Some more fixes and cleanups
   * Translations update
