@@ -1,0 +1,167 @@
+### mate-sensors-applet 1.24.1
+
+  * Translations update
+  * add git.mk to generate .gitignore
+  * build: prevents two consecutive slashes in plugin file path
+  * build: Fix G_LOG_DOMAIN for sensors applet
+  * sonypi-plugin.c: Make sonypi plugin portable to GNU/Hurd
+  * libsensors-plugin: Port to GRegex
+  * Replace g_malloc0 with g_new0 and g_strdup
+  * build: silent build warnings for distcheck
+  * use default MATE_COMPILE_WARNINGS level
+  * build: show configure summary
+
+### mate-sensors-applet 1.24.0
+
+  * Translations update
+
+### mate-sensors-applet 1.23.0
+
+  * Translations update
+  * Remove trailing whitespaces
+  * Change url project's website
+  * [ci] Add cppcheck html report
+  * [ci] Enable Clang Static Analyzer
+  * help: update copyright
+  * Help: Use XInclude instead of ENTITY for legal.xml
+
+### mate-sensors-applet 1.22.0
+
+  * Translations update
+  * Initialize Travis CI support
+  * Make translatable the copyright in about dialog
+
+### mate-sensors-applet 1.21.1
+
+  * Translations update
+  * disable deprecation warnings for distcheck
+  * Add NetBSD support.
+  * Use make functions for HELP_LINGUAS
+  * add help to transifex config
+
+### mate-sensors-applet 1.21.0
+
+  * Translations update
+  * Fix copyright for plugin files
+  * Add dummy plugin
+  * UDisks2 plugin cleanup
+
+### mate-sensors-applet 1.20.1
+
+  * Translations update
+  * fix save order of sensors v2
+  * prefs-dialog: drop unneeded space in general tab
+  * prefs-dialog: set a min_width for enable_column
+  * prefs-dialog: use hscrollbar-policy GTK_POLICY_NEVER
+
+### mate-sensors-applet 1.20.0
+
+  * require GTK+ 3.22 and GLib 2.50
+  * build: enable udisk2 plugin again
+  * Translations update
+  * Remove deprecated udisks plugin
+  * udisks plugin: fix memory management for GValue variables
+  * Remove deprecated eee plugin
+  * Fix popup shower on removed HDD
+  * ibm-acpi.c: Fix build warning:
+  * eee-plugin.c: Fix build warning:
+  * active-sensor.c: Fix build warning:
+  * sensors-applet.c: Fix build warning:
+  * update copyright year to 2018
+  * Fix indents
+  * Fix project cleanup
+
+### mate-sensors-applet 1.19.1
+
+  * Translations update
+  * Stop jumping applet as numbers change
+  * fix save order of sensors
+  * updated hide temperature units
+  * remove code duplication
+
+### mate-sensors-applet 1.19.0
+
+  * Translations update
+  * sensor-applet.c: replace deprecated GtkMisc
+  * sensor-applet.c: avoid deprecated GTK_STOCK_MISSING_IMAGE
+  * sensor-config-dialog: avoid deprecated GtkAlignment
+  * sensor-config-dialog: don't use deprecated GtkColorButton
+  * prefs-dialog: add style class frame to scrolledwindow
+  * prefs-dialog: avoid deprecated GtkAlignment
+  * prefs-dialog: avoid deprecated GTK_VBUTTON_BOX, GTK_TYPE_{H,V}BOX
+  * use GTK_ALIGN_CENTER for the sensor_applet grid
+
+### mate-sensors-applet 1.18.0
+
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Build: require mate-panel >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Fix some GTK+ deprecations
+  * Some more fixes and cleanups
+  * Translations update
+
+### mate-sensors-applet 1.16.1
+
+  * Update tooltip only when mouse is over the applet (fixes some
+    OpenGL issues in fullscreen apps)
+
+### mate-sensors-applet 1.16.0
+
+  * Make distcheck use currently selected GTK+ version
+  * Translations update
+
+### mate-sensors-applet 1.14.0
+
+  * Some cleanups
+  * Translations update
+  * Fix Changelog generation
+
+### mate-sensors-applet 1.12.1
+
+  * Fix wrong size of GPU icon
+
+### mate-sensors-applet 1.12.0
+
+  * Add support for nvidia thermal and cooler sensors (requires
+    libxnvctrl >= 256.25)
+  * Add mbmon plugin
+  * Make udisks plugin poll for new value
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Some GTK+3 fixes
+  * Some more fixes and cleanups
+
+### mate-sensors-applet 1.10.4
+
+  * Fix regression that caused segfault
+
+### mate-sensors-applet 1.10.3
+
+  * Set icons for prefs and about dialogs
+  * Several small cleanups and bugfixes
+  * Several help fixes
+
+### mate-sensors-applet 1.10.2
+
+  * Reintroduce missing help
+
+### mate-sensors-applet 1.10.1
+
+  * Fix sensor config dialog (was non-responsive)
+  * Fix display of sensors in GTK+3 build
+  * Updated translations
+
+### mate-sensors-applet 1.10.0
+
+  * Add GTK3 support
+
+### mate-sensors-applet 1.8.0
+
+  * Use yelp-tools instead of mate-doc-utils
+
+### mate-sensors-applet 1.5.0:
+
+  * migrate to GSettings and remove MateConf usage
+  * migrate to DBUS and remove MateComponent usage
+  * remove libmate usage and use glib instead
