@@ -116,7 +116,7 @@ typedef enum {
 
 struct _SensorsApplet {
     /* the actual applet for this instance */
-    MatePanelApplet* applet;
+    CafePanelApplet* applet;
     gint size;
 
     GtkTreeStore *sensors;

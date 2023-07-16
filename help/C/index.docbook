@@ -644,7 +644,7 @@ Alarms for individual sensors must also be enabled.
     <title>About &applet;</title>
     <para> The origin sensor applet was written by Alex Murray
       (<email>murray.alex@gmail.com</email>).
-      <application>&applet;</application> is further develop by Mate dev team.
+      <application>&applet;</application> is further develop by Cafe dev team.
       To find more information about
       <application>&applet;</application>, please visit the <ulink
         url="&project-webpage;" type="http">&applet; Project

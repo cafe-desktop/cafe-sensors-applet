@@ -406,7 +406,7 @@ ActiveSensor *active_sensor_new(SensorsApplet *sensors_applet,
                                 GtkTreeRowReference *sensor_row) {
 
     ActiveSensor *active_sensor;
-    MatePanelAppletOrient orient;
+    CafePanelAppletOrient orient;
     gint graph_size;
     gboolean horizontal;
 

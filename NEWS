@@ -162,6 +162,6 @@
 
 ### cafe-sensors-applet 1.5.0:
 
-  * migrate to GSettings and remove MateConf usage
-  * migrate to DBUS and remove MateComponent usage
+  * migrate to GSettings and remove CafeConf usage
+  * migrate to DBUS and remove CafeComponent usage
   * remove libcafe usage and use glib instead
