@@ -449,7 +449,7 @@ void sensor_config_dialog_create(SensorsApplet *sensors_applet) {
     g_free(header_text);
 
     /* icon type */
-    icon_store = ctk_list_store_new(1, GDK_TYPE_PIXBUF);
+    icon_store = ctk_list_store_new(1, CDK_TYPE_PIXBUF);
 
     /* populate list with icons */
     for (count = CPU_ICON; count < NUM_ICONS; count++) {
