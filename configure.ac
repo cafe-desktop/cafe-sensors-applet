@@ -12,7 +12,6 @@ AM_MAINTAINER_MODE
 
 # ============== basic compiler settings ============= #
 AC_PROG_CC
-AC_HEADER_STDC
 
 # =================== for plugins ==================== #
 AC_PROG_LIBTOOL
