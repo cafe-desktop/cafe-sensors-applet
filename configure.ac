@@ -14,7 +14,7 @@ AM_MAINTAINER_MODE
 AC_PROG_CC
 
 # =================== for plugins ==================== #
-AC_PROG_LIBTOOL
+LT_INIT
 
 # =========== take care of some localization ========= #
 AM_GNU_GETTEXT_VERSION([0.19.8])
