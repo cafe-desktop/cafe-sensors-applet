@@ -481,12 +481,3 @@ msgstr ""
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Nobeno tipalo ni omogočeno!"
-
-#~ msgid ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE developers"
-#~ msgstr ""
-#~ "Avtorske pravice © 2005-2009 Alex Murray\n"
-#~ "Avtorske pravice © 2011 Stefano Karapetsas\n"
-#~ "Avtorske pravice © 2012-2020 CAFE developers"

@@ -481,15 +481,3 @@ msgstr "嘗試更新位於 %s 的感應器 %s 值時發生錯誤。"
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "沒有啟用任何感應器！"
-
-#~ msgid "cafe-sensors-applet"
-#~ msgstr "cafe-sensors-applet"
-
-#~ msgid ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE developers"
-#~ msgstr ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE 開發者"

@@ -489,15 +489,3 @@ msgstr ""
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Ingen sensorer aktivert!"
-
-#~ msgid "cafe-sensors-applet"
-#~ msgstr "cafe-sensors-applet"
-
-#~ msgid ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE developers"
-#~ msgstr ""
-#~ "Opphavsrett © 2005-2009 Alex Murray\n"
-#~ "Opphavsrett © 2011 Stefano Karapetsas\n"
-#~ "Opphavsrett © 2012-2020 CAFE-utviklerne"

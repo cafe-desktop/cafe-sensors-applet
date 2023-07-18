@@ -477,6 +477,3 @@ msgstr ""
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "No sensors enabled!"
-
-#~ msgid "cafe-sensors-applet"
-#~ msgstr "cafe-sensors-applet"

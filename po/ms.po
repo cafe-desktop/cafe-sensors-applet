@@ -473,15 +473,3 @@ msgstr ""
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Tiada penderia dibenarkan!"
-
-#~ msgid "cafe-sensors-applet"
-#~ msgstr "cafe-sensors-applet"
-
-#~ msgid ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE developers"
-#~ msgstr ""
-#~ "Hak Cipta © 2005-2009 Alex Murray\n"
-#~ "Hak Cipta © 2011 Stefano Karapetsas\n"
-#~ "Hak Cipta © 2012-2020 Pembangun CAFE"

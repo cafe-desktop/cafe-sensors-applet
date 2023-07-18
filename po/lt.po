@@ -492,15 +492,3 @@ msgstr "Įvyko klaida, bandant atnaujinti %s jutiklio, esančio %s, reikšmę."
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Nėra įjungtų jutiklių!"
-
-#~ msgid "cafe-sensors-applet"
-#~ msgstr "cafe-sensors-applet"
-
-#~ msgid ""
-#~ "Copyright © 2005-2009 Alex Murray\n"
-#~ "Copyright © 2011 Stefano Karapetsas\n"
-#~ "Copyright © 2012-2020 CAFE developers"
-#~ msgstr ""
-#~ "Autorių teisės © 2005-2009 Alex Murray\n"
-#~ "Autorių teisės © 2011 Stefano Karapetsas\n"
-#~ "Autorių teisės © 2012-2020 CAFE kūrėjai"
