@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Alexei Sorokin, 2020
@@ -11,20 +11,22 @@
 # Alex Putz, 2020
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2020
 # Anna Vyalkova <cybertailor@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2023-07-18 09:33+0200\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/cafe/teams/13566/ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
@@ -33,12 +35,6 @@ msgstr "Фабрика апплета «Сенсоры»"
 #: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "Контроль датчиков оборудования"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:12
-msgid "cafe-sensors-applet"
-msgstr "cafe-sensors-applet"
 
 #: org.cafe.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -149,8 +145,7 @@ msgstr "ЦП"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
 #: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
-#: plugins/smu-sys/smu-sys-plugin.c:63
-#: plugins/aticonfig/aticonfig-plugin.c:107
+#: plugins/smu-sys/smu-sys-plugin.c:63 plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "ЦП"
 
@@ -174,8 +169,7 @@ msgstr "Вент 2"
 msgid "MiniPCI"
 msgstr "MiniPCI"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:95
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:107
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:95 plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "Батарея"
 
@@ -183,7 +177,7 @@ msgstr "Батарея"
 msgid "Fan"
 msgstr "Вент"
 
-#: plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:64
 msgid "CPU TEMP"
 msgstr "CPU TEMP"
 
@@ -339,17 +333,15 @@ msgstr "A"
 msgid "ERROR"
 msgstr "ОШИБКА"
 
-#: sensors-applet/about-dialog.c:40
+#: sensors-applet/about-dialog.c:41
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
-"Copyright © 2005-2009 Alex Murray\n"
-"Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2020 CAFE developers"
 
-#: sensors-applet/about-dialog.c:46
+#: sensors-applet/about-dialog.c:48
 msgid "translator-credits"
 msgstr ""
 "Александр Сапрыкин <xelfium@gmail.com>\n"
@@ -523,3 +515,15 @@ msgstr ""
 #: sensors-applet/sensors-applet.c:481
 msgid "No sensors enabled!"
 msgstr "Нет включённых датчиков!"
+
+#~ msgid "cafe-sensors-applet"
+#~ msgstr "cafe-sensors-applet"
+
+#~ msgid ""
+#~ "Copyright © 2005-2009 Alex Murray\n"
+#~ "Copyright © 2011 Stefano Karapetsas\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "Copyright © 2005-2009 Alex Murray\n"
+#~ "Copyright © 2011 Stefano Karapetsas\n"
+#~ "Copyright © 2012-2020 CAFE developers"

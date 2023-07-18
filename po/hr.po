@@ -2,26 +2,27 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-sensors-applet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Ivica  Kolić <ikoli@yahoo.com>, 2020
 # Tomislav Krznar <tomislav.krznar@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Elvis M. Lukšić <meluksic@yahoo.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-sensors-applet 1.23.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2023-07-18 09:33+0200\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Elvis M. Lukšić <meluksic@yahoo.com>, 2020\n"
 "Language-Team: Croatian (https://www.transifex.com/cafe/teams/13566/hr/)\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Sensors Applet Factory"
@@ -30,12 +31,6 @@ msgstr "Izvedbeni objekt senzorskog programčića"
 #: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Hardware Sensors Monitor"
 msgstr "Nadzornik hardverskih senzora"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:12
-msgid "cafe-sensors-applet"
-msgstr ""
 
 #: org.cafe.sensors-applet.gschema.xml.in:5
 msgid "Font size in points"
@@ -146,8 +141,7 @@ msgstr "CPU"
 
 #: plugins/pmu-sys/pmu-sys-plugin.c:65 plugins/nvidia/nvidia-plugin.c:128
 #: plugins/nvidia/nvidia-plugin.c:148 plugins/nvidia/nvidia-plugin.c:173
-#: plugins/smu-sys/smu-sys-plugin.c:63
-#: plugins/aticonfig/aticonfig-plugin.c:107
+#: plugins/smu-sys/smu-sys-plugin.c:63 plugins/aticonfig/aticonfig-plugin.c:107
 msgid "GPU"
 msgstr "Grafički procesor"
 
@@ -171,8 +165,7 @@ msgstr "Ventilator2"
 msgid "MiniPCI"
 msgstr "MiniPCI"
 
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:95
-#: plugins/ibm-acpi/ibm-acpi-plugin.c:107
+#: plugins/ibm-acpi/ibm-acpi-plugin.c:95 plugins/ibm-acpi/ibm-acpi-plugin.c:107
 msgid "Battery"
 msgstr "Baterija"
 
@@ -180,7 +173,7 @@ msgstr "Baterija"
 msgid "Fan"
 msgstr "Ventilator"
 
-#: plugins/sonypi/sonypi-plugin.c:62
+#: plugins/sonypi/sonypi-plugin.c:64
 msgid "CPU TEMP"
 msgstr "Temp. središnjeg procesora"
 
@@ -336,14 +329,15 @@ msgstr "A"
 msgid "ERROR"
 msgstr "NEISPRAVNOST"
 
-#: sensors-applet/about-dialog.c:40
+#: sensors-applet/about-dialog.c:41
 msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: sensors-applet/about-dialog.c:46
+#: sensors-applet/about-dialog.c:48
 msgid "translator-credits"
 msgstr ""
 "Prijevod na Transifexu:\n"
@@ -363,7 +357,8 @@ msgstr ""
 "  Bojan Sudarević https://launchpad.net/~sudarevic\n"
 "  Danijel Šnajder https://launchpad.net/~phantomlord\n"
 "  Krešo Kunjas https://launchpad.net/~deresh\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-admins\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
 "  Miroslav Sabljić https://launchpad.net/~civija\n"
 "  Valentin Vidic https://launchpad.net/~vvidic\n"
 "  alja https://launchpad.net/~alja\n"
