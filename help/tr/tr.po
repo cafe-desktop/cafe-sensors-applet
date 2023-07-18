@@ -1,22 +1,22 @@
-# 
+#
 # Translators:
 # mauron, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Butterfly <gokhanlnx@gmail.com>, 2020
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
 # Wolfgang Ulbrich <cafe@raveit.de>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2023-07-18 09:33+0200\n"
 "PO-Revision-Date: 2020-02-16 14:49+0000\n"
 "Last-Translator: Wolfgang Ulbrich <cafe@raveit.de>, 2020\n"
 "Language-Team: Turkish (https://www.transifex.com/cafe/teams/13566/tr/)\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -66,11 +66,11 @@ msgstr "<surname>CAFE Geliştiricileri</surname> <affiliation> </affiliation>"
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
 msgid ""
-"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
-"</affiliation>"
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> </"
+"affiliation>"
 msgstr ""
-"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
-"</affiliation>"
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> </"
+"affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:115
@@ -80,8 +80,8 @@ msgstr "Alex Murray <email>murray.alex@gmail.com</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
 msgid ""
-"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January "
-"2006</date> <_:revdescription-1/>"
+"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January 2006</"
+"date> <_:revdescription-1/>"
 msgstr ""
 "<revnumber>CAFE Donanım Algılayıcı Uygulamacığı Kılavuzu V2.1</revnumber> "
 "<date>Ocak 2006</date> <_:revdescription-1/>"
@@ -90,8 +90,7 @@ msgstr ""
 #: C/index.docbook:123
 msgid "This manual describes version 1.10 of CAFE Sensors Applet."
 msgstr ""
-"Bu kılavuz CAFE Donanım Algılayıcı Uygulamacığının 1.10 sürümünü tasvir "
-"eder."
+"Bu kılavuz CAFE Donanım Algılayıcı Uygulamacığının 1.10 sürümünü tasvir eder."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:126
@@ -102,13 +101,13 @@ msgstr "Geri bildirim"
 #: C/index.docbook:127
 msgid ""
 "To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
-"manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"manual, follow the directions in the <ulink url=\"help:cafe-user-guide/"
+"feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Bu kılavuz veya CAFE Donanım Algılayıcı Uygulamacığı hakkında hata "
-"raporlamak veya öneride bulunmak için <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">CAFE Geri Bildirim Sayfasındaki</ulink> "
-"yönergeleri izleyin."
+"raporlamak veya öneride bulunmak için <ulink url=\"help:cafe-user-guide/"
+"feedback\" type=\"help\">CAFE Geri Bildirim Sayfasındaki</ulink> yönergeleri "
+"izleyin."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:135
@@ -148,8 +147,8 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/applet_in_panel.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>3 algılayıcısı "
-"etkinleştirilmiş CAFE Donanım Algılayıcıları Uygulamacığı.</phrase> "
-"</textobject>"
+"etkinleştirilmiş CAFE Donanım Algılayıcıları Uygulamacığı.</phrase> </"
+"textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:157
@@ -174,33 +173,30 @@ msgstr "Linux çekirdeği i2c öbekleri"
 #. (itstool) path: listitem/para
 #: C/index.docbook:173
 msgid ""
-"Via the sysfs filesystem and <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">i2c</ulink> modules distributed directly with the kernel "
-"(kernel 2.6)"
+"Via the sysfs filesystem and <ulink url=\"http://secure.netroedge.com/~lm78/"
+"kernel26.html\" type=\"http\">i2c</ulink> modules distributed directly with "
+"the kernel (kernel 2.6)"
 msgstr ""
 "sysfs dosya sistemi ve doğrudan çekirdek (sürüm 2.6) ile dağıtılan <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">i2c</ulink> öbekleri vasıtasıyla"
+"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" type=\"http\">i2c</"
+"ulink> öbekleri vasıtasıyla"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:179
 msgid ""
-"Via the proc filesystem and i2c modules from the <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">lm_sensors and i2c</ulink> packages (kernel 2.4)"
+"Via the proc filesystem and i2c modules from the <ulink url=\"http://secure."
+"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors and i2c</ulink> "
+"packages (kernel 2.4)"
 msgstr ""
-"proc dosya sistemi ile <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">lm_sensors ve i2c</ulink> paketlerinden i2c öbekleri (çekirdek"
-" 2.4) vasıtasıyla"
+"proc dosya sistemi ile <ulink url=\"http://secure.netroedge.com/~lm78/"
+"kernel26.html\" type=\"http\">lm_sensors ve i2c</ulink> paketlerinden i2c "
+"öbekleri (çekirdek 2.4) vasıtasıyla"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:185
 msgid ""
-"Via the libsensors library provided with the <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">lm_sensors</ulink> package"
+"Via the libsensors library provided with the <ulink url=\"http://secure."
+"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors</ulink> package"
 msgstr ""
 "<ulink url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
 "type=\"http\">lm_sensors</ulink> paketi tarafından sağlanan libsensors "
@@ -213,17 +209,16 @@ msgid ""
 "type=\"http\">i8k</ulink> module (for Dell Inspiron Laptops)."
 msgstr ""
 "Linux çekirdeği <ulink url=\"http://people.debian.org/~dz/i8k/00-README\" "
-"type=\"http\">i8k</ulink> öbeği (Dell Inspiron diz üstü bilgisayarları "
-"için)."
+"type=\"http\">i8k</ulink> öbeği (Dell Inspiron diz üstü bilgisayarları için)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
-"Linux çekirdeği <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> öbeği (IBM diz üstü bilgisayarlar için)."
+"Linux çekirdeği <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> öbeği (IBM diz üstü bilgisayarlar için)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:207
@@ -238,35 +233,30 @@ msgstr "Linux çekirdeği iMac G5 Windfarm öbeği."
 #. (itstool) path: listitem/para
 #: C/index.docbook:215
 msgid ""
-"<ulink url=\"http://www.guzu.net/linux/hddtemp.php\" "
-"type=\"http\">hddtemp</ulink> daemon for reading temperatures from "
-"S.M.A.R.T. equipped disks."
+"<ulink url=\"http://www.guzu.net/linux/hddtemp.php\" type=\"http\">hddtemp</"
+"ulink> daemon for reading temperatures from S.M.A.R.T. equipped disks."
 msgstr ""
-"S.M.A.R.T donanımlı disklerden sıcaklıkları okumak için <ulink "
-"url=\"http://www.guzu.net/linux/hddtemp.php\" type=\"http\">hddtemp</ulink> "
-"servisi."
+"S.M.A.R.T donanımlı disklerden sıcaklıkları okumak için <ulink url=\"http://"
+"www.guzu.net/linux/hddtemp.php\" type=\"http\">hddtemp</ulink> servisi."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:221
 msgid ""
-"Linux kernel <ulink "
-"url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> module. (for "
-"HP and Toshiba Satellite Laptops)"
+"Linux kernel <ulink url=\"http://sourceforge.net/projects/omke\">Omnibook</"
+"ulink> module. (for HP and Toshiba Satellite Laptops)"
 msgstr ""
-"Linux çekirdeği <ulink "
-"url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> öbeği (HP ve "
-"Toshiba Satellite diz üstü bilgisayarları için)."
+"Linux çekirdeği <ulink url=\"http://sourceforge.net/projects/"
+"omke\">Omnibook</ulink> öbeği (HP ve Toshiba Satellite diz üstü "
+"bilgisayarları için)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:227
 msgid ""
-"NVIDIA graphics cards via libNVCtrl (provided with <ulink "
-"url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-"
-"settings</ulink> )."
+"NVIDIA graphics cards via libNVCtrl (provided with <ulink url=\"ftp://"
+"download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-settings</ulink> )."
 msgstr ""
-"NVIDIA grafik kartları, libNVCtrl vasıtasıyla (<ulink "
-"url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-"
-"settings</ulink> ile sağlanır)."
+"NVIDIA grafik kartları, libNVCtrl vasıtasıyla (<ulink url=\"ftp://download."
+"nvidia.com/XFree86/nvidia-settings/\"> nvidia-settings</ulink> ile sağlanır)."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:162
@@ -275,16 +265,16 @@ msgid ""
 "before adding CAFE Sensors Applet to the panel: <_:itemizedlist-1/>"
 msgstr ""
 "CAFE Donanım Algılayıcı Uygulamacığını panele eklemeden önce "
-"yapılandırılması gereken bir dizi algılayıcı arayüzü desteklenir: "
-"<_:itemizedlist-1/>"
+"yapılandırılması gereken bir dizi algılayıcı arayüzü desteklenir: <_:"
+"itemizedlist-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:236
 msgid ""
-"To add <application>CAFE Sensors Applet</application> to a panel right-click"
-" on the panel to open the panel pop-up menu, then choose <menuchoice> "
-"<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
-"Monitor</guimenuitem> </menuchoice>."
+"To add <application>CAFE Sensors Applet</application> to a panel right-click "
+"on the panel to open the panel pop-up menu, then choose <menuchoice> "
+"<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors Monitor</"
+"guimenuitem> </menuchoice>."
 msgstr ""
 "<application>CAFE Donanım Algılayıcıları Uygulamacığını</application> bir "
 "panele eklemek için panelin menüsünü açmak amacıyla panele sağ tıklayın, "
@@ -300,9 +290,9 @@ msgstr "Kullanım"
 #: C/index.docbook:248
 msgid ""
 "When you add <application>CAFE Sensors Applet</application> to a panel for "
-"the first time, the applet will search for any available sensors to monitor,"
-" and will display a sensible default sensor if found (such as the "
-"temperature of the CPU)."
+"the first time, the applet will search for any available sensors to monitor, "
+"and will display a sensible default sensor if found (such as the temperature "
+"of the CPU)."
 msgstr ""
 "<application>CAFE Donanım Algılayıcısı Uygulamacığını</application> bir "
 "panele ilk defa eklediğinizde, uygulamacık izlenecek mevcut algılayıcıları "
@@ -313,15 +303,13 @@ msgstr ""
 #: C/index.docbook:251
 msgid ""
 "Most users will then want to customize the display to their liking, which "
-"can be done via the <menuchoice> <guimenuitem>Preferences</guimenuitem> "
-"</menuchoice> menu item (see <xref linkend=\"sensors-applet-"
-"preferences\"/>)."
+"can be done via the <menuchoice> <guimenuitem>Preferences</guimenuitem> </"
+"menuchoice> menu item (see <xref linkend=\"sensors-applet-preferences\"/>)."
 msgstr ""
 "Kullanıcıların çoğu bunun ardından görüntüyü kendi tercihlerine göre "
-"özelleştirmek isteyeceklerdir, ki bu <menuchoice> "
-"<guimenuitem>Tercihler</guimenuitem> </menuchoice> menü unsuru ile "
-"yapılabilir (<xref linkend=\"sensors-applet-preferences\"/> sayfasına "
-"bakın)."
+"özelleştirmek isteyeceklerdir, ki bu <menuchoice> <guimenuitem>Tercihler</"
+"guimenuitem> </menuchoice> menü unsuru ile yapılabilir (<xref "
+"linkend=\"sensors-applet-preferences\"/> sayfasına bakın)."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:262
@@ -332,9 +320,8 @@ msgstr "Tercihler"
 #: C/index.docbook:263
 msgid ""
 "To configure <application>CAFE Sensors Applet</application>, right-click on "
-"the applet, then choose "
-"<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
-"pop-up menu."
+"the applet, then choose <menuchoice><guimenuitem>Preferences</guimenuitem></"
+"menuchoice> from the pop-up menu."
 msgstr ""
 "<application>CAFE Donanım Algılayıcıları Uygulamacığını</application> "
 "yapılandırmak için uygulamacığın üzerine sağ tıklayın, ardından açılan "
@@ -365,8 +352,8 @@ msgstr "<guilabel>Algılayıcıları panelde böyle görüntüle</guilabel>"
 msgid ""
 "This option selects whether to display sensors in the panel with either "
 "their label or icon and their value, or to have no identifier for each "
-"sensor and just display their values, or simply to display the icon for each"
-" sensor. A graph can also be displayed for each sensor, showing the "
+"sensor and just display their values, or simply to display the icon for each "
+"sensor. A graph can also be displayed for each sensor, showing the "
 "progression of the sensor value over time."
 msgstr ""
 "Bu seçenek, paneldeki algılayıcıların etiketleriyle veya ikonlarıyla ve "
@@ -389,8 +376,8 @@ msgstr "<guilabel>Algılayıcı konumlarının tercih edilen konumları</guilabe
 #. (itstool) path: listitem/para
 #: C/index.docbook:308
 msgid ""
-"Sensors can be display with either their value beside their icon / label, or"
-" with the value shown below the icon / label."
+"Sensors can be display with either their value beside their icon / label, or "
+"with the value shown below the icon / label."
 msgstr ""
 "Algılayıcılar, değerleri ikonlarının / etiketlerinin yanında ya da ikonun / "
 "etiketin altında gösterilebilirler."
@@ -404,8 +391,7 @@ msgstr "Varsayılan: etiketlerin / ikonların yanında."
 #: C/index.docbook:314
 msgid ""
 "If there is not enough room in the panel to use the requested position, the "
-"best position to ensure all sensor elements are visible will be used "
-"instead."
+"best position to ensure all sensor elements are visible will be used instead."
 msgstr ""
 "Eğer panelde istenilen konumu kullanmak için kafi yer yoksa, tüm unsurların "
 "görüntülenmesini garantileyen en iyi konum onun yerine kullanılacaktır."
@@ -419,11 +405,11 @@ msgstr "<guilabel>Grafik boyutu (piksel)</guilabel>"
 #: C/index.docbook:325
 msgid ""
 "When displaying sensors as graphs, the size of the graph sets either the "
-"width of the graph (when displayed on either the top or bottom panel) or the"
-" height of the graph (when displayed on the left or right panel)."
+"width of the graph (when displayed on either the top or bottom panel) or the "
+"height of the graph (when displayed on the left or right panel)."
 msgstr ""
-"Algılayıcılar grafik olarak görüntülendiklerinde, grafiğin ebadı ya grafiğin"
-" genişliğini (üst veya alt panelde görüntülendiğinde) ya da grafiğin "
+"Algılayıcılar grafik olarak görüntülendiklerinde, grafiğin ebadı ya grafiğin "
+"genişliğini (üst veya alt panelde görüntülendiğinde) ya da grafiğin "
 "yüksekliğini (sağ veya sol panelde görüntülendiğinde) ayarlar."
 
 #. (itstool) path: listitem/para
@@ -442,8 +428,8 @@ msgid ""
 "Which scale to use for temperature sensors (Kelvin, Fahrenheit or Celsius "
 "are supported)."
 msgstr ""
-"Sıcaklık algılayıcıları için hangi ölçeğin kullanılacağı (Kelvin, Fahrenheit"
-" ya da Celsius desteklenir)."
+"Sıcaklık algılayıcıları için hangi ölçeğin kullanılacağı (Kelvin, Fahrenheit "
+"ya da Celsius desteklenir)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:339
@@ -511,8 +497,8 @@ msgstr ""
 #: C/index.docbook:387
 msgid "A user editable label to identify the sensor within the panel."
 msgstr ""
-"Algılayıcıyı panelde tanımlamak için kullanıcı tarafından düzenlenebilir bir"
-" etiket."
+"Algılayıcıyı panelde tanımlamak için kullanıcı tarafından düzenlenebilir bir "
+"etiket."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:392
@@ -527,11 +513,11 @@ msgstr ""
 #: C/index.docbook:373
 msgid ""
 "The Sensors tab within the preferences window provides the options for "
-"configuring each individual sensor. Each sensor is listed under its specific"
-" interface, along with: <_:itemizedlist-1/> The "
-"<guibutton>Properties</guibutton> button allows a specific sensor to be more"
-" finely configured, providing a separate window box for this purpose. (see "
-"<xref linkend=\"sensors-applet-sensor-config-dialog\"/>)"
+"configuring each individual sensor. Each sensor is listed under its specific "
+"interface, along with: <_:itemizedlist-1/> The <guibutton>Properties</"
+"guibutton> button allows a specific sensor to be more finely configured, "
+"providing a separate window box for this purpose. (see <xref "
+"linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 msgstr ""
 "Tercihler penceresindeki Algılayıcılar sekmesi her bir algılayıcıyı "
 "yapılandırmak için seçenekler sağlar. Her bir algılayıcı kendi belirli "
@@ -571,8 +557,8 @@ msgid ""
 "read, it is first multiplied by the 'multiplier' and summed with the "
 "'offset' to produce the final value."
 msgstr ""
-"Algılayıcı değeri, kullanıcının her bir algılayıcı için bir çarpan ve mahsup"
-" belirlemesi sağlayarak doğrusal bir şekilde ölçeklendirilebilir. Her bir "
+"Algılayıcı değeri, kullanıcının her bir algılayıcı için bir çarpan ve mahsup "
+"belirlemesi sağlayarak doğrusal bir şekilde ölçeklendirilebilir. Her bir "
 "algılayıcı değeri okunduğunda, son değeri elde etmek için önce 'çarpan' ile "
 "çarpılır ve 'mahsup' ile toplanır."
 
@@ -601,8 +587,7 @@ msgstr "<guilabel>Ofset algılayıcı değeri</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:438
-msgid ""
-"This option allows the user to specify the offset for the sensor value."
+msgid "This option allows the user to specify the offset for the sensor value."
 msgstr ""
 "Bu seçenek, kullanıcının algılayıcı değeri için mahsup veya ofseti "
 "belirtmesine imkân verir."
@@ -620,8 +605,8 @@ msgstr "<guilabel>Algılayıcı düşük değeri</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:448
 msgid ""
-"The value at which to trigger an alarm if the sensor drops below this value."
-" This value is also used to scale the display of the graph and temperature "
+"The value at which to trigger an alarm if the sensor drops below this value. "
+"This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
 "Eğer algılayıcı bu değerin altına düşerse, alarm tetiklenir. Bu değer aynı "
@@ -641,8 +626,8 @@ msgstr "<guilabel>Algılayıcı yüksek değeri</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:459
 msgid ""
-"The value at which to trigger an alarm if the sensor rises above this value."
-" This value is also used to scale the display of the graph and temperature "
+"The value at which to trigger an alarm if the sensor rises above this value. "
+"This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
 "Eğer algılayıcı bu değeri aşarsa alarm tetiklenir. Bu değer aynı zamanda "
@@ -656,10 +641,10 @@ msgstr "<guilabel>Alarmı etkinleştir</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:470
 msgid ""
-"This option allows the user to enable alarm monitoring for this sensor. When"
-" the sensor value rises above, or drops below it's high or low values, the "
-"alarm condition will occur. This will display a notification to the user (if"
-" enabled), and execute the appropriate Alarm Command every Alarm repeat "
+"This option allows the user to enable alarm monitoring for this sensor. When "
+"the sensor value rises above, or drops below it's high or low values, the "
+"alarm condition will occur. This will display a notification to the user (if "
+"enabled), and execute the appropriate Alarm Command every Alarm repeat "
 "interval seconds."
 msgstr ""
 "Bu seçenek kullanıcının bu algılayıcı için alarm izlemesini "
@@ -688,8 +673,8 @@ msgstr "<guilabel>Alarmın tekrarlanma aralığı (saniye)</guilabel>"
 #: C/index.docbook:490
 msgid ""
 "How often to execute the alarm command while the alarm condition is met. A "
-"value of 0 specifies to execute the alarm once only when the alarm condition"
-" occurs."
+"value of 0 specifies to execute the alarm once only when the alarm condition "
+"occurs."
 msgstr ""
 "Alarm koşulu oluştuğunda alarm komutunun hangi sıklıkla çalıştırılacağı. 0 "
 "değeri, alarm koşulu oluştuğunda alarm komutunun sadece bir defa "
@@ -753,26 +738,22 @@ msgstr "<guilabel>Alarm meydana geldiğinde bir ses çal</guilabel>"
 #. (itstool) path: para/screen
 #: C/index.docbook:548
 #, no-wrap
-msgid ""
-"<userinput><command>esdplay "
-"/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
-msgstr ""
-"<userinput><command>esdplay "
-"/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
+msgid "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
+msgstr "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:535
 msgid ""
 "You can play a sound when the alarm occurs by using the command "
-"<command>esdplay</command> which should be available as part of the standard"
-" CAFE installation. (Note: If this does not work, you could also try "
-"<command>aplay</command> which is the default ALSA sound player). "
-"<_:screen-1/>"
+"<command>esdplay</command> which should be available as part of the standard "
+"CAFE installation. (Note: If this does not work, you could also try "
+"<command>aplay</command> which is the default ALSA sound player). <_:"
+"screen-1/>"
 msgstr ""
 "Alarm oluştuğunda standart CAFE kurulumunun bir parçası olması gereken "
 "<command>esdplay</command> komutuyla bir ses çalabilirsiniz. (Not: eğer bu "
-"komut çalışmıyorsa, varsayılan ALSA ses çalıcısı olan "
-"<command>aplay</command> komutunu deneyebilirsiniz). <_:screen-1/>"
+"komut çalışmıyorsa, varsayılan ALSA ses çalıcısı olan <command>aplay</"
+"command> komutunu deneyebilirsiniz). <_:screen-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:554
@@ -783,12 +764,8 @@ msgstr "<guilabel>Alarmın oluştuğunu bildiren bir pencere aç</guilabel>"
 #. (itstool) path: para/screen
 #: C/index.docbook:566
 #, no-wrap
-msgid ""
-"<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
-"--text=\"Sensor Alarm occurred\"</command></userinput>"
-msgstr ""
-"<userinput><command>zenity --warning --title=\"Algılayıcı Alarmı\" "
-"--text=\"Algılayıcı Alarmı oluştu\"</command></userinput>"
+msgid "<userinput><command>zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm occurred\"</command></userinput>"
+msgstr "<userinput><command>zenity --warning --title=\"Algılayıcı Alarmı\" --text=\"Algılayıcı Alarmı oluştu\"</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:559
@@ -808,28 +785,21 @@ msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:575
-msgid ""
-"<guilabel> Combine multiple commands into one alarm command </guilabel>"
+msgid "<guilabel> Combine multiple commands into one alarm command </guilabel>"
 msgstr "<guilabel>Birden çok komutu bir alarm komutuna birleştir</guilabel>"
 
 #. (itstool) path: para/screen
 #: C/index.docbook:587
 #, no-wrap
-msgid ""
-"<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp;"
-" zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm "
-"occurred\"</command></userinput>"
-msgstr ""
-"<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp;"
-" zenity --warning --title=\"Algılayıcı Alarmı\" --text=\"Algılayıcı Alarmı "
-"oluştu\"</command></userinput>"
+msgid "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm occurred\"</command></userinput>"
+msgstr "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title=\"Algılayıcı Alarmı\" --text=\"Algılayıcı Alarmı oluştu\"</command></userinput>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:581
 msgid ""
-"Multiple commands can be executed one after the other using the "
-"\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"Multiple commands can be executed one after the other using the \"&amp;&amp;"
+"\" construct to separate them. To play a sound and pop-up a dialog via "
+"Zenity the follow command can be used: <_:screen-1/>"
 msgstr ""
 "Birden çok komut, birbirlerinden \"&amp;&amp;\" ile ayrılarak birbirleri "
 "ardına çalıştırılabilir. Bir ses çalmak için ve Zenity ile açılır bir "
@@ -865,8 +835,8 @@ msgid ""
 "To accurately display graphs both the high and low values for the sensor "
 "need to be set correctly."
 msgstr ""
-"Grafikleri doğru şekilde görüntülemek için algılayıcıların hem yüksek hem de"
-" düşük değerlerinin doğru şekilde ayarlanması gerekir."
+"Grafikleri doğru şekilde görüntülemek için algılayıcıların hem yüksek hem de "
+"düşük değerlerinin doğru şekilde ayarlanması gerekir."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:644
@@ -876,21 +846,20 @@ msgstr "CAFE Donanım Algılayıcıları Uygulamacığı Hakkında"
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
 msgid ""
-"The origin sensor applet was written by Alex Murray "
-"(<email>murray.alex@gmail.com</email>). <application>CAFE Sensors "
-"Applet</application> is further develop by Cafe dev team. To find more "
-"information about <application>CAFE Sensors Applet</application>, please "
-"visit the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-"
-"applet/\" type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
+"The origin sensor applet was written by Alex Murray (<email>murray."
+"alex@gmail.com</email>). <application>CAFE Sensors Applet</application> is "
+"further develop by Cafe dev team. To find more information about "
+"<application>CAFE Sensors Applet</application>, please visit the <ulink "
+"url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" "
+"type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
 msgstr ""
-"Orijinal algılayıcı uygulamacığı Alex Murray "
-"(<email>murray.alex@gmail.com</email>) tarafından geliştirilmişti. "
-"<application>CAFE Donanım Algılayıcıları Uygulamacığı</application> "
-"geliştirilmesi CAFE geliştirme takımı tarafından devam etmektedir. "
-"<application>CAFE  Donanım Algılayıcıları Uygulamacığı</application> "
-"hakkında daha fazla bilgi için lütfen <ulink url=\"https://github.com/cafe-"
-"desktop/cafe-sensors-applet/\" type=\"http\">CAFE Algılayıcı Uygulamacık "
-"Projesi Ana Sayfasını</ulink> ziyaret edin."
+"Orijinal algılayıcı uygulamacığı Alex Murray (<email>murray.alex@gmail.com</"
+"email>) tarafından geliştirilmişti. <application>CAFE Donanım Algılayıcıları "
+"Uygulamacığı</application> geliştirilmesi CAFE geliştirme takımı tarafından "
+"devam etmektedir. <application>CAFE  Donanım Algılayıcıları Uygulamacığı</"
+"application> hakkında daha fazla bilgi için lütfen <ulink url=\"https://"
+"github.com/cafe-desktop/cafe-sensors-applet/\" type=\"http\">CAFE Algılayıcı "
+"Uygulamacık Projesi Ana Sayfasını</ulink> ziyaret edin."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:653
@@ -915,8 +884,8 @@ msgid ""
 msgstr ""
 "Bu program, Free Software Foundation yani Özgür Yazılım Vakfı tarafından "
 "yayınlanan GNU Genel Kamu lisansının ya 2. sürümü, ya da (seçiminize göre) "
-"daha sonraki herhangi bir sürümü kapsamında dağıtılmaktadır. Bu lisansın bir"
-" kopyasını bu <ulink type=\"help\" url=\"help:gpl\">bağlantıda</ulink> veya "
+"daha sonraki herhangi bir sürümü kapsamında dağıtılmaktadır. Bu lisansın bir "
+"kopyasını bu <ulink type=\"help\" url=\"help:gpl\">bağlantıda</ulink> veya "
 "bu programın kaynak kodundaki COPYING dosyasında bulabilirsiniz."
 
 #. (itstool) path: para/ulink
@@ -930,24 +899,24 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
-"Bu belgeyi kopyalama, dağıtma ve/veya değiştirme izni, değişmez bölümsüz, ön"
-" kapak metinsiz ve arka kapak metinsiz şekilde GNU Free Documentation "
-"License (GNU Özgür Belgeleme Lisansı, GFDL), sürüm 1.1 ya da Free Software "
-"Foundation tarafından yayınlanan daha yeni bir sürüm kapsamında verilmiştir."
-" GFDL'in bir kopyasını bu <_:ulink-1/>  ya da bu kılavuzla dağıtılan "
-"COPYING-DOCS dosyasında bulabilirsiniz."
+"Bu belgeyi kopyalama, dağıtma ve/veya değiştirme izni, değişmez bölümsüz, ön "
+"kapak metinsiz ve arka kapak metinsiz şekilde GNU Free Documentation License "
+"(GNU Özgür Belgeleme Lisansı, GFDL), sürüm 1.1 ya da Free Software "
+"Foundation tarafından yayınlanan daha yeni bir sürüm kapsamında verilmiştir. "
+"GFDL'in bir kopyasını bu <_:ulink-1/>  ya da bu kılavuzla dağıtılan COPYING-"
+"DOCS dosyasında bulabilirsiniz."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
 msgid ""
 "This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
 msgstr ""
 "Bu kılavuz, GFDL (GNU Özgür Belgelendirme Lisansı) kapsamında yayınlanan "
 "CAFE kılavuzları koleksiyonunun bir parçasıdır. Bu kılavuzu koleksiyondan "
@@ -965,8 +934,8 @@ msgid ""
 msgstr ""
 "Firmalar tarafından ürün ve hizmetlerinin ayırt edilmeleri için "
 "kullandıkları isimlerin birçoğu tescilli marka olarak ayrılmıştır. Bu "
-"isimlerin CAFE belgelendirilmesinde yer alması ve CAFE Belgelendirme Projesi"
-" mensupları bu tescilli markalardan haberdar edildikleri durumda, isimlerin "
+"isimlerin CAFE belgelendirilmesinde yer alması ve CAFE Belgelendirme Projesi "
+"mensupları bu tescilli markalardan haberdar edildikleri durumda, isimlerin "
 "ilk harfi ya da tamamı büyük harflerle yazılır."
 
 #. (itstool) path: listitem/para
@@ -984,10 +953,10 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"BELGE OLDUĞU GİBİ, AÇIK VEYA ZIMNİ HİÇBİR TÜRLÜ GARANTİ OLMADAN SUNULMUŞTUR,"
-" Kİ BUNA SINIRLAMA OLMAKSIZIN BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN"
-" BELLİ BİR AMACA UYGUN OLMALARI, KUSURDAN ARINMIŞ OLMALARI VEYA HAK "
-"İHLALİNDE BULUNMAMALARI GARANTİLERİ OLMAMASI DA DAHİLDİR. BELGE VE BELGENİN "
+"BELGE OLDUĞU GİBİ, AÇIK VEYA ZIMNİ HİÇBİR TÜRLÜ GARANTİ OLMADAN SUNULMUŞTUR, "
+"Kİ BUNA SINIRLAMA OLMAKSIZIN BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN "
+"BELLİ BİR AMACA UYGUN OLMALARI, KUSURDAN ARINMIŞ OLMALARI VEYA HAK İHLALİNDE "
+"BULUNMAMALARI GARANTİLERİ OLMAMASI DA DAHİLDİR. BELGE VE BELGENİN "
 "DEĞİŞTİRİLMİŞ SÜRÜMLERİNİN KALİTESİ, DOĞRULUĞU VE PERFORMANSINA İLİŞKİN TÜM "
 "RİSK SİZE AİTTİR. HERHANGİ BİR BELGE VEYA BELGENİN DEĞİŞTİRİLMİŞ SÜRÜMÜNÜN "
 "KUSURLU OLMASI HALİNDE, GEREKLİ SERVİS, ONARIM VE DÜZELTMENİN ÜCRETİNİ SİZ "
@@ -999,19 +968,19 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"HİÇBİR KOŞULDA VE HİÇBİR YASAL TEORİDE, Kİ BU TAZMİNAT YÜKÜMLÜLÜĞÜ (İHMAK DE"
-" DAHİL), KONTRATO VEYA BAŞKA BİR ŞEKİLİ DE İÇERİR, BELGEYİ VE BELGENİN "
+"HİÇBİR KOŞULDA VE HİÇBİR YASAL TEORİDE, Kİ BU TAZMİNAT YÜKÜMLÜLÜĞÜ (İHMAK DE "
+"DAHİL), KONTRATO VEYA BAŞKA BİR ŞEKİLİ DE İÇERİR, BELGEYİ VE BELGENİN "
 "DEĞİŞTİRİLMİŞ SÜRÜMLERİNİ İLK YAZAN, YAZAR, HERHANGİ BİR KATKIDA BULUNAN, "
 "DAĞITAN VEYA BU TARAFLARIN HERHANGİ BİR TEDARİKÇİSİ HERHANGİ DOĞRUDAN, "
 "DOLAYLI, ÖZEL, ARIZİ  ZARARLARDAN HERHANGİ BİR KİŞİ SORUMLU DEĞİLDİR, Kİ "

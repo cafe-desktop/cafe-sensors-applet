@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Ettore Atalan <atalanttore@googlemail.com>, 2020
@@ -6,18 +6,18 @@
 # Wolfgang Ulbrich <cafe@raveit.de>, 2020
 # Julian Rüger <jr98@gmx.net>, 2020
 # Marcel Artz <email@marcel-artz.de>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 19:14+0100\n"
+"POT-Creation-Date: 2023-07-18 09:33+0200\n"
 "PO-Revision-Date: 2020-02-16 14:49+0000\n"
 "Last-Translator: Marcel Artz <email@marcel-artz.de>, 2020\n"
 "Language-Team: German (https://www.transifex.com/cafe/teams/13566/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -63,8 +63,8 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
 msgid ""
-"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> "
-"</affiliation>"
+"<firstname>Alex</firstname> <surname>Murray</surname> <affiliation> </"
+"affiliation>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -75,8 +75,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:111
 msgid ""
-"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January "
-"2006</date> <_:revdescription-1/>"
+"<revnumber>CAFE Sensors Applet Manual V2.1</revnumber> <date>January 2006</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
@@ -93,8 +93,8 @@ msgstr "Rückmeldungen"
 #: C/index.docbook:127
 msgid ""
 "To report a bug or make a suggestion regarding CAFE Sensors Applet or this "
-"manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"manual, follow the directions in the <ulink url=\"help:cafe-user-guide/"
+"feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -152,26 +152,24 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:173
 msgid ""
-"Via the sysfs filesystem and <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">i2c</ulink> modules distributed directly with the kernel "
-"(kernel 2.6)"
+"Via the sysfs filesystem and <ulink url=\"http://secure.netroedge.com/~lm78/"
+"kernel26.html\" type=\"http\">i2c</ulink> modules distributed directly with "
+"the kernel (kernel 2.6)"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:179
 msgid ""
-"Via the proc filesystem and i2c modules from the <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">lm_sensors and i2c</ulink> packages (kernel 2.4)"
+"Via the proc filesystem and i2c modules from the <ulink url=\"http://secure."
+"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors and i2c</ulink> "
+"packages (kernel 2.4)"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:185
 msgid ""
-"Via the libsensors library provided with the <ulink "
-"url=\"http://secure.netroedge.com/~lm78/kernel26.html\" "
-"type=\"http\">lm_sensors</ulink> package"
+"Via the libsensors library provided with the <ulink url=\"http://secure."
+"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors</ulink> package"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -184,8 +182,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:201
 msgid ""
-"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" type=\"http"
-"\">ibm-acpi</ulink> module (for IBM Laptops)."
+"Linux kernel <ulink url=\"http://ibm-acpi.sourceforge.net/\" "
+"type=\"http\">ibm-acpi</ulink> module (for IBM Laptops)."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -201,25 +199,22 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:215
 msgid ""
-"<ulink url=\"http://www.guzu.net/linux/hddtemp.php\" "
-"type=\"http\">hddtemp</ulink> daemon for reading temperatures from "
-"S.M.A.R.T. equipped disks."
+"<ulink url=\"http://www.guzu.net/linux/hddtemp.php\" type=\"http\">hddtemp</"
+"ulink> daemon for reading temperatures from S.M.A.R.T. equipped disks."
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:221
 msgid ""
-"Linux kernel <ulink "
-"url=\"http://sourceforge.net/projects/omke\">Omnibook</ulink> module. (for "
-"HP and Toshiba Satellite Laptops)"
+"Linux kernel <ulink url=\"http://sourceforge.net/projects/omke\">Omnibook</"
+"ulink> module. (for HP and Toshiba Satellite Laptops)"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:227
 msgid ""
-"NVIDIA graphics cards via libNVCtrl (provided with <ulink "
-"url=\"ftp://download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-"
-"settings</ulink> )."
+"NVIDIA graphics cards via libNVCtrl (provided with <ulink url=\"ftp://"
+"download.nvidia.com/XFree86/nvidia-settings/\"> nvidia-settings</ulink> )."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -232,10 +227,10 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:236
 msgid ""
-"To add <application>CAFE Sensors Applet</application> to a panel right-click"
-" on the panel to open the panel pop-up menu, then choose <menuchoice> "
-"<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors "
-"Monitor</guimenuitem> </menuchoice>."
+"To add <application>CAFE Sensors Applet</application> to a panel right-click "
+"on the panel to open the panel pop-up menu, then choose <menuchoice> "
+"<guimenu>Add to Panel</guimenu> <guimenuitem>Hardware Sensors Monitor</"
+"guimenuitem> </menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -247,18 +242,17 @@ msgstr "Verwendung"
 #: C/index.docbook:248
 msgid ""
 "When you add <application>CAFE Sensors Applet</application> to a panel for "
-"the first time, the applet will search for any available sensors to monitor,"
-" and will display a sensible default sensor if found (such as the "
-"temperature of the CPU)."
+"the first time, the applet will search for any available sensors to monitor, "
+"and will display a sensible default sensor if found (such as the temperature "
+"of the CPU)."
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:251
 msgid ""
 "Most users will then want to customize the display to their liking, which "
-"can be done via the <menuchoice> <guimenuitem>Preferences</guimenuitem> "
-"</menuchoice> menu item (see <xref linkend=\"sensors-applet-"
-"preferences\"/>)."
+"can be done via the <menuchoice> <guimenuitem>Preferences</guimenuitem> </"
+"menuchoice> menu item (see <xref linkend=\"sensors-applet-preferences\"/>)."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -270,9 +264,8 @@ msgstr "Einstellungen"
 #: C/index.docbook:263
 msgid ""
 "To configure <application>CAFE Sensors Applet</application>, right-click on "
-"the applet, then choose "
-"<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> from the "
-"pop-up menu."
+"the applet, then choose <menuchoice><guimenuitem>Preferences</guimenuitem></"
+"menuchoice> from the pop-up menu."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -297,8 +290,8 @@ msgstr ""
 msgid ""
 "This option selects whether to display sensors in the panel with either "
 "their label or icon and their value, or to have no identifier for each "
-"sensor and just display their values, or simply to display the icon for each"
-" sensor. A graph can also be displayed for each sensor, showing the "
+"sensor and just display their values, or simply to display the icon for each "
+"sensor. A graph can also be displayed for each sensor, showing the "
 "progression of the sensor value over time."
 msgstr ""
 
@@ -315,8 +308,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:308
 msgid ""
-"Sensors can be display with either their value beside their icon / label, or"
-" with the value shown below the icon / label."
+"Sensors can be display with either their value beside their icon / label, or "
+"with the value shown below the icon / label."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -328,8 +321,7 @@ msgstr ""
 #: C/index.docbook:314
 msgid ""
 "If there is not enough room in the panel to use the requested position, the "
-"best position to ensure all sensor elements are visible will be used "
-"instead."
+"best position to ensure all sensor elements are visible will be used instead."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -341,8 +333,8 @@ msgstr ""
 #: C/index.docbook:325
 msgid ""
 "When displaying sensors as graphs, the size of the graph sets either the "
-"width of the graph (when displayed on either the top or bottom panel) or the"
-" height of the graph (when displayed on the left or right panel)."
+"width of the graph (when displayed on either the top or bottom panel) or the "
+"height of the graph (when displayed on the left or right panel)."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -435,11 +427,11 @@ msgstr ""
 #: C/index.docbook:373
 msgid ""
 "The Sensors tab within the preferences window provides the options for "
-"configuring each individual sensor. Each sensor is listed under its specific"
-" interface, along with: <_:itemizedlist-1/> The "
-"<guibutton>Properties</guibutton> button allows a specific sensor to be more"
-" finely configured, providing a separate window box for this purpose. (see "
-"<xref linkend=\"sensors-applet-sensor-config-dialog\"/>)"
+"configuring each individual sensor. Each sensor is listed under its specific "
+"interface, along with: <_:itemizedlist-1/> The <guibutton>Properties</"
+"guibutton> button allows a specific sensor to be more finely configured, "
+"providing a separate window box for this purpose. (see <xref "
+"linkend=\"sensors-applet-sensor-config-dialog\"/>)"
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -490,8 +482,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:438
-msgid ""
-"This option allows the user to specify the offset for the sensor value."
+msgid "This option allows the user to specify the offset for the sensor value."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -507,8 +498,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:448
 msgid ""
-"The value at which to trigger an alarm if the sensor drops below this value."
-" This value is also used to scale the display of the graph and temperature "
+"The value at which to trigger an alarm if the sensor drops below this value. "
+"This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
 
@@ -525,8 +516,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:459
 msgid ""
-"The value at which to trigger an alarm if the sensor rises above this value."
-" This value is also used to scale the display of the graph and temperature "
+"The value at which to trigger an alarm if the sensor rises above this value. "
+"This value is also used to scale the display of the graph and temperature "
 "icons."
 msgstr ""
 
@@ -538,10 +529,10 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:470
 msgid ""
-"This option allows the user to enable alarm monitoring for this sensor. When"
-" the sensor value rises above, or drops below it's high or low values, the "
-"alarm condition will occur. This will display a notification to the user (if"
-" enabled), and execute the appropriate Alarm Command every Alarm repeat "
+"This option allows the user to enable alarm monitoring for this sensor. When "
+"the sensor value rises above, or drops below it's high or low values, the "
+"alarm condition will occur. This will display a notification to the user (if "
+"enabled), and execute the appropriate Alarm Command every Alarm repeat "
 "interval seconds."
 msgstr ""
 
@@ -564,8 +555,8 @@ msgstr ""
 #: C/index.docbook:490
 msgid ""
 "How often to execute the alarm command while the alarm condition is met. A "
-"value of 0 specifies to execute the alarm once only when the alarm condition"
-" occurs."
+"value of 0 specifies to execute the alarm once only when the alarm condition "
+"occurs."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -618,19 +609,17 @@ msgstr ""
 #. (itstool) path: para/screen
 #: C/index.docbook:548
 #, no-wrap
-msgid ""
-"<userinput><command>esdplay "
-"/usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
+msgid "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav</command></userinput>"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:535
 msgid ""
 "You can play a sound when the alarm occurs by using the command "
-"<command>esdplay</command> which should be available as part of the standard"
-" CAFE installation. (Note: If this does not work, you could also try "
-"<command>aplay</command> which is the default ALSA sound player). "
-"<_:screen-1/>"
+"<command>esdplay</command> which should be available as part of the standard "
+"CAFE installation. (Note: If this does not work, you could also try "
+"<command>aplay</command> which is the default ALSA sound player). <_:"
+"screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -642,9 +631,7 @@ msgstr ""
 #. (itstool) path: para/screen
 #: C/index.docbook:566
 #, no-wrap
-msgid ""
-"<userinput><command>zenity --warning --title=\"Sensor Alarm\" "
-"--text=\"Sensor Alarm occurred\"</command></userinput>"
+msgid "<userinput><command>zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm occurred\"</command></userinput>"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -659,25 +646,21 @@ msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:575
-msgid ""
-"<guilabel> Combine multiple commands into one alarm command </guilabel>"
+msgid "<guilabel> Combine multiple commands into one alarm command </guilabel>"
 msgstr ""
 
 #. (itstool) path: para/screen
 #: C/index.docbook:587
 #, no-wrap
-msgid ""
-"<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp;"
-" zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm "
-"occurred\"</command></userinput>"
+msgid "<userinput><command>esdplay /usr/share/sounds/gnibbles/gobble.wav &amp;&amp; zenity --warning --title=\"Sensor Alarm\" --text=\"Sensor Alarm occurred\"</command></userinput>"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:581
 msgid ""
-"Multiple commands can be executed one after the other using the "
-"\"&amp;&amp;\" construct to separate them. To play a sound and pop-up a "
-"dialog via Zenity the follow command can be used: <_:screen-1/>"
+"Multiple commands can be executed one after the other using the \"&amp;&amp;"
+"\" construct to separate them. To play a sound and pop-up a dialog via "
+"Zenity the follow command can be used: <_:screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -717,12 +700,12 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
 msgid ""
-"The origin sensor applet was written by Alex Murray "
-"(<email>murray.alex@gmail.com</email>). <application>CAFE Sensors "
-"Applet</application> is further develop by Cafe dev team. To find more "
-"information about <application>CAFE Sensors Applet</application>, please "
-"visit the <ulink url=\"https://github.com/cafe-desktop/cafe-sensors-"
-"applet/\" type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
+"The origin sensor applet was written by Alex Murray (<email>murray."
+"alex@gmail.com</email>). <application>CAFE Sensors Applet</application> is "
+"further develop by Cafe dev team. To find more information about "
+"<application>CAFE Sensors Applet</application>, please visit the <ulink "
+"url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" "
+"type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -754,8 +737,8 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
 "Die Erlaubnis, das vorliegende Dokument zu kopieren, verteilen und/oder "
@@ -771,8 +754,8 @@ msgstr ""
 msgid ""
 "This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
 msgstr ""
 "Das vorliegende Handbuch ist Teil einer Reihe von CAFE-Handbüchern, die "
 "unter der GFDL verteilt werden. Wenn Sie dieses Handbuch separat verteilen "
@@ -828,26 +811,26 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
 "UNTER KEINEN UMSTÄNDEN UND GEMÄSS KEINER RECHTSLEHRE, WEDER AUFGRUND VON "
 "UNERLAUBTEN HANDLUNGEN (EINSCHLIESSLICH FAHRLÄSSIGKEIT), VERTRÄGEN ODER "
 "SONSTIGEM, KANN DER AUTOR, DER URSPRÜNGLICHE VERFASSER, EIN MITWIRKENDER "
 "ODER EIN VERTEILER DES DOKUMENTS ODER EINER MODIFIZIERTEN VERSION DES "
 "DOKUMENTS ODER EIN LIEFERANT EINER DIESER PARTEIEN VON EINER PERSON FÜR "
-"DIREKTE, INDIREKTE, BESONDERE, ZUFÄLLIGE ODER ALS FOLGE AUFGETRETENE SCHÄDEN"
-" IRGENDEINER ART, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF, SCHÄDEN DURCH "
-"GESCHÄFTSWERTVERLUSTE, ARBEITSAUSFÄLLE, COMPUTERAUSFÄLLE ODER "
-"-FUNKTIONSSTÖRUNGEN ODER JEGLICHE ANDERE SCHÄDEN ODER VERLUSTE, DIE DURCH "
+"DIREKTE, INDIREKTE, BESONDERE, ZUFÄLLIGE ODER ALS FOLGE AUFGETRETENE SCHÄDEN "
+"IRGENDEINER ART, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF, SCHÄDEN DURCH "
+"GESCHÄFTSWERTVERLUSTE, ARBEITSAUSFÄLLE, COMPUTERAUSFÄLLE ODER -"
+"FUNKTIONSSTÖRUNGEN ODER JEGLICHE ANDERE SCHÄDEN ODER VERLUSTE, DIE DURCH "
 "ODER IM ZUSAMMENHANG MIT DER VERWENDUNG DES DOKUMENTS ODER EINER "
 "MODIFIZIERTEN VERSION DES DOKUMENTS ENTSTANDEN SIND, SELBST WENN DIESE "
 "PARTEI ÜBER MÖGLICHE SCHÄDEN INFORMIERT WORDEN SEIN SOLLTE, HAFTBAR GEMACHT "
