@@ -336,7 +336,7 @@ msgstr ""
 #: sensors-applet/about-dialog.c:48
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
 "Jorge González González <jorge.gonzalez.gonzalez@hispalinux.es>"
 
 #: sensors-applet/sensor-config-dialog.c:388

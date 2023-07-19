@@ -4,14 +4,14 @@
 # Giuseppe Pignataro <rogepix@gmail.com>, 2020
 # Marco Z. <minaz666@gmail.com>, 2020
 # Alessandro Volturno <alelvb@inwind.it>, 2020
-# Wolfgang Ulbrich <cafe@raveit.de>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2023-07-18 09:33+0200\n"
 "PO-Revision-Date: 2020-02-16 14:49+0000\n"
-"Last-Translator: Wolfgang Ulbrich <cafe@raveit.de>, 2020\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/cafe/teams/13566/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
