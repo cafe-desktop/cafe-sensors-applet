@@ -1329,6 +1329,10 @@ void sensors_applet_init(SensorsApplet *sensors_applet) {
     sensors_applet->timeout_id = g_timeout_add_seconds(g_settings_get_int(sensors_applet->settings, TIMEOUT) / 1000,
                                                            (GSourceFunc)sensors_applet_update_active_sensors,
                                                            sensors_applet);
+
+    g_object_set (ctk_settings_get_default (), "ctk-menu-images", TRUE, NULL);
+    g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
     ctk_widget_show_all(CTK_WIDGET(sensors_applet->applet));
 }
 
