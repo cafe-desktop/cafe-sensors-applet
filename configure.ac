@@ -1,6 +1,6 @@
 # ================= initialization =================== #
 
-AC_INIT([CAFE Sensors Applet], [1.24.1], [https://cafe-desktop.org],
+AC_INIT([CAFE Sensors Applet], [1.25.0], [https://cafe-desktop.org],
 [cafe-sensors-applet])
 
 AC_CONFIG_SRCDIR([sensors-applet/main.c])
