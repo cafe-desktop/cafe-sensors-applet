@@ -1,0 +1,2170 @@
+Checking lib/sensors-applet-plugin.c ...
+lib/sensors-applet-plugin.c:35:11: style: The scope of the variable 'dir' can be reduced. [variableScope]
+    GDir *dir;
+          ^
+lib/sensors-applet-plugin.c:36:18: style: The scope of the variable 'new_file' can be reduced. [variableScope]
+    const gchar* new_file;
+                 ^
+lib/sensors-applet-plugin.c:37:12: style: The scope of the variable 'new_path' can be reduced. [variableScope]
+    gchar *new_path;
+           ^
+lib/sensors-applet-plugin.c:66:12: style: The scope of the variable 'string' can be reduced. [variableScope]
+    gchar *string;
+           ^
+Checking lib/sensors-applet-plugin.c: HAVE_CONFIG_H...
+Checking lib/sensors-applet-plugin.c: HAVE_UNISTD_H...
+1/27 files checked 1% done
+Checking plugins/acpi/acpi-plugin.c ...
+plugins/acpi/acpi-plugin.c:44:12: style: Unused variable: label [unusedVariable]
+    gchar *label;
+           ^
+Checking plugins/acpi/acpi-plugin.c: HAVE_CONFIG_H...
+Checking plugins/acpi/acpi-plugin.c: HAVE_STDIO_H...
+2/27 files checked 2% done
+Checking plugins/aticonfig/aticonfig-plugin.c ...
+plugins/aticonfig/aticonfig-plugin.c:51:12: style: Unused variable: temp [unusedVariable]
+    double temp;
+           ^
+plugins/aticonfig/aticonfig-plugin.c:52:9: style: Unused variable: read_count [unusedVariable]
+    int read_count;
+        ^
+Checking plugins/aticonfig/aticonfig-plugin.c: HAVE_CONFIG_H...
+Checking plugins/aticonfig/aticonfig-plugin.c: HAVE_STDIO_H...
+Checking plugins/aticonfig/aticonfig-plugin.c: HAVE_TIME_H...
+Checking plugins/aticonfig/aticonfig-plugin.c: HAVE_UNISTD_H...
+3/27 files checked 4% done
+Checking plugins/dummy/dummy-plugin.c ...
+Checking plugins/dummy/dummy-plugin.c: DPDBG...
+Checking plugins/dummy/dummy-plugin.c: HAVE_CONFIG_H...
+4/27 files checked 5% done
+Checking plugins/hddtemp/hddtemp-plugin.c ...
+plugins/hddtemp/hddtemp-plugin.c:63:9: style: The scope of the variable 'sockfd' can be reduced. [variableScope]
+    int sockfd;
+        ^
+plugins/hddtemp/hddtemp-plugin.c:67:12: style: The scope of the variable 'pc' can be reduced. [variableScope]
+    gchar *pc;
+           ^
+plugins/hddtemp/hddtemp-plugin.c:64:15: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+    ssize_t n = 1;
+              ^
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_ARPA_INET_H...
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_CONFIG_H...
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_NETINET_IN_H...
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_STRING_H...
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_SYS_SOCKET_H...
+Checking plugins/hddtemp/hddtemp-plugin.c: HAVE_SYS_TYPES_H...
+5/27 files checked 7% done
+Checking plugins/i2c-proc/i2c-proc-plugin.c ...
+Checking plugins/i2c-proc/i2c-proc-plugin.c: HAVE_CONFIG_H...
+Checking plugins/i2c-proc/i2c-proc-plugin.c: HAVE_LOCALE_H...
+Checking plugins/i2c-proc/i2c-proc-plugin.c: HAVE_STDIO_H...
+6/27 files checked 10% done
+Checking plugins/i2c-sys/i2c-sys-plugin.c ...
+Checking plugins/i2c-sys/i2c-sys-plugin.c: HAVE_CONFIG_H...
+Checking plugins/i2c-sys/i2c-sys-plugin.c: HAVE_STDIO_H...
+7/27 files checked 11% done
+Checking plugins/i8k/i8k-plugin.c ...
+Checking plugins/i8k/i8k-plugin.c: HAVE_CONFIG_H...
+Checking plugins/i8k/i8k-plugin.c: HAVE_STDIO_H...
+8/27 files checked 13% done
+Checking plugins/ibm-acpi/ibm-acpi-plugin.c ...
+plugins/ibm-acpi/ibm-acpi-plugin.c:53:12: style: The scope of the variable 'label' can be reduced. [variableScope]
+    gchar *label;
+           ^
+Checking plugins/ibm-acpi/ibm-acpi-plugin.c: HAVE_CONFIG_H...
+Checking plugins/ibm-acpi/ibm-acpi-plugin.c: HAVE_STDIO_H...
+9/27 files checked 16% done
+Checking plugins/libsensors/libsensors-plugin.c ...
+plugins/libsensors/libsensors-plugin.c:175:30: style: Variable 'sensor_info' can be declared as pointer to const [constVariablePointer]
+    SensorsAppletSensorInfo *sensor_info = NULL;
+                             ^
+plugins/libsensors/libsensors-plugin.c:175:30: style: Variable 'sensor_info' is assigned a value that is never used. [unreadVariable]
+    SensorsAppletSensorInfo *sensor_info = NULL;
+                             ^
+plugins/libsensors/libsensors-plugin.c:403:13: style: Unused variable: i [unusedVariable]
+        int i;
+            ^
+Checking plugins/libsensors/libsensors-plugin.c: HAVE_CONFIG_H...
+Checking plugins/libsensors/libsensors-plugin.c: HAVE_SENSORS_SENSORS_H...
+Checking plugins/libsensors/libsensors-plugin.c: HAVE_STDLIB_H...
+Checking plugins/libsensors/libsensors-plugin.c: HAVE_STRING_H...
+Checking plugins/libsensors/libsensors-plugin.c: HAVE_SYS_TYPES_H...
+10/27 files checked 21% done
+Checking plugins/mbmon/mbmon-plugin.c ...
+plugins/mbmon/mbmon-plugin.c:57:9: style: The scope of the variable 'sockfd' can be reduced. [variableScope]
+    int sockfd;
+        ^
+plugins/mbmon/mbmon-plugin.c:138:43: style: The scope of the variable 'pv2' can be reduced. [variableScope]
+    gchar **output_vector = NULL, **pv, **pv2;
+                                          ^
+plugins/mbmon/mbmon-plugin.c:58:15: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+    ssize_t n = 1;
+              ^
+Checking plugins/mbmon/mbmon-plugin.c: HAVE_ARPA_INET_H...
+Checking plugins/mbmon/mbmon-plugin.c: HAVE_CONFIG_H...
+Checking plugins/mbmon/mbmon-plugin.c: HAVE_NETINET_IN_H...
+Checking plugins/mbmon/mbmon-plugin.c: HAVE_SYS_SOCKET_H...
+Checking plugins/mbmon/mbmon-plugin.c: HAVE_SYS_TYPES_H...
+11/27 files checked 23% done
+Checking plugins/netbsd/netbsd-plugin.c ...
+Checking plugins/netbsd/netbsd-plugin.c: HAVE_CONFIG_H...
+12/27 files checked 25% done
+Checking plugins/nvidia/nvidia-plugin.c ...
+Checking plugins/nvidia/nvidia-plugin.c: HAVE_CONFIG_H...
+13/27 files checked 27% done
+Checking plugins/omnibook/omnibook-plugin.c ...
+Checking plugins/omnibook/omnibook-plugin.c: HAVE_CONFIG_H...
+Checking plugins/omnibook/omnibook-plugin.c: HAVE_STDIO_H...
+14/27 files checked 28% done
+Checking plugins/pmu-sys/pmu-sys-plugin.c ...
+Checking plugins/pmu-sys/pmu-sys-plugin.c: HAVE_CONFIG_H...
+Checking plugins/pmu-sys/pmu-sys-plugin.c: HAVE_STDIO_H...
+15/27 files checked 30% done
+Checking plugins/smu-sys/smu-sys-plugin.c ...
+Checking plugins/smu-sys/smu-sys-plugin.c: HAVE_CONFIG_H...
+Checking plugins/smu-sys/smu-sys-plugin.c: HAVE_STDIO_H...
+16/27 files checked 32% done
+Checking plugins/sonypi/sonypi-plugin.c ...
+Checking plugins/sonypi/sonypi-plugin.c: HAVE_CONFIG_H...
+Checking plugins/sonypi/sonypi-plugin.c: HAVE_FCNTL_H...
+Checking plugins/sonypi/sonypi-plugin.c: HAVE_SYS_IOCTL_H...
+Checking plugins/sonypi/sonypi-plugin.c: HAVE_UNISTD_H...
+17/27 files checked 33% done
+Checking plugins/udisks2/udisks2-plugin.c ...
+Checking plugins/udisks2/udisks2-plugin.c: HAVE_CONFIG_H...
+Checking plugins/udisks2/udisks2-plugin.c: UD2PD...
+18/27 files checked 38% done
+Checking sensors-applet/about-dialog.c ...
+Checking sensors-applet/about-dialog.c: HAVE_CONFIG_H...
+Checking sensors-applet/about-dialog.c: HAVE_LIBNOTIFY...
+19/27 files checked 39% done
+Checking sensors-applet/active-sensor-libnotify.c ...
+sensors-applet/active-sensor-libnotify.c:29:49: style: Parameter 'notification' can be declared as pointer to const. However it seems that 'notif_closed_cb' is a callback function, if 'notification' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static void notif_closed_cb(NotifyNotification *notification,
+                                                ^
+sensors-applet/active-sensor-libnotify.c:88:33: note: You might need to cast the function pointer here
+                     G_CALLBACK(notif_closed_cb),
+                                ^
+sensors-applet/active-sensor-libnotify.c:29:49: note: Parameter 'notification' can be declared as pointer to const
+static void notif_closed_cb(NotifyNotification *notification,
+                                                ^
+Checking sensors-applet/active-sensor-libnotify.c: HAVE_CONFIG_H...
+Checking sensors-applet/active-sensor-libnotify.c: HAVE_LIBNOTIFY...
+20/27 files checked 40% done
+Checking sensors-applet/active-sensor.c ...
+sensors-applet/active-sensor.c:214:16: style: The scope of the variable 'overlay_icon' can be reduced. [variableScope]
+    GdkPixbuf *overlay_icon, *new_icon;
+               ^
+sensors-applet/active-sensor.c:363:14: style: The scope of the variable 'old_values' can be reduced. [variableScope]
+    gdouble *old_values;
+             ^
+sensors-applet/active-sensor.c:507:12: style: The scope of the variable 'old_value_text' can be reduced. [variableScope]
+    gchar *old_value_text;
+           ^
+sensors-applet/active-sensor.c:509:22: style: The scope of the variable 'scale' can be reduced. [variableScope]
+    TemperatureScale scale;
+                     ^
+sensors-applet/active-sensor.c:510:17: style: The scope of the variable 'display_mode' can be reduced. [variableScope]
+    DisplayMode display_mode;
+                ^
+sensors-applet/active-sensor.c:728:29: style: Variable 'label_width' is assigned a value that is never used. [unreadVariable]
+                label_width = MAX(req.width, label_min_width);
+                            ^
+Checking sensors-applet/active-sensor.c: HAVE_CONFIG_H...
+Checking sensors-applet/active-sensor.c: HAVE_LIBNOTIFY...
+Checking sensors-applet/active-sensor.c: HAVE_STRING_H...
+21/27 files checked 49% done
+Checking sensors-applet/main.c ...
+sensors-applet/main.c:31:20: style: The scope of the variable 'sensors_applet' can be reduced. [variableScope]
+    SensorsApplet *sensors_applet;
+                   ^
+Checking sensors-applet/main.c: HAVE_CONFIG_H...
+Checking sensors-applet/main.c: HAVE_LIBNOTIFY...
+22/27 files checked 49% done
+Checking sensors-applet/prefs-dialog.c ...
+sensors-applet/prefs-dialog.c:296:18: style: The scope of the variable 'path' can be reduced. [variableScope]
+    CtkTreePath *path;
+                 ^
+sensors-applet/prefs-dialog.c:352:18: style: The scope of the variable 'path' can be reduced. [variableScope]
+    CtkTreePath *path;
+                 ^
+sensors-applet/prefs-dialog.c:456:20: style: Local variable 'content_area' shadows outer variable [shadowVariable]
+        CtkWidget *content_area;
+                   ^
+sensors-applet/prefs-dialog.c:399:16: note: Shadowed declaration
+    CtkWidget *content_area;
+               ^
+sensors-applet/prefs-dialog.c:456:20: note: Shadow variable
+        CtkWidget *content_area;
+                   ^
+sensors-applet/prefs-dialog.c:92:75: style: Parameter 'scales' can be declared as const array [constParameter]
+                                                         TemperatureScale scales[2]) {
+                                                                          ^
+Checking sensors-applet/prefs-dialog.c: HAVE_CONFIG_H...
+Checking sensors-applet/prefs-dialog.c: HAVE_LIBNOTIFY...
+23/27 files checked 62% done
+Checking sensors-applet/sensor-config-dialog.c ...
+sensors-applet/sensor-config-dialog.c:286:18: style: The scope of the variable 'path' can be reduced. [variableScope]
+    CtkTreePath *path;
+                 ^
+sensors-applet/sensor-config-dialog.c:289:14: style: The scope of the variable 'icon_type' can be reduced. [variableScope]
+    IconType icon_type;
+             ^
+sensors-applet/sensor-config-dialog.c:355:16: style: The scope of the variable 'pixbuf' can be reduced. [variableScope]
+    GdkPixbuf *pixbuf;
+               ^
+sensors-applet/sensor-config-dialog.c:320:16: style: Unused variable: content_area [unusedVariable]
+    CtkWidget *content_area;
+               ^
+Checking sensors-applet/sensor-config-dialog.c: HAVE_CONFIG_H...
+Checking sensors-applet/sensor-config-dialog.c: HAVE_LIBNOTIFY...
+24/27 files checked 73% done
+Checking sensors-applet/sensors-applet-plugins.c ...
+sensors-applet/sensors-applet-plugins.c:42:41: style: The scope of the variable 'name_fn' can be reduced. [variableScope]
+                SensorsAppletPluginName name_fn;
+                                        ^
+sensors-applet/sensors-applet-plugins.c:44:51: style: The scope of the variable 'get_value_fn' can be reduced. [variableScope]
+                SensorsAppletPluginGetSensorValue get_value_fn;
+                                                  ^
+Checking sensors-applet/sensors-applet-plugins.c: HAVE_CONFIG_H...
+Checking sensors-applet/sensors-applet-plugins.c: HAVE_DLFCN_H...
+Checking sensors-applet/sensors-applet-plugins.c: HAVE_LIBNOTIFY...
+25/27 files checked 75% done
+Checking sensors-applet/sensors-applet-settings.c ...
+sensors-applet/sensors-applet-settings.c:243:33: style: Variable 'not_end_of_sensors' is assigned a value that is never used. [unreadVariable]
+    gboolean not_end_of_sensors = TRUE;
+                                ^
+sensors-applet/sensors-applet-settings.c:546:33: style: Variable 'not_end_of_sensors' is assigned a value that is never used. [unreadVariable]
+    gboolean not_end_of_sensors = TRUE;
+                                ^
+Checking sensors-applet/sensors-applet-settings.c: HAVE_CONFIG_H...
+Checking sensors-applet/sensors-applet-settings.c: HAVE_LIBNOTIFY...
+Checking sensors-applet/sensors-applet-settings.c: SORT_DEBUG...
+sensors-applet/sensors-applet-settings.c:155:33: style: Variable 'not_end_of_sensors' is assigned a value that is never used. [unreadVariable]
+    gboolean not_end_of_sensors = TRUE;
+                                ^
+26/27 files checked 83% done
+Checking sensors-applet/sensors-applet.c ...
+sensors-applet/sensors-applet.c:898:25: style: Variable 'not_empty_tree' is reassigned a value before the old one has been used. [redundantAssignment]
+    for (not_empty_tree = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+                        ^
+sensors-applet/sensors-applet.c:867:20: note: not_empty_tree is assigned
+    not_empty_tree = TRUE;
+                   ^
+sensors-applet/sensors-applet.c:898:25: note: not_empty_tree is overwritten
+    for (not_empty_tree = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+                        ^
+sensors-applet/sensors-applet.c:898:25: style: Variable 'not_empty_tree' is reassigned a value before the old one has been used. [redundantAssignment]
+    for (not_empty_tree = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+                        ^
+sensors-applet/sensors-applet.c:894:24: note: not_empty_tree is assigned
+        not_empty_tree = FALSE;
+                       ^
+sensors-applet/sensors-applet.c:898:25: note: not_empty_tree is overwritten
+    for (not_empty_tree = ctk_tree_model_get_iter_first(CTK_TREE_MODEL(sensors_applet->sensors), &interfaces_iter);
+                        ^
+sensors-applet/sensors-applet.c:168:18: style: The scope of the variable 'path' can be reduced. [variableScope]
+    CtkTreePath *path;
+                 ^
+sensors-applet/sensors-applet.c:171:16: style: The scope of the variable 'new_icon' can be reduced. [variableScope]
+    GdkPixbuf *new_icon;
+               ^
+sensors-applet/sensors-applet.c:862:18: style: The scope of the variable 'tree_path' can be reduced. [variableScope]
+    CtkTreePath *tree_path;
+                 ^
+sensors-applet/sensors-applet.c:1044:18: style: The scope of the variable 'sensor_tree_path' can be reduced. [variableScope]
+    CtkTreePath *sensor_tree_path;
+                 ^
+sensors-applet/sensors-applet.c:138:45: style: Parameter 'allocation' can be declared as pointer to const. However it seems that 'size_allocate_cb' is a callback function, if 'allocation' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+                             CtkAllocation *allocation,
+                                            ^
+sensors-applet/sensors-applet.c:1315:34: note: You might need to cast the function pointer here
+                      G_CALLBACK(size_allocate_cb),
+                                 ^
+sensors-applet/sensors-applet.c:138:45: note: Parameter 'allocation' can be declared as pointer to const
+                             CtkAllocation *allocation,
+                                            ^
+sensors-applet/sensors-applet.c:169:63: style: Variable 'not_end_of_sensors' is assigned a value that is never used. [unreadVariable]
+    gboolean not_end_of_interfaces = TRUE, not_end_of_sensors = TRUE;
+                                                              ^
+sensors-applet/sensors-applet.c:857:33: style: Variable 'not_end_of_sensors' is assigned a value that is never used. [unreadVariable]
+    gboolean not_end_of_sensors = TRUE;
+                                ^
+Checking sensors-applet/sensors-applet.c: HAVE_CONFIG_H...
+Checking sensors-applet/sensors-applet.c: HAVE_LIBNOTIFY...
+Checking sensors-applet/sensors-applet.c: HAVE_UNISTD_H...
+27/27 files checked 100% done
+/usr/bin/cafe-autogen
+/usr/bin/yelp-build
+checking for autoreconf >= 2.53...
+(B  testing autoreconf... found 2.71
+checking for pkg-config >= 0.14.0...
+(B  testing pkg-config... found 1.8.1
+checking for cafe-common >= 0.0.1...
+(B  testing cafe-doc-common... found 1.25.0
+Checking for required M4 macros...
+(BChecking for forbidden M4 macros...
+(BProcessing ./configure.ac
+(BRunning cafe-doc-common...
+(BRunning autoreconf...
+(Bautoreconf: export WARNINGS=no-portability
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file ABOUT-NLS
+Copying file config.rpath
+Copying file m4/codeset.m4
+Copying file m4/extern-inline.m4
+Copying file m4/fcntl-o.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/threadlib.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+autoreconf: running: aclocal --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:14: installing './compile'
+configure.ac:17: installing './config.guess'
+configure.ac:17: installing './config.sub'
+configure.ac:9: installing './install-sh'
+configure.ac:9: installing './missing'
+Makefile.am: installing './INSTALL'
+help/Makefile.am:9: warning: if $(IGNORE_HELP_LINGUAS: non-POSIX variable name
+help/Makefile.am:9: (probably a GNU make extension)
+help/Makefile.am:9: warning: filter-out $(IGNORE_HELP_LINGUAS: non-POSIX variable name
+help/Makefile.am:9: (probably a GNU make extension)
+help/Makefile.am:9: warning: subst /,,$(dir $(wildcard */*.po: non-POSIX variable name
+help/Makefile.am:9: (probably a GNU make extension)
+lib/Makefile.am: installing './depcomp'
+autoreconf: Leaving directory '.'
+Skipping configure process.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer accepts -g... yes
+checking for /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer option to enable C11 features... none needed
+checking whether /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer understands -c and -o together... rm: cannot remove 'conftest.plist': Is a directory
+yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer... gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... rm: cannot remove 'conftest.plist': Is a directory
+BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3145728
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... rm: cannot remove 'conftest.plist': Is a directory
+@
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer object... rm: cannot remove 'conftest.plist': Is a directory
+ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer supports -fno-rtti -fno-exceptions... no
+checking for /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer option to produce PIC... -fPIC -DPIC
+checking if /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer PIC flag -fPIC -DPIC works... yes
+checking if /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer static flag -static works... yes
+checking if /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer supports -c -o file.o... yes
+checking if /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer supports -c -o file.o... (cached) yes
+checking whether the /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C preprocessor... /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for stdio.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for fcntl.h... yes
+checking for sys/ioctl.h... yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for glib-2.0 >= 2.50.0 gio-2.0... yes
+checking for ctk+-3.0 >= 3.22.0... yes
+checking for libcafepanelapplet-4.0 >= 1.17.0... yes
+checking for cairo >= 1.0.4... yes
+checking for libnotify >= 0.7.0... yes
+checking for sensors/sensors.h... yes
+checking for sensors_init in -lsensors... yes
+checking for X11/Xlib.h... yes
+checking for XOpenDisplay in -lX11... yes
+checking for NVCtrl/NVCtrl.h... yes
+checking for NVCtrl/NVCtrlLib.h... yes
+checking for XNVCTRLQueryExtension in -lXNVCtrl... yes
+checking for aticonfig... no
+Disabling aticonfig support
+checking for xsltproc... /usr/bin/xsltproc
+checking whether C compiler accepts -Werror=unknown-warning-option... no
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wmissing-prototypes... yes
+checking whether C compiler accepts -Wbad-function-cast... yes
+checking whether C compiler accepts -Wcast-align... yes
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -Wformat-nonliteral... yes
+checking whether C compiler accepts -Wmissing-declarations... yes
+checking whether C compiler accepts -Wmissing-field-initializers... yes
+checking whether C compiler accepts -Wnested-externs... yes
+checking whether C compiler accepts -Wpointer-arith... yes
+checking whether C compiler accepts -Wredundant-decls... yes
+checking whether C compiler accepts -Wshadow... yes
+checking whether C compiler accepts -Wstrict-prototypes... yes
+checking whether C compiler accepts -Wunused-macros... yes
+checking whether C compiler accepts -Werror=format-security... yes
+checking flags to pass to the C compiler /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer... -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wmissing-field-initializers -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security
+checking for itstool... itstool
+checking for xmllint... xmllint
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking pkg-config is at least version 0.16... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating org.cafe.sensors-applet.gschema.xml
+config.status: creating org.cafe.sensors-applet.sensor.gschema.xml
+config.status: creating sensors-applet/Makefile
+config.status: creating lib/Makefile
+config.status: creating plugins/Makefile
+config.status: creating plugins/acpi/Makefile
+config.status: creating plugins/dummy/Makefile
+config.status: creating plugins/udisks2/Makefile
+config.status: creating plugins/hddtemp/Makefile
+config.status: creating plugins/i2c-proc/Makefile
+config.status: creating plugins/i2c-sys/Makefile
+config.status: creating plugins/i8k/Makefile
+config.status: creating plugins/ibm-acpi/Makefile
+config.status: creating plugins/libsensors/Makefile
+config.status: creating plugins/mbmon/Makefile
+config.status: creating plugins/netbsd/Makefile
+config.status: creating plugins/nvidia/Makefile
+config.status: creating plugins/aticonfig/Makefile
+config.status: creating plugins/omnibook/Makefile
+config.status: creating plugins/pmu-sys/Makefile
+config.status: creating plugins/smu-sys/Makefile
+config.status: creating plugins/sonypi/Makefile
+config.status: creating pixmaps/Makefile
+config.status: creating po/Makefile.in
+config.status: creating help/Makefile
+config.status: creating sensors-applet/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+       cafe-sensors-applet 1.25.0
+       ==========================
+
+       prefix:               /usr/local
+       compiler:             /usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer
+       cflags:               -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wmissing-field-initializers -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security
+       warning flags:        -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wmissing-field-initializers -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security
+
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-07-21-120119-75813-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+git.mk: Generating .gitignore
+Making all in sensors-applet
+make[1]: Entering directory '/rootdir/sensors-applet'
+git.mk: Generating .gitignore
+make  all-am
+make[2]: Entering directory '/rootdir/sensors-applet'
+  CC       main.o
+  CC       about-dialog.o
+  CC       active-sensor.o
+about-dialog.c: In function 'about_dialog_open':
+about-dialog.c:28:39: warning: unused parameter 'sensors_applet' [-Wunused-parameter]
+   28 | void about_dialog_open(SensorsApplet *sensors_applet) {
+      |                        ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+main.c: In function 'sensors_applet_fill':
+main.c:29:46: warning: unused parameter 'data' [-Wunused-parameter]
+   29 |                                     gpointer data) {
+      |                                     ~~~~~~~~~^~~~
+active-sensor.c:345:10: warning: no previous prototype for 'graph_draw_cb' [-Wmissing-prototypes]
+  345 | gboolean graph_draw_cb(CtkWidget *graph,
+      |          ^~~~~~~~~~~~~
+active-sensor.c: In function 'graph_draw_cb':
+active-sensor.c:345:35: warning: unused parameter 'graph' [-Wunused-parameter]
+  345 | gboolean graph_draw_cb(CtkWidget *graph,
+      |                        ~~~~~~~~~~~^~~~~
+active-sensor.c: In function 'active_sensor_update':
+active-sensor.c:579:33: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  579 |                         scale = (TemperatureScale) g_settings_get_int(sensors_applet->settings, TEMPERATURE_SCALE);
+      |                                 ^
+active-sensor.c:502:10: warning: variable 'label_width' set but not used [-Wunused-but-set-variable]
+  502 |     gint label_width;
+      |          ^~~~~~~~~~~
+  CC       prefs-dialog.o
+  CC       sensor-config-dialog.o
+prefs-dialog.c:53:6: warning: no previous prototype for 'prefs_dialog_response' [-Wmissing-prototypes]
+   53 | void prefs_dialog_response(CtkDialog *prefs_dialog,
+      |      ^~~~~~~~~~~~~~~~~~~~~
+prefs-dialog.c: In function 'prefs_dialog_response':
+prefs-dialog.c:53:39: warning: unused parameter 'prefs_dialog' [-Wunused-parameter]
+   53 | void prefs_dialog_response(CtkDialog *prefs_dialog,
+      |                            ~~~~~~~~~~~^~~~~~~~~~~~
+prefs-dialog.c: In function 'prefs_dialog_convert_low_and_high_values':
+prefs-dialog.c:90:71: warning: unused parameter 'path' [-Wunused-parameter]
+   90 |                                                          CtkTreePath *path,
+      |                                                          ~~~~~~~~~~~~~^~~~
+prefs-dialog.c: In function 'prefs_dialog_temperature_scale_changed':
+prefs-dialog.c:179:30: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  179 |     scales[OLD_TEMP_SCALE] = (TemperatureScale) g_settings_get_int (prefs_dialog->sensors_applet->settings, TEMPERATURE_SCALE);
+      |                              ^
+prefs-dialog.c:181:30: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  181 |     scales[NEW_TEMP_SCALE] = (TemperatureScale)ctk_combo_box_get_active(temperature_scale_combo_box);
+      |                              ^
+prefs-dialog.c: In function 'prefs_dialog_graph_size_changed':
+prefs-dialog.c:232:13: warning: cast from function call of type 'gdouble' {aka 'double'} to non-matching type 'int' [-Wbad-function-cast]
+  232 |     value = (gint)(ctk_spin_button_get_value(button));
+      |             ^
+prefs-dialog.c: In function 'prefs_dialog_sensor_toggled':
+prefs-dialog.c:241:58: warning: unused parameter 'renderer' [-Wunused-parameter]
+  241 | static void prefs_dialog_sensor_toggled(CtkCellRenderer *renderer, gchar *path_str, PrefsDialog *prefs_dialog) {
+      |                                         ~~~~~~~~~~~~~~~~~^~~~~~~~
+prefs-dialog.c: In function 'prefs_dialog_sensor_name_changed':
+prefs-dialog.c:268:63: warning: unused parameter 'renderer' [-Wunused-parameter]
+  268 | static void prefs_dialog_sensor_name_changed(CtkCellRenderer *renderer, gchar *path_str, gchar *new_text, PrefsDialog *prefs_dialog) {
+      |                                              ~~~~~~~~~~~~~~~~~^~~~~~~~
+prefs-dialog.c: In function 'prefs_dialog_row_activated':
+prefs-dialog.c:280:97: warning: unused parameter 'column' [-Wunused-parameter]
+  280 | static void prefs_dialog_row_activated(CtkTreeView *view, CtkTreePath *path, CtkTreeViewColumn *column, PrefsDialog *prefs_dialog) {
+      |                                                                              ~~~~~~~~~~~~~~~~~~~^~~~~~
+prefs-dialog.c: In function 'prefs_dialog_sensor_up_button_clicked':
+prefs-dialog.c:293:62: warning: unused parameter 'button' [-Wunused-parameter]
+  293 | static void prefs_dialog_sensor_up_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
+      |                                                   ~~~~~~~~~~~^~~~~~
+prefs-dialog.c: In function 'prefs_dialog_sensor_down_button_clicked':
+prefs-dialog.c:321:64: warning: unused parameter 'button' [-Wunused-parameter]
+  321 | static void prefs_dialog_sensor_down_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
+      |                                                     ~~~~~~~~~~~^~~~~~
+prefs-dialog.c: In function 'prefs_dialog_sensor_config_button_clicked':
+prefs-dialog.c:341:66: warning: unused parameter 'button' [-Wunused-parameter]
+  341 | static void prefs_dialog_sensor_config_button_clicked(CtkButton *button, PrefsDialog *prefs_dialog) {
+      |                                                       ~~~~~~~~~~~^~~~~~
+prefs-dialog.c: In function 'prefs_dialog_open':
+prefs-dialog.c:456:20: warning: declaration of 'content_area' shadows a previous local [-Wshadow]
+  456 |         CtkWidget *content_area;
+      |                    ^~~~~~~~~~~~
+prefs-dialog.c:399:16: note: shadowed declaration is here
+  399 |     CtkWidget *content_area;
+      |                ^~~~~~~~~~~~
+prefs-dialog.c:551:61: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'double' [-Wbad-function-cast]
+  551 |                                                    "value", (gdouble)g_settings_get_int(sensors_applet->settings, GRAPH_SIZE),
+      |                                                             ^
+prefs-dialog.c:563:65: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'double' [-Wbad-function-cast]
+  563 |                                                        "value", (gdouble)g_settings_get_int(sensors_applet->settings, GRAPH_SIZE),
+      |                                                                 ^
+prefs-dialog.c:612:62: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'double' [-Wbad-function-cast]
+  612 |                                                     "value", (gdouble) g_settings_get_int(sensors_applet->settings, TIMEOUT) / 1000.0,
+      |                                                              ^
+sensor-config-dialog.c: In function 'sensor_config_dialog_response':
+sensor-config-dialog.c:76:25: warning: variable 'config_dialog' set but not used [-Wunused-but-set-variable]
+   76 |     SensorConfigDialog *config_dialog;
+      |                         ^~~~~~~~~~~~~
+sensor-config-dialog.c: In function 'sensor_config_dialog_graph_color_set':
+sensor-config-dialog.c:320:16: warning: unused variable 'content_area' [-Wunused-variable]
+  320 |     CtkWidget *content_area;
+      |                ^~~~~~~~~~~~
+  CC       sensors-applet.o
+sensor-config-dialog.c:79:5: warning: Value stored to 'config_dialog' is never read [deadcode.DeadStores]
+    config_dialog = (SensorConfigDialog *)data;
+    ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+  CC       sensors-applet-plugins.o
+sensors-applet.c: In function 'prefs_cb':
+sensors-applet.c:59:33: warning: unused parameter 'action' [-Wunused-parameter]
+   59 | static void prefs_cb(CtkAction *action, gpointer *data) {
+      |                      ~~~~~~~~~~~^~~~~~
+sensors-applet.c: In function 'about_cb':
+sensors-applet.c:71:33: warning: unused parameter 'action' [-Wunused-parameter]
+   71 | static void about_cb(CtkAction *action, gpointer data) {
+      |                      ~~~~~~~~~~~^~~~~~
+sensors-applet.c: In function 'help_cb':
+sensors-applet.c:78:32: warning: unused parameter 'action' [-Wunused-parameter]
+   78 | static void help_cb(CtkAction *action, gpointer data) {
+      |                     ~~~~~~~~~~~^~~~~~
+sensors-applet.c:78:49: warning: unused parameter 'data' [-Wunused-parameter]
+   78 | static void help_cb(CtkAction *action, gpointer data) {
+      |                                        ~~~~~~~~~^~~~
+sensors-applet.c: In function 'destroy_cb':
+sensors-applet.c:114:20: warning: cast between incompatible function types from 'void (*)(ActiveSensor *)' {aka 'void (*)(struct _ActiveSensor *)'} to 'void (*)(void *, void *)' [-Wcast-function-type]
+  114 |                    (GFunc)active_sensor_destroy,
+      |                    ^
+sensors-applet.c:93:35: warning: unused parameter 'widget' [-Wunused-parameter]
+   93 | static void destroy_cb(CtkWidget *widget, gpointer data) {
+      |                        ~~~~~~~~~~~^~~~~~
+sensors-applet.c: In function 'change_orient_cb':
+sensors-applet.c:127:48: warning: unused parameter 'applet' [-Wunused-parameter]
+  127 | static void change_orient_cb (CafePanelApplet *applet,
+      |                               ~~~~~~~~~~~~~~~~~^~~~~~
+sensors-applet.c:128:53: warning: unused parameter 'orient' [-Wunused-parameter]
+  128 |                               CafePanelAppletOrient orient,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+sensors-applet.c: In function 'size_allocate_cb':
+sensors-applet.c:137:47: warning: unused parameter 'applet' [-Wunused-parameter]
+  137 | static void size_allocate_cb(CafePanelApplet *applet,
+      |                              ~~~~~~~~~~~~~~~~~^~~~~~
+sensors-applet.c: In function 'style_set_cb':
+sensors-applet.c:164:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  164 | static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+sensors-applet.c:164:55: warning: unused parameter 'old_style' [-Wunused-parameter]
+  164 | static void style_set_cb(CtkWidget *widget, CtkStyle *old_style, gpointer data) {
+      |                                             ~~~~~~~~~~^~~~~~~~~
+sensors-applet.c: In function 'mouse_enter_cb':
+sensors-applet.c:222:43: warning: unused parameter 'widget' [-Wunused-parameter]
+  222 | static gboolean mouse_enter_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
+      |                                ~~~~~~~~~~~^~~~~~
+sensors-applet.c:222:69: warning: unused parameter 'event' [-Wunused-parameter]
+  222 | static gboolean mouse_enter_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
+      |                                                   ~~~~~~~~~~~~~~~~~~^~~~~
+sensors-applet.c: In function 'mouse_leave_cb':
+sensors-applet.c:230:43: warning: unused parameter 'widget' [-Wunused-parameter]
+  230 | static gboolean mouse_leave_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
+      |                                ~~~~~~~~~~~^~~~~~
+sensors-applet.c:230:69: warning: unused parameter 'event' [-Wunused-parameter]
+  230 | static gboolean mouse_leave_cb(CtkWidget *widget, CdkEventCrossing *event, gpointer data)
+      |                                                   ~~~~~~~~~~~~~~~~~~^~~~~
+sensors-applet.c: In function 'notif_closed_cb':
+sensors-applet.c:250:49: warning: unused parameter 'notification' [-Wunused-parameter]
+  250 | static void notif_closed_cb(NotifyNotification *notification, SensorsApplet *sensors_applet) {
+      |                             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+sensors-applet.c: In function 'sensors_applet_notify_active_sensor':
+sensors-applet.c:327:34: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  327 |                     temp_scale = (TemperatureScale) g_settings_get_int (active_sensor->sensors_applet->settings, TEMPERATURE_SCALE);
+      |                                  ^
+sensors-applet.c: In function 'sensors_applet_notify_end_all_gfunc':
+sensors-applet.c:414:87: warning: unused parameter 'data' [-Wunused-parameter]
+  414 | static void sensors_applet_notify_end_all_gfunc(ActiveSensor *active_sensor, gpointer data) {
+      |                                                                              ~~~~~~~~~^~~~
+sensors-applet.c: In function 'sensors_applet_pack_display':
+sensors-applet.c:497:72: warning: cast between incompatible function types from 'void (*)(CtkWidget *)' {aka 'void (*)(struct _CtkWidget *)'} to 'void (*)(CtkWidget *, void *)' {aka 'void (*)(struct _CtkWidget *, void *)'} [-Wcast-function-type]
+  497 |             ctk_container_foreach(CTK_CONTAINER(sensors_applet->grid), (CtkCallback)ctk_widget_destroy, NULL);
+      |                                                                        ^
+sensors-applet.c:509:20: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  509 |     display_mode = (DisplayMode) g_settings_get_int (sensors_applet->settings, DISPLAY_MODE);
+      |                    ^
+sensors-applet.c:510:19: warning: cast from function call of type 'gint' {aka 'int'} to non-matching type 'enum <anonymous>' [-Wbad-function-cast]
+  510 |     layout_mode = (LayoutMode) g_settings_get_int (sensors_applet->settings, LAYOUT_MODE);
+      |                   ^
+sensors-applet.c: At top level:
+sensors-applet.c:250:13: warning: 'notif_closed_cb' defined but not used [-Wunused-function]
+  250 | static void notif_closed_cb(NotifyNotification *notification, SensorsApplet *sensors_applet) {
+      |             ^~~~~~~~~~~~~~~
+active-sensor.c:305:15: warning: 1st function call argument is an uninitialized value [core.CallAndMessage]
+    pattern = cairo_pattern_create_linear(x, y, x, 0);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+active-sensor.c:728:17: warning: Value stored to 'label_width' is never read [deadcode.DeadStores]
+                label_width = MAX(req.width, label_min_width);
+                ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+  CC       sensors-applet-settings.o
+  CC       active-sensor-libnotify.o
+sensors-applet.c:62:22: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+    sensors_applet = (SensorsApplet *)data;
+                     ^~~~~~~~~~~~~~~~~~~~~
+sensors-applet.c:536:59: warning: Division by zero [core.DivideZero]
+            num_sensors_per_group = (sensors_applet->size / (horizontal ? value_height : value_width));
+                                     ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sensors-applet.c:867:5: warning: Value stored to 'not_empty_tree' is never read [deadcode.DeadStores]
+    not_empty_tree = TRUE;
+    ^                ~~~~
+sensors-applet.c:894:9: warning: Value stored to 'not_empty_tree' is never read [deadcode.DeadStores]
+        not_empty_tree = FALSE;
+        ^                ~~~~~
+4 warnings generated.
+  CCLD     cafe-sensors-applet
+make[2]: Leaving directory '/rootdir/sensors-applet'
+make[1]: Leaving directory '/rootdir/sensors-applet'
+Making all in lib
+make[1]: Entering directory '/rootdir/lib'
+  CC       sensors-applet-plugin.lo
+git.mk: Generating .gitignore
+  CCLD     libcafe-sensors-applet-plugin.la
+make[1]: Leaving directory '/rootdir/lib'
+Making all in plugins
+make[1]: Entering directory '/rootdir/plugins'
+git.mk: Generating .gitignore
+Making all in acpi
+make[2]: Entering directory '/rootdir/plugins/dummy'
+git.mk: Generating .gitignore
+make[2]: Entering directory '/rootdir/plugins/acpi'
+  CC       acpi-plugin.lo
+git.mk: Generating .gitignore
+make[2]: Leaving directory '/rootdir/plugins/dummy'
+make[2]: Entering directory '/rootdir/plugins/i2c-proc'
+git.mk: Generating .gitignore
+make[2]: Leaving directory '/rootdir/plugins/i2c-proc'
+make[2]: Entering directory '/rootdir/plugins/i2c-sys'
+git.mk: Generating .gitignore
+make[2]: Leaving directory '/rootdir/plugins/i2c-sys'
+make[2]: Entering directory '/rootdir/plugins/netbsd'
+git.mk: Generating .gitignore
+make[2]: Leaving directory '/rootdir/plugins/netbsd'
+make[2]: Entering directory '/rootdir/plugins/aticonfig'
+git.mk: Generating .gitignore
+make[2]: Leaving directory '/rootdir/plugins/aticonfig'
+acpi-plugin.c: In function 'acpi_plugin_add_sensor':
+acpi-plugin.c:44:12: warning: unused variable 'label' [-Wunused-variable]
+   44 |     gchar *label;
+      |            ^~~~~
+acpi-plugin.c: In function 'acpi_plugin_get_sensor_value':
+acpi-plugin.c:85:58: warning: unused parameter 'id' [-Wunused-parameter]
+   85 |                                             const gchar *id,
+      |                                             ~~~~~~~~~~~~~^~
+acpi-plugin.c:86:56: warning: unused parameter 'type' [-Wunused-parameter]
+   86 |                                             SensorType type,
+      |                                             ~~~~~~~~~~~^~~~
+acpi-plugin.c: At top level:
+acpi-plugin.c:114:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  114 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libacpi.la
+make[2]: Leaving directory '/rootdir/plugins/acpi'
+Making all in hddtemp
+make[2]: Entering directory '/rootdir/plugins/hddtemp'
+  CC       hddtemp-plugin.lo
+git.mk: Generating .gitignore
+hddtemp-plugin.c: In function 'hddtemp_plugin_get_sensor_value':
+hddtemp-plugin.c:179:60: warning: unused parameter 'id' [-Wunused-parameter]
+  179 |                                               const gchar *id,
+      |                                               ~~~~~~~~~~~~~^~
+hddtemp-plugin.c:180:58: warning: unused parameter 'type' [-Wunused-parameter]
+  180 |                                               SensorType type,
+      |                                               ~~~~~~~~~~~^~~~
+hddtemp-plugin.c: At top level:
+hddtemp-plugin.c:230:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  230 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libhddtemp.la
+make[2]: Leaving directory '/rootdir/plugins/hddtemp'
+Making all in i8k
+make[2]: Entering directory '/rootdir/plugins/i8k'
+  CC       i8k-plugin.lo
+git.mk: Generating .gitignore
+i8k-plugin.c:83:9: warning: no previous prototype for 'i8k_plugin_get_sensor_value' [-Wmissing-prototypes]
+   83 | gdouble i8k_plugin_get_sensor_value(const gchar *path,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+i8k-plugin.c:151:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  151 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+i8k-plugin.c:34: warning: macro "I8K_DEVICE_FILE" is not used [-Wunused-macros]
+   34 | #define I8K_DEVICE_FILE "i8k"
+      | 
+  CCLD     libi8k.la
+make[2]: Leaving directory '/rootdir/plugins/i8k'
+Making all in ibm-acpi
+make[2]: Entering directory '/rootdir/plugins/ibm-acpi'
+  CC       ibm-acpi-plugin.lo
+git.mk: Generating .gitignore
+ibm-acpi-plugin.c:134:8: warning: no previous prototype for 'ibm_acpi_plugin_init' [-Wmissing-prototypes]
+  134 | GList *ibm_acpi_plugin_init(void) {
+      |        ^~~~~~~~~~~~~~~~~~~~
+ibm-acpi-plugin.c:142:9: warning: no previous prototype for 'ibm_acpi_plugin_get_sensor_value' [-Wmissing-prototypes]
+  142 | gdouble ibm_acpi_plugin_get_sensor_value(const gchar *path,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ibm-acpi-plugin.c:208:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  208 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+ibm-acpi-plugin.c:204:5: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+    return (gdouble)sensor_value;
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+  CCLD     libibm-acpi.la
+make[2]: Leaving directory '/rootdir/plugins/ibm-acpi'
+Making all in mbmon
+make[2]: Entering directory '/rootdir/plugins/mbmon'
+  CC       mbmon-plugin.lo
+git.mk: Generating .gitignore
+mbmon-plugin.c: In function 'mbmon_plugin_get_sensor_value':
+mbmon-plugin.c:214:58: warning: unused parameter 'id' [-Wunused-parameter]
+  214 |                                             const gchar *id,
+      |                                             ~~~~~~~~~~~~~^~
+mbmon-plugin.c:215:56: warning: unused parameter 'type' [-Wunused-parameter]
+  215 |                                             SensorType type,
+      |                                             ~~~~~~~~~~~^~~~
+mbmon-plugin.c: At top level:
+mbmon-plugin.c:246:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  246 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libmbmon.la
+make[2]: Leaving directory '/rootdir/plugins/mbmon'
+Making all in omnibook
+make[2]: Entering directory '/rootdir/plugins/omnibook'
+  CC       omnibook-plugin.lo
+git.mk: Generating .gitignore
+omnibook-plugin.c: In function 'omnibook_plugin_get_sensor_value':
+omnibook-plugin.c:66:62: warning: unused parameter 'id' [-Wunused-parameter]
+   66 |                                                 const gchar *id,
+      |                                                 ~~~~~~~~~~~~~^~
+omnibook-plugin.c:67:60: warning: unused parameter 'type' [-Wunused-parameter]
+   67 |                                                 SensorType type,
+      |                                                 ~~~~~~~~~~~^~~~
+omnibook-plugin.c: At top level:
+omnibook-plugin.c:90:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+   90 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libomnibook.la
+make[2]: Leaving directory '/rootdir/plugins/omnibook'
+Making all in pmu-sys
+make[2]: Entering directory '/rootdir/plugins/pmu-sys'
+  CC       pmu-sys-plugin.lo
+git.mk: Generating .gitignore
+pmu-sys-plugin.c:122:8: warning: no previous prototype for 'pmu_sys_plugin_init' [-Wmissing-prototypes]
+  122 | GList *pmu_sys_plugin_init(void) {
+      |        ^~~~~~~~~~~~~~~~~~~
+pmu-sys-plugin.c:133:9: warning: no previous prototype for 'pmu_sys_plugin_get_sensor_value' [-Wmissing-prototypes]
+  133 | gdouble pmu_sys_plugin_get_sensor_value(const gchar *path,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pmu-sys-plugin.c: In function 'pmu_sys_plugin_get_sensor_value':
+pmu-sys-plugin.c:134:54: warning: unused parameter 'id' [-Wunused-parameter]
+  134 |                                         const gchar *id,
+      |                                         ~~~~~~~~~~~~~^~
+pmu-sys-plugin.c: At top level:
+pmu-sys-plugin.c:176:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  176 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libpmu-sys.la
+make[2]: Leaving directory '/rootdir/plugins/pmu-sys'
+Making all in smu-sys
+make[2]: Entering directory '/rootdir/plugins/smu-sys'
+  CC       smu-sys-plugin.lo
+git.mk: Generating .gitignore
+smu-sys-plugin.c:114:8: warning: no previous prototype for 'smu_sys_plugin_init' [-Wmissing-prototypes]
+  114 | GList *smu_sys_plugin_init(void) {
+      |        ^~~~~~~~~~~~~~~~~~~
+smu-sys-plugin.c:126:9: warning: no previous prototype for 'smu_sys_plugin_get_sensor_value' [-Wmissing-prototypes]
+  126 | gdouble smu_sys_plugin_get_sensor_value(const gchar *path,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+smu-sys-plugin.c: In function 'smu_sys_plugin_get_sensor_value':
+smu-sys-plugin.c:127:54: warning: unused parameter 'id' [-Wunused-parameter]
+  127 |                                         const gchar *id,
+      |                                         ~~~~~~~~~~~~~^~
+smu-sys-plugin.c: At top level:
+smu-sys-plugin.c:166:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  166 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libsmu-sys.la
+make[2]: Leaving directory '/rootdir/plugins/smu-sys'
+Making all in sonypi
+make[2]: Entering directory '/rootdir/plugins/sonypi'
+  CC       sonypi-plugin.lo
+git.mk: Generating .gitignore
+sonypi-plugin.c:55:8: warning: no previous prototype for 'sonypi_plugin_init' [-Wmissing-prototypes]
+   55 | GList *sonypi_plugin_init(void) {
+      |        ^~~~~~~~~~~~~~~~~~
+sonypi-plugin.c:74:9: warning: no previous prototype for 'sonypi_plugin_get_sensor_value' [-Wmissing-prototypes]
+   74 | gdouble sonypi_plugin_get_sensor_value(const gchar *path,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sonypi-plugin.c: In function 'sonypi_plugin_get_sensor_value':
+sonypi-plugin.c:76:51: warning: unused parameter 'type' [-Wunused-parameter]
+   76 |                                        SensorType type,
+      |                                        ~~~~~~~~~~~^~~~
+sonypi-plugin.c: At top level:
+sonypi-plugin.c:101:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  101 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+sonypi-plugin.c:45: warning: macro "SONYPI_IOCGFAN" is not used [-Wunused-macros]
+   45 | #define SONYPI_IOCGFAN   _IOR('v', 10, uint8_t)
+      | 
+  CCLD     libsonypi.la
+make[2]: Leaving directory '/rootdir/plugins/sonypi'
+Making all in udisks2
+make[2]: Entering directory '/rootdir/plugins/udisks2'
+  CC       udisks2-plugin.lo
+git.mk: Generating .gitignore
+udisks2-plugin.c: In function 'udisks2_plugin_get_sensor_value':
+udisks2-plugin.c:414:62: warning: unused parameter 'id' [-Wunused-parameter]
+  414 |                                                 const gchar *id,
+      |                                                 ~~~~~~~~~~~~~^~
+udisks2-plugin.c:415:60: warning: unused parameter 'type' [-Wunused-parameter]
+  415 |                                                 SensorType type,
+      |                                                 ~~~~~~~~~~~^~~~
+udisks2-plugin.c: At top level:
+udisks2-plugin.c:439:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  439 | const gchar *sensors_applet_plugin_name (void) {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:300:82: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+        propdict = g_variant_lookup_value (value, UDISKS2_DEVICE_INTERFACE_NAME, G_VARIANT_TYPE_DICTIONARY);
+                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:232:46: note: expanded from macro 'G_VARIANT_TYPE_DICTIONARY'
+#define G_VARIANT_TYPE_DICTIONARY           ((const GVariantType *) "a{?*}")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:301:84: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+        propdict2 = g_variant_lookup_value (value, UDISKS2_DEVICE_INTERFACE2_NAME, G_VARIANT_TYPE_DICTIONARY);
+                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:232:46: note: expanded from macro 'G_VARIANT_TYPE_DICTIONARY'
+#define G_VARIANT_TYPE_DICTIONARY           ((const GVariantType *) "a{?*}")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:321:90: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+            id = (gchar *) g_variant_get_string (g_variant_lookup_value (propdict, "Id", G_VARIANT_TYPE_STRING), NULL);
+                                                                                         ^~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:124:46: note: expanded from macro 'G_VARIANT_TYPE_STRING'
+#define G_VARIANT_TYPE_STRING               ((const GVariantType *) "s")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:322:96: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+            model = (gchar *) g_variant_get_string (g_variant_lookup_value (propdict, "Model", G_VARIANT_TYPE_STRING), NULL);
+                                                                                               ^~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:124:46: note: expanded from macro 'G_VARIANT_TYPE_STRING'
+#define G_VARIANT_TYPE_STRING               ((const GVariantType *) "s")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:324:102: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+            smartenabled = g_variant_get_boolean (g_variant_lookup_value (propdict2, "SmartEnabled", G_VARIANT_TYPE_BOOLEAN));
+                                                                                                     ^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:50:46: note: expanded from macro 'G_VARIANT_TYPE_BOOLEAN'
+#define G_VARIANT_TYPE_BOOLEAN              ((const GVariantType *) "b")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+udisks2-plugin.c:325:97: warning: Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption [alpha.core.CastToStruct]
+            temp = g_variant_get_double (g_variant_lookup_value (propdict2, "SmartTemperature", G_VARIANT_TYPE_DOUBLE));
+                                                                                                ^~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gvarianttype.h:117:46: note: expanded from macro 'G_VARIANT_TYPE_DOUBLE'
+#define G_VARIANT_TYPE_DOUBLE               ((const GVariantType *) "d")
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+  CCLD     libudisks2.la
+make[2]: Leaving directory '/rootdir/plugins/udisks2'
+Making all in libsensors
+make[2]: Entering directory '/rootdir/plugins/libsensors'
+  CC       libsensors-plugin.lo
+git.mk: Generating .gitignore
+libsensors-plugin.c: In function 'libsensors_plugin_get_sensors':
+libsensors-plugin.c:232:9: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  232 |     int i;
+      |         ^
+libsensors-plugin.c: In function 'libsensors_plugin_get_sensor_value':
+libsensors-plugin.c:403:13: warning: unused variable 'i' [-Wunused-variable]
+  403 |         int i;
+      |             ^
+libsensors-plugin.c:392:66: warning: unused parameter 'id' [-Wunused-parameter]
+  392 |                                                     const gchar *id,
+      |                                                     ~~~~~~~~~~~~~^~
+libsensors-plugin.c:393:64: warning: unused parameter 'type' [-Wunused-parameter]
+  393 |                                                     SensorType type,
+      |                                                     ~~~~~~~~~~~^~~~
+libsensors-plugin.c: At top level:
+libsensors-plugin.c:439:15: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  439 | static GList *libsensors_plugin_init() {
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+libsensors-plugin.c:457:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  457 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+libsensors-plugin.c:283:5: warning: Value stored to 'i' is never read [deadcode.DeadStores]
+    i = 0;
+    ^   ~
+1 warning generated.
+  CCLD     liblibsensors.la
+make[2]: Leaving directory '/rootdir/plugins/libsensors'
+Making all in nvidia
+make[2]: Entering directory '/rootdir/plugins/nvidia'
+  CC       nvidia-plugin.lo
+git.mk: Generating .gitignore
+nvidia-plugin.c: In function 'nvidia_plugin_get_sensor_value':
+nvidia-plugin.c:45:58: warning: unused parameter 'type' [-Wunused-parameter]
+   45 |                                               SensorType type,
+      |                                               ~~~~~~~~~~~^~~~
+nvidia-plugin.c: At top level:
+nvidia-plugin.c:204:14: warning: no previous prototype for 'sensors_applet_plugin_name' [-Wmissing-prototypes]
+  204 | const gchar *sensors_applet_plugin_name(void)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libnvidia.la
+make[2]: Leaving directory '/rootdir/plugins/nvidia'
+make[2]: Entering directory '/rootdir/plugins'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/rootdir/plugins'
+make[1]: Leaving directory '/rootdir/plugins'
+Making all in pixmaps
+make[1]: Entering directory '/rootdir/pixmaps'
+git.mk: Generating .gitignore
+make[1]: Leaving directory '/rootdir/pixmaps'
+Making all in po
+make[1]: Entering directory '/rootdir/po'
+make cafe-sensors-applet.pot-update
+make[2]: Entering directory '/rootdir/po'
+sed -e '/^#/d' remove-potcdate.sin > t-remove-potcdate.sed
+mv t-remove-potcdate.sed remove-potcdate.sed
+package_gnu=""; \
+test -n "$package_gnu" || { \
+  if { if (LC_ALL=C find --version) 2>/dev/null | grep GNU >/dev/null; then \
+	 LC_ALL=C find -L .. -maxdepth 1 -type f \
+		       -size -10000000c -exec grep 'GNU cafe-sensors-applet' \
+		       /dev/null '{}' ';' 2>/dev/null; \
+       else \
+	 LC_ALL=C grep 'GNU cafe-sensors-applet' ../* 2>/dev/null; \
+       fi; \
+     } | grep -v 'libtool:' >/dev/null; then \
+     package_gnu=yes; \
+   else \
+     package_gnu=no; \
+   fi; \
+}; \
+if test "$package_gnu" = "yes"; then \
+  package_prefix='GNU '; \
+else \
+  package_prefix=''; \
+fi; \
+if test -n '' || test 'https://cafe-desktop.org' = '@'PACKAGE_BUGREPORT'@'; then \
+  msgid_bugs_address=''; \
+else \
+  msgid_bugs_address='https://cafe-desktop.org'; \
+fi; \
+case `/usr/bin/xgettext --version | sed 1q | sed -e 's,^[^0-9]*,,'` in \
+  '' | 0.[0-9] | 0.[0-9].* | 0.1[0-5] | 0.1[0-5].* | 0.16 | 0.16.[0-1]*) \
+    /usr/bin/xgettext --default-domain=cafe-sensors-applet --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --add-comments=Translators:  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Desktop Environment team' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+  *) \
+    /usr/bin/xgettext --default-domain=cafe-sensors-applet --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --add-comments=Translators:  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Desktop Environment team' \
+      --package-name="${package_prefix}cafe-sensors-applet" \
+      --package-version='1.25.0' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+esac
+test ! -f cafe-sensors-applet.po || { \
+  if test -f ./cafe-sensors-applet.pot-header; then \
+    sed -e '1,/^#$/d' < cafe-sensors-applet.po > cafe-sensors-applet.1po && \
+    cat ./cafe-sensors-applet.pot-header cafe-sensors-applet.1po > cafe-sensors-applet.po; \
+    rm -f cafe-sensors-applet.1po; \
+  fi; \
+  if test -f ./cafe-sensors-applet.pot; then \
+    sed -f remove-potcdate.sed < ./cafe-sensors-applet.pot > cafe-sensors-applet.1po && \
+    sed -f remove-potcdate.sed < cafe-sensors-applet.po > cafe-sensors-applet.2po && \
+    if cmp cafe-sensors-applet.1po cafe-sensors-applet.2po >/dev/null 2>&1; then \
+      rm -f cafe-sensors-applet.1po cafe-sensors-applet.2po cafe-sensors-applet.po; \
+    else \
+      rm -f cafe-sensors-applet.1po cafe-sensors-applet.2po ./cafe-sensors-applet.pot && \
+      mv cafe-sensors-applet.po ./cafe-sensors-applet.pot; \
+    fi; \
+  else \
+    mv cafe-sensors-applet.po ./cafe-sensors-applet.pot; \
+  fi; \
+}
+make[2]: Leaving directory '/rootdir/po'
+test ! -f ./cafe-sensors-applet.pot || \
+  test -z "af.gmo am.gmo an.gmo ar.gmo as.gmo ast.gmo az.gmo be.gmo bg.gmo bn.gmo bn_IN.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cmn.gmo crh.gmo cs.gmo csb.gmo cy.gmo da.gmo de.gmo dz.gmo el.gmo en_AU.gmo en_CA.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_CR.gmo es_DO.gmo es_EC.gmo es_ES.gmo es_MX.gmo es_NI.gmo es_PA.gmo es_PE.gmo es_PR.gmo es_SV.gmo es_UY.gmo es_VE.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo fr_CA.gmo frp.gmo fur.gmo fy.gmo ga.gmo gl.gmo gu.gmo ha.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo ia.gmo id.gmo ie.gmo ig.gmo is.gmo it.gmo ja.gmo jv.gmo ka.gmo kab.gmo kk.gmo km.gmo kn.gmo ko.gmo ks.gmo ku.gmo ku_IQ.gmo ky.gmo lb.gmo li.gmo lt.gmo lv.gmo mai.gmo mg.gmo mi.gmo mk.gmo ml.gmo mn.gmo mr.gmo ms.gmo nah.gmo nb.gmo nds.gmo ne.gmo nl.gmo nn.gmo nqo.gmo nso.gmo oc.gmo or.gmo pa.gmo pl.gmo pms.gmo ps.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo rw.gmo sc.gmo si.gmo sk.gmo sl.gmo sq.gmo sr.gmo sr@latin.gmo sv.gmo sw.gmo ta.gmo te.gmo th.gmo tk.gmo tr.gmo tt.gmo ug.gmo uk.gmo ur.gmo ur_PK.gmo uz.gmo vi.gmo wa.gmo xh.gmo yi.gmo yo.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo zu.gmo" || make af.gmo am.gmo an.gmo ar.gmo as.gmo ast.gmo az.gmo be.gmo bg.gmo bn.gmo bn_IN.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cmn.gmo crh.gmo cs.gmo csb.gmo cy.gmo da.gmo de.gmo dz.gmo el.gmo en_AU.gmo en_CA.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_CR.gmo es_DO.gmo es_EC.gmo es_ES.gmo es_MX.gmo es_NI.gmo es_PA.gmo es_PE.gmo es_PR.gmo es_SV.gmo es_UY.gmo es_VE.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo fr_CA.gmo frp.gmo fur.gmo fy.gmo ga.gmo gl.gmo gu.gmo ha.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo ia.gmo id.gmo ie.gmo ig.gmo is.gmo it.gmo ja.gmo jv.gmo ka.gmo kab.gmo kk.gmo km.gmo kn.gmo ko.gmo ks.gmo ku.gmo ku_IQ.gmo ky.gmo lb.gmo li.gmo lt.gmo lv.gmo mai.gmo mg.gmo mi.gmo mk.gmo ml.gmo mn.gmo mr.gmo ms.gmo nah.gmo nb.gmo nds.gmo ne.gmo nl.gmo nn.gmo nqo.gmo nso.gmo oc.gmo or.gmo pa.gmo pl.gmo pms.gmo ps.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo rw.gmo sc.gmo si.gmo sk.gmo sl.gmo sq.gmo sr.gmo sr@latin.gmo sv.gmo sw.gmo ta.gmo te.gmo th.gmo tk.gmo tr.gmo tt.gmo ug.gmo uk.gmo ur.gmo ur_PK.gmo uz.gmo vi.gmo wa.gmo xh.gmo yi.gmo yo.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo zu.gmo
+make[2]: Entering directory '/rootdir/po'
+/usr/bin/msgmerge --update --quiet --lang=af af.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=am am.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=an an.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=as as.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ast ast.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ar ar.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=az az.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=be be.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=bg bg.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=bn bn.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=bn_IN bn_IN.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=bs bs.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=br br.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ca ca.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=cmn cmn.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ca@valencia ca@valencia.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=crh crh.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=cs cs.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=csb csb.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=cy cy.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=de de.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=da da.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=el el.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=dz dz.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=en_AU en_AU.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=en_GB en_GB.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=en_CA en_CA.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=eo eo.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es es.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_AR es_AR.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CL es_CL.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CO es_CO.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_DO es_DO.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CR es_CR.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_EC es_EC.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_ES es_ES.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_NI es_NI.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_MX es_MX.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_PE es_PE.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_PA es_PA.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_PR es_PR.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_SV es_SV.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_UY es_UY.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=es_VE es_VE.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=et et.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=eu eu.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fa fa.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fi fi.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fr fr.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fr_CA fr_CA.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=frp frp.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fur fur.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=fy fy.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ga ga.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=gl gl.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=gu gu.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ha ha.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=hi hi.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=he he.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=hr hr.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=hu hu.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=hy hy.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ia ia.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=id id.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ie ie.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ig ig.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=is is.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=it it.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=jv jv.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ja ja.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ka ka.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=kab kab.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=kk kk.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=km km.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=kn kn.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ko ko.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ks ks.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ku ku.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ku_IQ ku_IQ.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ky ky.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=lb lb.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=lt lt.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=li li.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=lv lv.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mai mai.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mg mg.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mi mi.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ml ml.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mk mk.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mr mr.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=mn mn.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ms ms.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nah nah.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nds nds.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nb nb.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ne ne.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nn nn.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nl nl.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nqo nqo.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=oc oc.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=nso nso.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=or or.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=pa pa.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=pl pl.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=pms pms.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ps ps.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=pt pt.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=pt_BR pt_BR.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ro ro.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ru ru.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=rw rw.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sc sc.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=si si.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sl sl.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sk sk.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sq sq.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sr sr.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sr@latin sr@latin.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sv sv.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=sw sw.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ta ta.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=te te.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=th th.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=tk tk.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=tr tr.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ug ug.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=tt tt.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=uk uk.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ur ur.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=uz uz.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=ur_PK ur_PK.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=vi vi.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=wa wa.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=xh xh.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=yo yo.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=yi yi.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_CN zh_CN.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_HK zh_HK.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=zu zu.po cafe-sensors-applet.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_TW zh_TW.po cafe-sensors-applet.pot
+rm -f af.gmo && /usr/bin/msgfmt -c --statistics --verbose -o af.gmo af.po
+rm -f am.gmo && /usr/bin/msgfmt -c --statistics --verbose -o am.gmo am.po
+rm -f an.gmo && /usr/bin/msgfmt -c --statistics --verbose -o an.gmo an.po
+af.po: 15 translated messages, 94 untranslated messages.
+am.po: 107 translated messages, 2 untranslated messages.
+an.po: 2 translated messages, 107 untranslated messages.
+rm -f ar.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ar.gmo ar.po
+ar.po: 106 translated messages, 3 untranslated messages.
+rm -f as.gmo && /usr/bin/msgfmt -c --statistics --verbose -o as.gmo as.po
+rm -f ast.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ast.gmo ast.po
+as.po: rm -f az.gmo && /usr/bin/msgfmt -c --statistics --verbose -o az.gmo az.po
+18 translated messages, 91 untranslated messages.
+ast.po: 17 translated messages, 92 untranslated messages.
+rm -f be.gmo && /usr/bin/msgfmt -c --statistics --verbose -o be.gmo be.po
+az.po: 14 translated messages, 95 untranslated messages.
+rm -f bg.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bg.gmo bg.po
+be.po: 106 translated messages, 3 untranslated messages.
+rm -f bn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bn.gmo bn.po
+bg.po: 108 translated messages, 1 untranslated message.
+rm -f bn_IN.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bn_IN.gmo bn_IN.po
+bn_IN.po: 17 translated messages, 92 untranslated messages.
+bn.po: 17 translated messages, 92 untranslated messages.
+rm -f br.gmo && /usr/bin/msgfmt -c --statistics --verbose -o br.gmo br.po
+rm -f bs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bs.gmo bs.po
+br.po: 15 translated messages, 94 untranslated messages.
+rm -f ca.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca.gmo ca.po
+bs.po: 14 translated messages, 95 untranslated messages.
+ca.po: 108 translated messages, 1 untranslated message.
+rm -f cmn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cmn.gmo cmn.po
+rm -f ca@valencia.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca@valencia.gmo ca@valencia.po
+cmn.po: 104 translated messages, 5 untranslated messages.
+rm -f crh.gmo && /usr/bin/msgfmt -c --statistics --verbose -o crh.gmo crh.po
+ca@valencia.po: 108 translated messages, 1 untranslated message.
+crh.po: 15 translated messages, 94 untranslated messages.
+rm -f cs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cs.gmo cs.po
+rm -f csb.gmo && /usr/bin/msgfmt -c --statistics --verbose -o csb.gmo csb.po
+rm -f cy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cy.gmo cy.po
+cs.po: 108 translated messages, 1 untranslated message.
+csb.po: 2 translated messages, 107 untranslated messages.
+cy.po: 14 translated messages, 95 untranslated messages.
+rm -f da.gmo && /usr/bin/msgfmt -c --statistics --verbose -o da.gmo da.po
+rm -f de.gmo && /usr/bin/msgfmt -c --statistics --verbose -o de.gmo de.po
+rm -f dz.gmo && /usr/bin/msgfmt -c --statistics --verbose -o dz.gmo dz.po
+da.po: 108 translated messages, 1 untranslated message.
+de.po: 108 translated messages, 1 untranslated message.
+dz.po: 16 translated messages, 93 untranslated messages.
+rm -f el.gmo && /usr/bin/msgfmt -c --statistics --verbose -o el.gmo el.po
+rm -f en_AU.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_AU.gmo en_AU.po
+en_AU.po: 106 translated messages, 3 untranslated messages.
+el.po: 107 translated messages, 2 untranslated messages.
+rm -f en_CA.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_CA.gmo en_CA.po
+rm -f en_GB.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_GB.gmo en_GB.po
+en_CA.po: rm -f eo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eo.gmo eo.po
+15 translated messages, 94 untranslated messages.
+en_GB.po: 108 translated messages, 1 untranslated message.
+eo.po: 17 translated messages, 92 untranslated messages.
+rm -f es.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es.gmo es.po
+rm -f es_AR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_AR.gmo es_AR.po
+rm -f es_CL.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CL.gmo es_CL.po
+es.po: 108 translated messages, 1 untranslated message.
+es_AR.po: 10 translated messages, 99 untranslated messages.
+es_CL.po: 12 translated messages, 97 untranslated messages.
+rm -f es_CO.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CO.gmo es_CO.po
+rm -f es_CR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CR.gmo es_CR.po
+es_CO.po: 18 translated messages, 91 untranslated messages.
+rm -f es_DO.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_DO.gmo es_DO.po
+es_CR.po: 10 translated messages, 99 untranslated messages.
+rm -f es_ES.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_ES.gmo es_ES.po
+es_DO.po: 10 translated messages, 99 untranslated messages.
+rm -f es_EC.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_EC.gmo es_EC.po
+rm -f es_MX.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_MX.gmo es_MX.po
+es_ES.po: 12 translated messages, 97 untranslated messages.
+es_EC.po: 10 translated messages, 99 untranslated messages.
+es_MX.po: 14 translated messages, 95 untranslated messages.
+rm -f es_NI.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_NI.gmo es_NI.po
+es_NI.po: 10 translated messages, 99 untranslated messages.
+rm -f es_PA.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_PA.gmo es_PA.po
+rm -f es_PE.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_PE.gmo es_PE.po
+rm -f es_PR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_PR.gmo es_PR.po
+es_PR.po: 10 translated messages, 99 untranslated messages.
+es_PE.po: 10 translated messages, 99 untranslated messages.
+es_PA.po: 10 translated messages, 99 untranslated messages.
+rm -f es_SV.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_SV.gmo es_SV.po
+rm -f es_UY.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_UY.gmo es_UY.po
+rm -f es_VE.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_VE.gmo es_VE.po
+es_SV.po: 10 translated messages, 99 untranslated messages.
+es_VE.po: 11 translated messages, 98 untranslated messages.
+es_UY.po: 10 translated messages, 99 untranslated messages.
+rm -f eu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eu.gmo eu.po
+rm -f et.gmo && /usr/bin/msgfmt -c --statistics --verbose -o et.gmo et.po
+rm -f fa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fa.gmo fa.po
+eu.po: 76 translated messages, 33 untranslated messages.
+fa.po: 16 translated messages, 93 untranslated messages.
+et.po: 108 translated messages, 1 untranslated message.
+rm -f fr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.po
+rm -f fi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fi.gmo fi.po
+rm -f fr_CA.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fr_CA.gmo fr_CA.po
+fi.po: 70 translated messages, 39 untranslated messages.
+fr_CA.po: 3 translated messages, 106 untranslated messages.
+fr.po: 108 translated messages, 1 untranslated message.
+rm -f frp.gmo && /usr/bin/msgfmt -c --statistics --verbose -o frp.gmo frp.po
+rm -f fur.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fur.gmo fur.po
+rm -f fy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fy.gmo fy.po
+frp.po: 4 translated messages, 105 untranslated messages.
+fur.po: 9 translated messages, 100 untranslated messages.
+rm -f ga.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ga.gmo ga.po
+fy.po: 9 translated messages, 100 untranslated messages.
+ga.po: 17 translated messages, 92 untranslated messages.
+rm -f gl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gl.gmo gl.po
+rm -f gu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gu.gmo gu.po
+rm -f ha.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ha.gmo ha.po
+gl.po: 108 translated messages, 1 untranslated message.
+gu.po: 18 translated messages, 91 untranslated messages.
+rm -f he.gmo && /usr/bin/msgfmt -c --statistics --verbose -o he.gmo he.po
+ha.po: 8 translated messages, 101 untranslated messages.
+rm -f hi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hi.gmo hi.po
+hi.po: 92 translated messages, 17 untranslated messages.
+he.po: 88 translated messages, 21 untranslated messages.
+rm -f hr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hr.gmo hr.po
+rm -f hy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hy.gmo hy.po
+rm -f hu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hu.gmo hu.po
+hr.po: 108 translated messages, 1 untranslated message.
+hu.po: 108 translated messages, 1 untranslated message.
+rm -f ia.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ia.gmo ia.po
+hy.po: 106 translated messages, 3 untranslated messages.
+ia.po: 2 translated messages, 107 untranslated messages.
+rm -f ie.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ie.gmo ie.po
+rm -f id.gmo && /usr/bin/msgfmt -c --statistics --verbose -o id.gmo id.po
+id.po: ie.po: 96 translated messages, 13 untranslated messages.
+108 translated messages, 1 untranslated message.
+rm -f ig.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ig.gmo ig.po
+rm -f is.gmo && /usr/bin/msgfmt -c --statistics --verbose -o is.gmo is.po
+ig.po: 8 translated messages, 101 untranslated messages.
+is.po: 15 translated messages, 94 untranslated messages.
+rm -f it.gmo && /usr/bin/msgfmt -c --statistics --verbose -o it.gmo it.po
+rm -f ja.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ja.gmo ja.po
+rm -f jv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o jv.gmo jv.po
+it.po: 108 translated messages, 1 untranslated message.
+jv.po: 3 translated messages, 106 untranslated messages.
+rm -f ka.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ka.gmo ka.po
+ja.po: 106 translated messages, 3 untranslated messages.
+ka.po: 14 translated messages, 95 untranslated messages.
+rm -f kab.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kab.gmo kab.po
+rm -f kk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kk.gmo kk.po
+kab.po: 6 translated messages, 103 untranslated messages.
+kk.po: 27 translated messages, 82 untranslated messages.
+rm -f km.gmo && /usr/bin/msgfmt -c --statistics --verbose -o km.gmo km.po
+rm -f kn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kn.gmo kn.po
+km.po: 6 translated messages, 103 untranslated messages.
+kn.po: 18 translated messages, 91 untranslated messages.
+rm -f ko.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ko.gmo ko.po
+ko.po: 108 translated messages, 1 untranslated message.
+rm -f ks.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ks.gmo ks.po
+rm -f ku.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ku.gmo ku.po
+ks.po: 4 translated messages, 105 untranslated messages.
+rm -f ku_IQ.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ku_IQ.gmo ku_IQ.po
+ku.po: 13 translated messages, 96 untranslated messages.
+ku_IQ.po: 27 translated messages, 82 untranslated messages.
+rm -f ky.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ky.gmo ky.po
+rm -f lb.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lb.gmo lb.po
+rm -f li.gmo && /usr/bin/msgfmt -c --statistics --verbose -o li.gmo li.po
+ky.po: 24 translated messages, 85 untranslated messages.
+lb.po: 2 translated messages, 107 untranslated messages.
+li.po: 5 translated messages, 104 untranslated messages.
+rm -f lt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lt.gmo lt.po
+rm -f lv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lv.gmo lv.po
+lv.po: 18 translated messages, 91 untranslated messages.
+rm -f mai.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mai.gmo mai.po
+lt.po: 108 translated messages, 1 untranslated message.
+rm -f mg.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mg.gmo mg.po
+mai.po: 15 translated messages, 94 untranslated messages.
+rm -f mi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mi.gmo mi.po
+mg.po: 13 translated messages, 96 untranslated messages.
+mi.po: 5 translated messages, 104 untranslated messages.
+rm -f mk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mk.gmo mk.po
+rm -f ml.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ml.gmo ml.po
+mk.po: 104 translated messages, 5 untranslated messages.
+rm -f mn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mn.gmo mn.po
+ml.po: 18 translated messages, 91 untranslated messages.
+mn.po: 11 translated messages, 98 untranslated messages.
+rm -f mr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mr.gmo mr.po
+rm -f nah.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nah.gmo nah.po
+rm -f ms.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ms.gmo ms.po
+mr.po: 104 translated messages, 5 untranslated messages.
+nah.po: 2 translated messages, 107 untranslated messages.
+rm -f nb.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nb.gmo nb.po
+ms.po: 108 translated messages, 1 untranslated message.
+nb.po: 108 translated messages, 1 untranslated message.
+rm -f nds.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nds.gmo nds.po
+rm -f ne.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ne.gmo ne.po
+rm -f nl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nl.gmo nl.po
+ne.po: 14 translated messages, 95 untranslated messages.
+nds.po: 11 translated messages, 98 untranslated messages.
+rm -f nn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nn.gmo nn.po
+nl.po: 108 translated messages, 1 untranslated message.
+rm -f nqo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nqo.gmo nqo.po
+nn.po: 17 translated messages, 92 untranslated messages.
+rm -f nso.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nso.gmo nso.po
+nqo.po: 2 translated messages, 107 untranslated messages.
+nso.po: 8 translated messages, 101 untranslated messages.
+rm -f or.gmo && /usr/bin/msgfmt -c --statistics --verbose -o or.gmo or.po
+rm -f oc.gmo && /usr/bin/msgfmt -c --statistics --verbose -o oc.gmo oc.po
+rm -f pa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pa.gmo pa.po
+oc.po: 66 translated messages, 43 untranslated messages.
+or.po: 18 translated messages, 91 untranslated messages.
+rm -f pl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pl.gmo pl.po
+pa.po: 18 translated messages, 91 untranslated messages.
+pl.po: 108 translated messages, 1 untranslated message.
+rm -f ps.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ps.gmo ps.po
+rm -f pms.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pms.gmo pms.po
+rm -f pt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt.gmo pt.po
+pt.po: 108 translated messages, 1 untranslated message.
+pms.po: 8 translated messages, 101 untranslated messages.
+ps.po: 12 translated messages, 97 untranslated messages.
+rm -f pt_BR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt_BR.gmo pt_BR.po
+rm -f ro.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ro.gmo ro.po
+rm -f ru.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ru.gmo ru.po
+pt_BR.po: 108 translated messages, 1 untranslated message.
+ru.po: 108 translated messages, 1 untranslated message.
+ro.po: 107 translated messages, 2 untranslated messages.
+rm -f rw.gmo && /usr/bin/msgfmt -c --statistics --verbose -o rw.gmo rw.po
+rm -f sc.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sc.gmo sc.po
+rm -f si.gmo && /usr/bin/msgfmt -c --statistics --verbose -o si.gmo si.po
+sc.po: 3 translated messages, 106 untranslated messages.
+rw.po: 5 translated messages, 104 untranslated messages.
+si.po: 14 translated messages, 95 untranslated messages.
+rm -f sk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sk.gmo sk.po
+rm -f sl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sl.gmo sl.po
+sk.po: 108 translated messages, 1 untranslated message.
+rm -f sq.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sq.gmo sq.po
+sq.po: 17 translated messages, 92 untranslated messages.
+sl.po: 107 translated messages, 2 untranslated messages.
+rm -f sr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sr.gmo sr.po
+sr.po: 108 translated messages, 1 untranslated message.
+rm -f sr@latin.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sr@latin.gmo sr@latin.po
+rm -f sv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.po
+sv.po: 108 translated messages, 1 untranslated message.
+sr@latin.po: 18 translated messages, 91 untranslated messages.
+rm -f sw.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sw.gmo sw.po
+rm -f ta.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ta.gmo ta.po
+sw.po: 2 translated messages, 107 untranslated messages.
+ta.po: 18 translated messages, 91 untranslated messages.
+rm -f th.gmo && /usr/bin/msgfmt -c --statistics --verbose -o th.gmo th.po
+rm -f te.gmo && /usr/bin/msgfmt -c --statistics --verbose -o te.gmo te.po
+th.po: 18 translated messages, 91 untranslated messages.
+rm -f tk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tk.gmo tk.po
+te.po: 36 translated messages, 73 untranslated messages.
+tk.po: 6 translated messages, 103 untranslated messages.
+rm -f tr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tr.gmo tr.po
+rm -f tt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tt.gmo tt.po
+tr.po: 108 translated messages, 1 untranslated message.
+rm -f ug.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ug.gmo ug.po
+tt.po: 3 translated messages, 106 untranslated messages.
+rm -f uk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.po
+ug.po: 17 translated messages, 92 untranslated messages.
+rm -f ur.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ur.gmo ur.po
+ur.po: 17 translated messages, 92 untranslated messages.
+uk.po: 108 translated messages, 1 untranslated message.
+rm -f ur_PK.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ur_PK.gmo ur_PK.po
+rm -f vi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.po
+rm -f uz.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uz.gmo uz.po
+ur_PK.po: 2 translated messages, 107 untranslated messages.
+vi.po: 17 translated messages, 92 untranslated messages.
+uz.po: 48 translated messages, 61 untranslated messages.
+rm -f wa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o wa.gmo wa.po
+rm -f xh.gmo && /usr/bin/msgfmt -c --statistics --verbose -o xh.gmo xh.po
+rm -f yi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o yi.gmo yi.po
+xh.po: 14 translated messages, 95 untranslated messages.
+wa.po: 9 translated messages, 100 untranslated messages.
+rm -f yo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o yo.gmo yo.po
+yi.po: 3 translated messages, 106 untranslated messages.
+yo.po: 8 translated messages, 101 untranslated messages.
+rm -f zh_HK.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_HK.gmo zh_HK.po
+rm -f zh_CN.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.po
+rm -f zh_TW.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.po
+zh_HK.po: 64 translated messages, 45 untranslated messages.
+zh_CN.po: 108 translated messageszh_TW.po: 108 translated messages, 1 untranslated message.
+, 1 untranslated message.
+rm -f zu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zu.gmo zu.po
+zu.po: 8 translated messages, 101 untranslated messages.
+make[2]: Leaving directory '/rootdir/po'
+touch stamp-po
+make[1]: Leaving directory '/rootdir/po'
+Making all in help
+make[1]: Entering directory '/rootdir/help'
+  GEN      af/af.mo
+  GEN      am/am.mo
+  GEN      an/an.mo
+  GEN      ar/ar.mo
+  GEN      as/as.mo
+  GEN      ast/ast.mo
+  GEN      az/az.mo
+  GEN      be/be.mo
+  GEN      bg/bg.mo
+  GEN      bn/bn.mo
+  GEN      bn_IN/bn_IN.mo
+  GEN      br/br.mo
+  GEN      bs/bs.mo
+  GEN      ca/ca.mo
+  GEN      ca@valencia/ca@valencia.mo
+  GEN      cmn/cmn.mo
+  GEN      crh/crh.mo
+  GEN      cs/cs.mo
+  GEN      cy/cy.mo
+  GEN      da/da.mo
+  GEN      de/de.mo
+  GEN      dz/dz.mo
+  GEN      el/el.mo
+  GEN      en_AU/en_AU.mo
+  GEN      en_CA/en_CA.mo
+  GEN      en_GB/en_GB.mo
+  GEN      eo/eo.mo
+  GEN      es/es.mo
+  GEN      es_AR/es_AR.mo
+  GEN      es_CL/es_CL.mo
+  GEN      es_CO/es_CO.mo
+  GEN      es_ES/es_ES.mo
+  GEN      es_MX/es_MX.mo
+  GEN      es_PR/es_PR.mo
+  GEN      et/et.mo
+  GEN      eu/eu.mo
+  GEN      fa/fa.mo
+  GEN      fi/fi.mo
+  GEN      fr/fr.mo
+  GEN      frp/frp.mo
+  GEN      fur/fur.mo
+  GEN      fy/fy.mo
+  GEN      ga/ga.mo
+  GEN      gl/gl.mo
+  GEN      gu/gu.mo
+  GEN      ha/ha.mo
+  GEN      he/he.mo
+  GEN      hi/hi.mo
+  GEN      hr/hr.mo
+  GEN      hu/hu.mo
+  GEN      hy/hy.mo
+  GEN      ia/ia.mo
+  GEN      id/id.mo
+  GEN      ie/ie.mo
+  GEN      ig/ig.mo
+  GEN      is/is.mo
+  GEN      it/it.mo
+  GEN      ja/ja.mo
+  GEN      jv/jv.mo
+  GEN      ka/ka.mo
+  GEN      kab/kab.mo
+  GEN      kk/kk.mo
+  GEN      km/km.mo
+  GEN      kn/kn.mo
+  GEN      ko/ko.mo
+  GEN      ku/ku.mo
+  GEN      ku_IQ/ku_IQ.mo
+  GEN      ky/ky.mo
+  GEN      la/la.mo
+  GEN      lt/lt.mo
+  GEN      lv/lv.mo
+  GEN      mai/mai.mo
+  GEN      mg/mg.mo
+  GEN      mi/mi.mo
+  GEN      mk/mk.mo
+  GEN      ml/ml.mo
+  GEN      mn/mn.mo
+  GEN      mr/mr.mo
+  GEN      ms/ms.mo
+  GEN      nb/nb.mo
+  GEN      nds/nds.mo
+  GEN      ne/ne.mo
+  GEN      nl/nl.mo
+  GEN      nn/nn.mo
+  GEN      nso/nso.mo
+  GEN      oc/oc.mo
+  GEN      or/or.mo
+  GEN      pa/pa.mo
+  GEN      pl/pl.mo
+  GEN      ps/ps.mo
+  GEN      pt/pt.mo
+  GEN      pt_BR/pt_BR.mo
+  GEN      ro/ro.mo
+  GEN      ru/ru.mo
+  GEN      si/si.mo
+  GEN      sk/sk.mo
+  GEN      sl/sl.mo
+  GEN      sq/sq.mo
+  GEN      sr/sr.mo
+  GEN      sr@latin/sr@latin.mo
+  GEN      sv/sv.mo
+  GEN      ta/ta.mo
+  GEN      te/te.mo
+  GEN      th/th.mo
+  GEN      tk/tk.mo
+  GEN      tr/tr.mo
+  GEN      ug/ug.mo
+  GEN      uk/uk.mo
+  GEN      ur/ur.mo
+  GEN      uz/uz.mo
+  GEN      vi/vi.mo
+  GEN      wa/wa.mo
+  GEN      xh/xh.mo
+  GEN      yo/yo.mo
+  GEN      zh_CN/zh_CN.mo
+  GEN      zh_HK/zh_HK.mo
+  GEN      zh_TW/zh_TW.mo
+  GEN      zu/zu.mo
+git.mk: Generating .gitignore
+  GEN    af/
+  GEN    am/
+  GEN    an/
+  GEN    ar/
+  GEN    as/
+  GEN    ast/
+  GEN    az/
+  GEN    be/
+  GEN    bg/
+  GEN    bn/
+  GEN    bn_IN/
+  GEN    br/
+  GEN    bs/
+  GEN    ca/
+  GEN    ca@valencia/
+  GEN    cmn/
+  GEN    crh/
+  GEN    cs/
+  GEN    cy/
+  GEN    da/
+  GEN    de/
+  GEN    dz/
+  GEN    el/
+  GEN    en_AU/
+  GEN    en_CA/
+  GEN    en_GB/
+  GEN    eo/
+  GEN    es/
+  GEN    es_AR/
+  GEN    es_CL/
+  GEN    es_CO/
+  GEN    es_ES/
+  GEN    es_MX/
+  GEN    es_PR/
+  GEN    et/
+  GEN    eu/
+  GEN    fa/
+  GEN    fi/
+  GEN    fr/
+  GEN    frp/
+  GEN    fur/
+  GEN    fy/
+  GEN    ga/
+  GEN    gl/
+  GEN    gu/
+  GEN    ha/
+  GEN    he/
+  GEN    hi/
+  GEN    hr/
+  GEN    hu/
+  GEN    hy/
+  GEN    ia/
+  GEN    id/
+  GEN    ie/
+  GEN    ig/
+  GEN    is/
+  GEN    it/
+  GEN    ja/
+  GEN    jv/
+  GEN    ka/
+  GEN    kab/
+  GEN    kk/
+  GEN    km/
+  GEN    kn/
+  GEN    ko/
+  GEN    ku/
+  GEN    ku_IQ/
+  GEN    ky/
+  GEN    la/
+  GEN    lt/
+  GEN    lv/
+  GEN    mai/
+  GEN    mg/
+  GEN    mi/
+  GEN    mk/
+  GEN    ml/
+  GEN    mn/
+  GEN    mr/
+  GEN    ms/
+  GEN    nb/
+  GEN    nds/
+  GEN    ne/
+  GEN    nl/
+  GEN    nn/
+  GEN    nso/
+  GEN    oc/
+  GEN    or/
+  GEN    pa/
+  GEN    pl/
+  GEN    ps/
+  GEN    pt/
+  GEN    pt_BR/
+  GEN    ro/
+  GEN    ru/
+  GEN    si/
+  GEN    sk/
+  GEN    sl/
+  GEN    sq/
+  GEN    sr/
+  GEN    sr@latin/
+  GEN    sv/
+  GEN    ta/
+  GEN    te/
+  GEN    th/
+  GEN    tk/
+  GEN    tr/
+  GEN    ug/
+  GEN    uk/
+  GEN    ur/
+  GEN    uz/
+  GEN    vi/
+  GEN    wa/
+  GEN    xh/
+  GEN    yo/
+  GEN    zh_CN/
+  GEN    zh_HK/
+  GEN    zh_TW/
+  GEN    zu/
+make[1]: Leaving directory '/rootdir/help'
+make[1]: Entering directory '/rootdir'
+  GEN      org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in
+  GEN      org.cafe.panel.applet.SensorsAppletFactory.service
+  GEN      org.cafe.sensors-applet.gschema.valid
+  GEN      org.cafe.sensors-applet.sensor.gschema.valid
+  GEN      org.cafe.applets.SensorsApplet.cafe-panel-applet
+make[1]: Leaving directory '/rootdir'
+scan-build: Analysis run complete.
+scan-build: 15 bugs found.
+scan-build: Run 'scan-view /rootdir/html-report/2023-07-21-120131-79067-1' to examine bug reports.
+Making check in sensors-applet
+make[1]: Entering directory '/rootdir/sensors-applet'
+make[1]: Leaving directory '/rootdir/sensors-applet'
+Making check in lib
+make[1]: Entering directory '/rootdir/lib'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/lib'
+Making check in plugins
+make[1]: Entering directory '/rootdir/plugins'
+Making check in acpi
+make[2]: Entering directory '/rootdir/plugins/acpi'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/acpi'
+Making check in hddtemp
+make[2]: Entering directory '/rootdir/plugins/hddtemp'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/hddtemp'
+Making check in i8k
+make[2]: Entering directory '/rootdir/plugins/i8k'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/i8k'
+Making check in ibm-acpi
+make[2]: Entering directory '/rootdir/plugins/ibm-acpi'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/ibm-acpi'
+Making check in mbmon
+make[2]: Entering directory '/rootdir/plugins/mbmon'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/mbmon'
+Making check in omnibook
+make[2]: Entering directory '/rootdir/plugins/omnibook'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/omnibook'
+Making check in pmu-sys
+make[2]: Entering directory '/rootdir/plugins/pmu-sys'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/pmu-sys'
+Making check in smu-sys
+make[2]: Entering directory '/rootdir/plugins/smu-sys'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/smu-sys'
+Making check in sonypi
+make[2]: Entering directory '/rootdir/plugins/sonypi'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/sonypi'
+Making check in udisks2
+make[2]: Entering directory '/rootdir/plugins/udisks2'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/udisks2'
+Making check in libsensors
+make[2]: Entering directory '/rootdir/plugins/libsensors'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/libsensors'
+Making check in nvidia
+make[2]: Entering directory '/rootdir/plugins/nvidia'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/rootdir/plugins/nvidia'
+make[2]: Entering directory '/rootdir/plugins'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/rootdir/plugins'
+make[1]: Leaving directory '/rootdir/plugins'
+Making check in pixmaps
+make[1]: Entering directory '/rootdir/pixmaps'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/pixmaps'
+Making check in po
+make[1]: Entering directory '/rootdir/po'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/po'
+Making check in help
+make[1]: Entering directory '/rootdir/help'
+for lc in C  af am an ar as ast az be bg bn bn_IN br bs ca ca@valencia cmn crh cs cy da de dz el en_AU en_CA en_GB eo es es_AR es_CL es_CO es_ES es_MX es_PR et eu fa fi fr frp fur fy ga gl gu ha he hi hr hu hy ia id ie ig is it ja jv ka kab kk km kn ko ku ku_IQ ky la lt lv mai mg mi mk ml mn mr ms nb nds ne nl nn nso oc or pa pl ps pt pt_BR ro ru si sk sl sq sr sr@latin sv ta te th tk tr ug uk ur uz vi wa xh yo zh_CN zh_HK zh_TW zu ; do \
+  if test -d "$lc"; \
+    then d=; \
+    xmlpath="$lc"; \
+  else \
+    d="./"; \
+    xmlpath="$lc:./$lc"; \
+  fi; \
+  for page in index.docbook legal.xml; do \
+    echo "xmllint --nonet --noout --noent --path $xmlpath --xinclude $d$lc/$page"; \
+    xmllint --nonet --noout --noent --path "$xmlpath" --xinclude "$d$lc/$page"; \
+  done; \
+done
+xmllint --nonet --noout --noent --path C --xinclude C/index.docbook
+xmllint --nonet --noout --noent --path C --xinclude C/legal.xml
+xmllint --nonet --noout --noent --path af --xinclude af/index.docbook
+xmllint --nonet --noout --noent --path af --xinclude af/legal.xml
+xmllint --nonet --noout --noent --path am --xinclude am/index.docbook
+xmllint --nonet --noout --noent --path am --xinclude am/legal.xml
+xmllint --nonet --noout --noent --path an --xinclude an/index.docbook
+xmllint --nonet --noout --noent --path an --xinclude an/legal.xml
+xmllint --nonet --noout --noent --path ar --xinclude ar/index.docbook
+xmllint --nonet --noout --noent --path ar --xinclude ar/legal.xml
+xmllint --nonet --noout --noent --path as --xinclude as/index.docbook
+xmllint --nonet --noout --noent --path as --xinclude as/legal.xml
+xmllint --nonet --noout --noent --path ast --xinclude ast/index.docbook
+xmllint --nonet --noout --noent --path ast --xinclude ast/legal.xml
+xmllint --nonet --noout --noent --path az --xinclude az/index.docbook
+xmllint --nonet --noout --noent --path az --xinclude az/legal.xml
+xmllint --nonet --noout --noent --path be --xinclude be/index.docbook
+xmllint --nonet --noout --noent --path be --xinclude be/legal.xml
+xmllint --nonet --noout --noent --path bg --xinclude bg/index.docbook
+xmllint --nonet --noout --noent --path bg --xinclude bg/legal.xml
+xmllint --nonet --noout --noent --path bn --xinclude bn/index.docbook
+xmllint --nonet --noout --noent --path bn --xinclude bn/legal.xml
+xmllint --nonet --noout --noent --path bn_IN --xinclude bn_IN/index.docbook
+xmllint --nonet --noout --noent --path bn_IN --xinclude bn_IN/legal.xml
+xmllint --nonet --noout --noent --path br --xinclude br/index.docbook
+xmllint --nonet --noout --noent --path br --xinclude br/legal.xml
+xmllint --nonet --noout --noent --path bs --xinclude bs/index.docbook
+xmllint --nonet --noout --noent --path bs --xinclude bs/legal.xml
+xmllint --nonet --noout --noent --path ca --xinclude ca/index.docbook
+xmllint --nonet --noout --noent --path ca --xinclude ca/legal.xml
+xmllint --nonet --noout --noent --path ca@valencia --xinclude ca@valencia/index.docbook
+xmllint --nonet --noout --noent --path ca@valencia --xinclude ca@valencia/legal.xml
+xmllint --nonet --noout --noent --path cmn --xinclude cmn/index.docbook
+xmllint --nonet --noout --noent --path cmn --xinclude cmn/legal.xml
+xmllint --nonet --noout --noent --path crh --xinclude crh/index.docbook
+xmllint --nonet --noout --noent --path crh --xinclude crh/legal.xml
+xmllint --nonet --noout --noent --path cs --xinclude cs/index.docbook
+xmllint --nonet --noout --noent --path cs --xinclude cs/legal.xml
+xmllint --nonet --noout --noent --path cy --xinclude cy/index.docbook
+xmllint --nonet --noout --noent --path cy --xinclude cy/legal.xml
+xmllint --nonet --noout --noent --path da --xinclude da/index.docbook
+xmllint --nonet --noout --noent --path da --xinclude da/legal.xml
+xmllint --nonet --noout --noent --path de --xinclude de/index.docbook
+xmllint --nonet --noout --noent --path de --xinclude de/legal.xml
+xmllint --nonet --noout --noent --path dz --xinclude dz/index.docbook
+xmllint --nonet --noout --noent --path dz --xinclude dz/legal.xml
+xmllint --nonet --noout --noent --path el --xinclude el/index.docbook
+xmllint --nonet --noout --noent --path el --xinclude el/legal.xml
+xmllint --nonet --noout --noent --path en_AU --xinclude en_AU/index.docbook
+xmllint --nonet --noout --noent --path en_AU --xinclude en_AU/legal.xml
+xmllint --nonet --noout --noent --path en_CA --xinclude en_CA/index.docbook
+xmllint --nonet --noout --noent --path en_CA --xinclude en_CA/legal.xml
+xmllint --nonet --noout --noent --path en_GB --xinclude en_GB/index.docbook
+xmllint --nonet --noout --noent --path en_GB --xinclude en_GB/legal.xml
+xmllint --nonet --noout --noent --path eo --xinclude eo/index.docbook
+xmllint --nonet --noout --noent --path eo --xinclude eo/legal.xml
+xmllint --nonet --noout --noent --path es --xinclude es/index.docbook
+xmllint --nonet --noout --noent --path es --xinclude es/legal.xml
+xmllint --nonet --noout --noent --path es_AR --xinclude es_AR/index.docbook
+xmllint --nonet --noout --noent --path es_AR --xinclude es_AR/legal.xml
+xmllint --nonet --noout --noent --path es_CL --xinclude es_CL/index.docbook
+xmllint --nonet --noout --noent --path es_CL --xinclude es_CL/legal.xml
+xmllint --nonet --noout --noent --path es_CO --xinclude es_CO/index.docbook
+xmllint --nonet --noout --noent --path es_CO --xinclude es_CO/legal.xml
+xmllint --nonet --noout --noent --path es_ES --xinclude es_ES/index.docbook
+xmllint --nonet --noout --noent --path es_ES --xinclude es_ES/legal.xml
+xmllint --nonet --noout --noent --path es_MX --xinclude es_MX/index.docbook
+xmllint --nonet --noout --noent --path es_MX --xinclude es_MX/legal.xml
+xmllint --nonet --noout --noent --path es_PR --xinclude es_PR/index.docbook
+xmllint --nonet --noout --noent --path es_PR --xinclude es_PR/legal.xml
+xmllint --nonet --noout --noent --path et --xinclude et/index.docbook
+xmllint --nonet --noout --noent --path et --xinclude et/legal.xml
+xmllint --nonet --noout --noent --path eu --xinclude eu/index.docbook
+xmllint --nonet --noout --noent --path eu --xinclude eu/legal.xml
+xmllint --nonet --noout --noent --path fa --xinclude fa/index.docbook
+xmllint --nonet --noout --noent --path fa --xinclude fa/legal.xml
+xmllint --nonet --noout --noent --path fi --xinclude fi/index.docbook
+xmllint --nonet --noout --noent --path fi --xinclude fi/legal.xml
+xmllint --nonet --noout --noent --path fr --xinclude fr/index.docbook
+xmllint --nonet --noout --noent --path fr --xinclude fr/legal.xml
+xmllint --nonet --noout --noent --path frp --xinclude frp/index.docbook
+xmllint --nonet --noout --noent --path frp --xinclude frp/legal.xml
+xmllint --nonet --noout --noent --path fur --xinclude fur/index.docbook
+xmllint --nonet --noout --noent --path fur --xinclude fur/legal.xml
+xmllint --nonet --noout --noent --path fy --xinclude fy/index.docbook
+xmllint --nonet --noout --noent --path fy --xinclude fy/legal.xml
+xmllint --nonet --noout --noent --path ga --xinclude ga/index.docbook
+xmllint --nonet --noout --noent --path ga --xinclude ga/legal.xml
+xmllint --nonet --noout --noent --path gl --xinclude gl/index.docbook
+xmllint --nonet --noout --noent --path gl --xinclude gl/legal.xml
+xmllint --nonet --noout --noent --path gu --xinclude gu/index.docbook
+xmllint --nonet --noout --noent --path gu --xinclude gu/legal.xml
+xmllint --nonet --noout --noent --path ha --xinclude ha/index.docbook
+xmllint --nonet --noout --noent --path ha --xinclude ha/legal.xml
+xmllint --nonet --noout --noent --path he --xinclude he/index.docbook
+xmllint --nonet --noout --noent --path he --xinclude he/legal.xml
+xmllint --nonet --noout --noent --path hi --xinclude hi/index.docbook
+xmllint --nonet --noout --noent --path hi --xinclude hi/legal.xml
+xmllint --nonet --noout --noent --path hr --xinclude hr/index.docbook
+xmllint --nonet --noout --noent --path hr --xinclude hr/legal.xml
+xmllint --nonet --noout --noent --path hu --xinclude hu/index.docbook
+xmllint --nonet --noout --noent --path hu --xinclude hu/legal.xml
+xmllint --nonet --noout --noent --path hy --xinclude hy/index.docbook
+xmllint --nonet --noout --noent --path hy --xinclude hy/legal.xml
+xmllint --nonet --noout --noent --path ia --xinclude ia/index.docbook
+xmllint --nonet --noout --noent --path ia --xinclude ia/legal.xml
+xmllint --nonet --noout --noent --path id --xinclude id/index.docbook
+xmllint --nonet --noout --noent --path id --xinclude id/legal.xml
+xmllint --nonet --noout --noent --path ie --xinclude ie/index.docbook
+xmllint --nonet --noout --noent --path ie --xinclude ie/legal.xml
+xmllint --nonet --noout --noent --path ig --xinclude ig/index.docbook
+xmllint --nonet --noout --noent --path ig --xinclude ig/legal.xml
+xmllint --nonet --noout --noent --path is --xinclude is/index.docbook
+xmllint --nonet --noout --noent --path is --xinclude is/legal.xml
+xmllint --nonet --noout --noent --path it --xinclude it/index.docbook
+xmllint --nonet --noout --noent --path it --xinclude it/legal.xml
+xmllint --nonet --noout --noent --path ja --xinclude ja/index.docbook
+xmllint --nonet --noout --noent --path ja --xinclude ja/legal.xml
+xmllint --nonet --noout --noent --path jv --xinclude jv/index.docbook
+xmllint --nonet --noout --noent --path jv --xinclude jv/legal.xml
+xmllint --nonet --noout --noent --path ka --xinclude ka/index.docbook
+xmllint --nonet --noout --noent --path ka --xinclude ka/legal.xml
+xmllint --nonet --noout --noent --path kab --xinclude kab/index.docbook
+xmllint --nonet --noout --noent --path kab --xinclude kab/legal.xml
+xmllint --nonet --noout --noent --path kk --xinclude kk/index.docbook
+xmllint --nonet --noout --noent --path kk --xinclude kk/legal.xml
+xmllint --nonet --noout --noent --path km --xinclude km/index.docbook
+xmllint --nonet --noout --noent --path km --xinclude km/legal.xml
+xmllint --nonet --noout --noent --path kn --xinclude kn/index.docbook
+xmllint --nonet --noout --noent --path kn --xinclude kn/legal.xml
+xmllint --nonet --noout --noent --path ko --xinclude ko/index.docbook
+xmllint --nonet --noout --noent --path ko --xinclude ko/legal.xml
+xmllint --nonet --noout --noent --path ku --xinclude ku/index.docbook
+xmllint --nonet --noout --noent --path ku --xinclude ku/legal.xml
+xmllint --nonet --noout --noent --path ku_IQ --xinclude ku_IQ/index.docbook
+xmllint --nonet --noout --noent --path ku_IQ --xinclude ku_IQ/legal.xml
+xmllint --nonet --noout --noent --path ky --xinclude ky/index.docbook
+xmllint --nonet --noout --noent --path ky --xinclude ky/legal.xml
+xmllint --nonet --noout --noent --path la --xinclude la/index.docbook
+xmllint --nonet --noout --noent --path la --xinclude la/legal.xml
+xmllint --nonet --noout --noent --path lt --xinclude lt/index.docbook
+xmllint --nonet --noout --noent --path lt --xinclude lt/legal.xml
+xmllint --nonet --noout --noent --path lv --xinclude lv/index.docbook
+xmllint --nonet --noout --noent --path lv --xinclude lv/legal.xml
+xmllint --nonet --noout --noent --path mai --xinclude mai/index.docbook
+xmllint --nonet --noout --noent --path mai --xinclude mai/legal.xml
+xmllint --nonet --noout --noent --path mg --xinclude mg/index.docbook
+xmllint --nonet --noout --noent --path mg --xinclude mg/legal.xml
+xmllint --nonet --noout --noent --path mi --xinclude mi/index.docbook
+xmllint --nonet --noout --noent --path mi --xinclude mi/legal.xml
+xmllint --nonet --noout --noent --path mk --xinclude mk/index.docbook
+xmllint --nonet --noout --noent --path mk --xinclude mk/legal.xml
+xmllint --nonet --noout --noent --path ml --xinclude ml/index.docbook
+xmllint --nonet --noout --noent --path ml --xinclude ml/legal.xml
+xmllint --nonet --noout --noent --path mn --xinclude mn/index.docbook
+xmllint --nonet --noout --noent --path mn --xinclude mn/legal.xml
+xmllint --nonet --noout --noent --path mr --xinclude mr/index.docbook
+xmllint --nonet --noout --noent --path mr --xinclude mr/legal.xml
+xmllint --nonet --noout --noent --path ms --xinclude ms/index.docbook
+xmllint --nonet --noout --noent --path ms --xinclude ms/legal.xml
+xmllint --nonet --noout --noent --path nb --xinclude nb/index.docbook
+xmllint --nonet --noout --noent --path nb --xinclude nb/legal.xml
+xmllint --nonet --noout --noent --path nds --xinclude nds/index.docbook
+xmllint --nonet --noout --noent --path nds --xinclude nds/legal.xml
+xmllint --nonet --noout --noent --path ne --xinclude ne/index.docbook
+xmllint --nonet --noout --noent --path ne --xinclude ne/legal.xml
+xmllint --nonet --noout --noent --path nl --xinclude nl/index.docbook
+xmllint --nonet --noout --noent --path nl --xinclude nl/legal.xml
+xmllint --nonet --noout --noent --path nn --xinclude nn/index.docbook
+xmllint --nonet --noout --noent --path nn --xinclude nn/legal.xml
+xmllint --nonet --noout --noent --path nso --xinclude nso/index.docbook
+xmllint --nonet --noout --noent --path nso --xinclude nso/legal.xml
+xmllint --nonet --noout --noent --path oc --xinclude oc/index.docbook
+xmllint --nonet --noout --noent --path oc --xinclude oc/legal.xml
+xmllint --nonet --noout --noent --path or --xinclude or/index.docbook
+xmllint --nonet --noout --noent --path or --xinclude or/legal.xml
+xmllint --nonet --noout --noent --path pa --xinclude pa/index.docbook
+xmllint --nonet --noout --noent --path pa --xinclude pa/legal.xml
+xmllint --nonet --noout --noent --path pl --xinclude pl/index.docbook
+xmllint --nonet --noout --noent --path pl --xinclude pl/legal.xml
+xmllint --nonet --noout --noent --path ps --xinclude ps/index.docbook
+xmllint --nonet --noout --noent --path ps --xinclude ps/legal.xml
+xmllint --nonet --noout --noent --path pt --xinclude pt/index.docbook
+xmllint --nonet --noout --noent --path pt --xinclude pt/legal.xml
+xmllint --nonet --noout --noent --path pt_BR --xinclude pt_BR/index.docbook
+xmllint --nonet --noout --noent --path pt_BR --xinclude pt_BR/legal.xml
+xmllint --nonet --noout --noent --path ro --xinclude ro/index.docbook
+xmllint --nonet --noout --noent --path ro --xinclude ro/legal.xml
+xmllint --nonet --noout --noent --path ru --xinclude ru/index.docbook
+xmllint --nonet --noout --noent --path ru --xinclude ru/legal.xml
+xmllint --nonet --noout --noent --path si --xinclude si/index.docbook
+xmllint --nonet --noout --noent --path si --xinclude si/legal.xml
+xmllint --nonet --noout --noent --path sk --xinclude sk/index.docbook
+xmllint --nonet --noout --noent --path sk --xinclude sk/legal.xml
+xmllint --nonet --noout --noent --path sl --xinclude sl/index.docbook
+xmllint --nonet --noout --noent --path sl --xinclude sl/legal.xml
+xmllint --nonet --noout --noent --path sq --xinclude sq/index.docbook
+xmllint --nonet --noout --noent --path sq --xinclude sq/legal.xml
+xmllint --nonet --noout --noent --path sr --xinclude sr/index.docbook
+xmllint --nonet --noout --noent --path sr --xinclude sr/legal.xml
+xmllint --nonet --noout --noent --path sr@latin --xinclude sr@latin/index.docbook
+xmllint --nonet --noout --noent --path sr@latin --xinclude sr@latin/legal.xml
+xmllint --nonet --noout --noent --path sv --xinclude sv/index.docbook
+xmllint --nonet --noout --noent --path sv --xinclude sv/legal.xml
+xmllint --nonet --noout --noent --path ta --xinclude ta/index.docbook
+xmllint --nonet --noout --noent --path ta --xinclude ta/legal.xml
+xmllint --nonet --noout --noent --path te --xinclude te/index.docbook
+xmllint --nonet --noout --noent --path te --xinclude te/legal.xml
+xmllint --nonet --noout --noent --path th --xinclude th/index.docbook
+xmllint --nonet --noout --noent --path th --xinclude th/legal.xml
+xmllint --nonet --noout --noent --path tk --xinclude tk/index.docbook
+xmllint --nonet --noout --noent --path tk --xinclude tk/legal.xml
+xmllint --nonet --noout --noent --path tr --xinclude tr/index.docbook
+xmllint --nonet --noout --noent --path tr --xinclude tr/legal.xml
+xmllint --nonet --noout --noent --path ug --xinclude ug/index.docbook
+xmllint --nonet --noout --noent --path ug --xinclude ug/legal.xml
+xmllint --nonet --noout --noent --path uk --xinclude uk/index.docbook
+xmllint --nonet --noout --noent --path uk --xinclude uk/legal.xml
+xmllint --nonet --noout --noent --path ur --xinclude ur/index.docbook
+xmllint --nonet --noout --noent --path ur --xinclude ur/legal.xml
+xmllint --nonet --noout --noent --path uz --xinclude uz/index.docbook
+xmllint --nonet --noout --noent --path uz --xinclude uz/legal.xml
+xmllint --nonet --noout --noent --path vi --xinclude vi/index.docbook
+xmllint --nonet --noout --noent --path vi --xinclude vi/legal.xml
+xmllint --nonet --noout --noent --path wa --xinclude wa/index.docbook
+xmllint --nonet --noout --noent --path wa --xinclude wa/legal.xml
+xmllint --nonet --noout --noent --path xh --xinclude xh/index.docbook
+xmllint --nonet --noout --noent --path xh --xinclude xh/legal.xml
+xmllint --nonet --noout --noent --path yo --xinclude yo/index.docbook
+xmllint --nonet --noout --noent --path yo --xinclude yo/legal.xml
+xmllint --nonet --noout --noent --path zh_CN --xinclude zh_CN/index.docbook
+xmllint --nonet --noout --noent --path zh_CN --xinclude zh_CN/legal.xml
+xmllint --nonet --noout --noent --path zh_HK --xinclude zh_HK/index.docbook
+xmllint --nonet --noout --noent --path zh_HK --xinclude zh_HK/legal.xml
+xmllint --nonet --noout --noent --path zh_TW --xinclude zh_TW/index.docbook
+xmllint --nonet --noout --noent --path zh_TW --xinclude zh_TW/legal.xml
+xmllint --nonet --noout --noent --path zu --xinclude zu/index.docbook
+xmllint --nonet --noout --noent --path zu --xinclude zu/legal.xml
+make[1]: Leaving directory '/rootdir/help'
+make[1]: Entering directory '/rootdir'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/rootdir'
+Listing... 0%Listing... 0%Listing... 0%Listing... Done
+cafe-sensors-applet-build-deps/now 1.25.0-1 amd64 [installed,local]
+Errors detected in the build 0
+Warnings detected in the logs 116
+cppcheck defects detected in the logs 47
+TOTAL warnings detected in the logs 163
