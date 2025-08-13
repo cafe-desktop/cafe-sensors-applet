@@ -1,0 +1,8 @@
+udisks2-plugin: Fix an invalid pointer crash with glib 2.83.2
+
+The typecast to non-const gchar produced invalid pointer errors on free() with glib 2.83.2
+
+Based in mate-sensors-applet PR 137
+
+The crash happens since glib commit:
+https://gitlab.gnome.org/GNOME/glib/-/commit/1e3b010af8782256aad1e71f998e421e216d3843
