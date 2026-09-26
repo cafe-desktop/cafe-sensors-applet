@@ -885,7 +885,7 @@ gboolean sensors_applet_add_sensor(SensorsApplet *sensors_applet,
                                  G_TYPE_DOUBLE, /* multiplier */
                                  G_TYPE_DOUBLE, /* offset */
                                  G_TYPE_UINT, /* icon type */
-                                 GDK_TYPE_PIXBUF, /* icon pixbuf */
+                                 CDK_TYPE_PIXBUF, /* icon pixbuf */
                                  G_TYPE_STRING); /* graph color */
 
         g_debug("Sensor tree created.");
