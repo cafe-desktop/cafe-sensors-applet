@@ -1,3 +1,12 @@
+### cafe-sensors-applet 2.0.0
+
+  * ci: some improvements
+  * udisks2-plugin: Fix an invalid pointer crash with glib 2.83.2
+  * port from GdkPixbuf to CdkPixbuf
+  * lib: resolve plugin name via dlsym() instead of extern plugin_name
+  * update translations
+
+
 ### cafe-sensors-applet 1.25.0
 
   * initial release: mate-sensors-applet 1.24.1 fork
