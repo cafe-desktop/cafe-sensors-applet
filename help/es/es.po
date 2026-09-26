@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-07-18 09:33+0200\n"
+"POT-Creation-Date: 2026-09-26 12:27+0200\n"
 "PO-Revision-Date: 2020-02-16 14:49+0000\n"
 "Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/cafe/teams/13566/es/)\n"
@@ -158,16 +158,17 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:179
 msgid ""
-"Via the proc filesystem and i2c modules from the <ulink url=\"http://secure."
-"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors and i2c</ulink> "
-"packages (kernel 2.4)"
+"Via the proc filesystem and i2c modules from the <ulink url=\"http://"
+"secure.netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors and i2c</"
+"ulink> packages (kernel 2.4)"
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:185
 msgid ""
-"Via the libsensors library provided with the <ulink url=\"http://secure."
-"netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors</ulink> package"
+"Via the libsensors library provided with the <ulink url=\"http://"
+"secure.netroedge.com/~lm78/kernel26.html\" type=\"http\">lm_sensors</ulink> "
+"package"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -616,8 +617,8 @@ msgid ""
 "You can play a sound when the alarm occurs by using the command "
 "<command>esdplay</command> which should be available as part of the standard "
 "CAFE installation. (Note: If this does not work, you could also try "
-"<command>aplay</command> which is the default ALSA sound player). <_:"
-"screen-1/>"
+"<command>aplay</command> which is the default ALSA sound player). "
+"<_:screen-1/>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -698,11 +699,11 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:645
 msgid ""
-"The origin sensor applet was written by Alex Murray (<email>murray."
-"alex@gmail.com</email>). <application>CAFE Sensors Applet</application> is "
-"further develop by Cafe dev team. To find more information about "
-"<application>CAFE Sensors Applet</application>, please visit the <ulink "
-"url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" "
+"The origin sensor applet was written by Alex Murray "
+"(<email>murray.alex@gmail.com</email>). <application>CAFE Sensors Applet</"
+"application> is further develop by Cafe dev team. To find more information "
+"about <application>CAFE Sensors Applet</application>, please visit the "
+"<ulink url=\"https://github.com/cafe-desktop/cafe-sensors-applet/\" "
 "type=\"http\">CAFE Sensors Applet Project Homepage</ulink>."
 msgstr ""
 
@@ -726,9 +727,9 @@ msgstr ""
 "Este programa se distribuye según los términos de la Licencia Pública "
 "General de GNU publicada por la Free Software Foundation, ya sea la versión "
 "2 de la Licencia o (a su elección) cualquier versión posterior. Puede "
-"encontrar una copia de esta licencia en este <ulink type=\"help\" url=\"help:"
-"gpl\">enlace</ulink> o en el archivo COPYING incluido en el código fuente de "
-"este programa."
+"encontrar una copia de esta licencia en este <ulink type=\"help\" "
+"url=\"help:gpl\">enlace</ulink> o en el archivo COPYING incluido en el "
+"código fuente de este programa."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
