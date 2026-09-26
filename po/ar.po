@@ -14,9 +14,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-sensors-applet 1.25.0\n"
+"Project-Id-Version: cafe-sensors-applet 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2023-07-18 09:33+0200\n"
+"POT-Creation-Date: 2026-09-26 12:26+0200\n"
 "PO-Revision-Date: 2020-02-16 14:48+0000\n"
 "Last-Translator: Saif Husam <saifxman10@yahoo.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/cafe/teams/13566/ar/)\n"
@@ -27,11 +27,11 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:5
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Sensors Applet Factory"
 msgstr "استشعار مصنع التطبيق الصغير"
 
-#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:9
+#: org.cafe.applets.SensorsApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Hardware Sensors Monitor"
 msgstr "مراقبة أجهزة الاستشعار"
 
@@ -335,7 +335,7 @@ msgid ""
 "Copyright © 2005-2009 Alex Murray\n"
 "Copyright © 2011 Stefano Karapetsas\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2023 Pablo Barciela"
+"Copyright © 2023-2026 Pablo Barciela"
 msgstr ""
 
 #: sensors-applet/about-dialog.c:48
