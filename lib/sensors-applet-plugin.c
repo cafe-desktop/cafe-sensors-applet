@@ -16,6 +16,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #include <sensors-applet/sensors-applet-plugin.h>
 
 #ifdef HAVE_CONFIG_H
@@ -26,7 +30,7 @@
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
 
-extern const gchar *plugin_name;
+#include <dlfcn.h>
 
 /* recursive function to find sensors in a given path */
 void sensors_applet_plugin_find_sensors(GList **sensors,
@@ -60,13 +64,24 @@ void sensors_applet_plugin_find_sensors(GList **sensors,
     }
 }
 
+static const gchar *plugin_get_name(void) {
+    const gchar *(*name_fn)(void);
+
+    name_fn = (const gchar *(*)(void))dlsym(RTLD_DEFAULT, "sensors_applet_plugin_name");
+    if (name_fn != NULL) {
+        return name_fn();
+    }
+
+    return "unknown";
+}
+
 /* for error handling */
 GQuark sensors_applet_plugin_error_quark(void) {
     static GQuark quark = 0;
     gchar *string;
 
     if (quark == 0) {
-        string = g_strdup_printf("%s-plugin-error", plugin_name);
+        string = g_strdup_printf("%s-plugin-error", plugin_get_name());
         quark = g_quark_from_string(string);
         g_free(string);
     }
